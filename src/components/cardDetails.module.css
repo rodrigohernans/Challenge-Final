@@ -1,0 +1,86 @@
+.containerGeneral {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 100vw;
+} 
+
+.containerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+.firstContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    
+}
+.containerImage {
+    margin-top: 2em;
+}
+
+.info{
+    background-color: #725ac1;
+    border-radius: 1em;
+    width: 95vw;
+    height: 47%;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.imagen {
+    width: 95vw;
+    object-fit: cover;
+    border-radius: 4%;
+}
+.titulo {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 40vh;
+    border-radius: 0.3em;
+}
+
+.downInfo{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.8rem;
+}
+.window {
+    width: 3rem;
+    padding: 0.4rem;
+} 
+.carrito {
+    width: 3rem;
+    padding: 0.4rem;
+} 
+.carrito:hover{
+    background-color: white;
+    border-radius: 10%;
+}
+
+.moreInfo {
+    margin: 0.8em;
+    background-image: url(https://www.wallpapertip.com/wmimgs/58-583737_navy-blue-background-background-blue-and-black-hd.png);
+    width: 95vw;
+    border-radius: 0.2em;
+    text-align: center;
+    box-shadow: 0px 0px 4px white;
+}
+.moreInfo:hover{
+    box-shadow: 0px 0px 15px white;
+
+}
+
+.containerCarousel {
+    display: flex;
+}
+
+.imgCarousel {
+    width: 150px;
+}
