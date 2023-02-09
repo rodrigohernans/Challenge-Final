@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.h2{
+    display: flex;
+    justify-content: start;
+    width: 90vw;
+}
+
+h2{
+    border-bottom: solid 1px white;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.container>p {
+    width: 80%;
+}
+.container2{
+    display: flex;
+    width: 80vw;
+    text-align: center;
+}
+
+.firstContainer{
+    border: solid 1px white;
+    width: 50%;
+    margin-right: 2rem;
+}
+
+.secondContainer{
+    border: solid 1px white;
+    width: 50%;
+}
