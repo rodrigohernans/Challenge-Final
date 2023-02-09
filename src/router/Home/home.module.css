@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.homeContainer{
+    background-color: #221F20;
+}
+.divCarrusel{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 200px;
+}
+.carruselImg{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+.carruselImg:hover{
+    opacity: 0.8;
+}
+
+@media (min-width:768px){
+    .carruselImg{
+        height: 500px;
+        width: 1300px;
+        margin: 50px;
+        display: flex;
+    }
+    .divCarrusel{
+      
+        height: 500px;
+    }
+}
+
+/*
+fondo negro : #221F20
+azulviolaceo : #725AC1
+gris: #575561
+celeste claro: #8D86C9
+azul boton: #3C29E3
+CARTAS::after
+azul oscuro: #242038
+gris claro: #CAC4CE
+boton azul: #3C29E3
+*/
