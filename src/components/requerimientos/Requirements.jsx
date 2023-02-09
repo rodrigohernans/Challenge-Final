@@ -1,6 +1,10 @@
 import styles from "./Requirements.module.css";
+import { useSelector } from "react-redux";
 
 const Requirements = () => {
+
+  const gameStore = useSelector((store) => store?.games);
+
   return (
     <div className={styles.container} id="Requirements">
       <div className={styles.h2}>
@@ -9,12 +13,12 @@ const Requirements = () => {
       <div>
         <div className={styles.container2}>
           <div className={styles.firstContainer}>
-            <p>So: "Windows 7 SP1, Windows 8.1, Windows 10 (64-bit)."</p>
-            <p>Procesador: "2.3 GHz Dual Core o equivalente."</p>
+            <p>So: {gameStore?.game?.response?.so}</p>
+            <p>Procesador: {gameStore?.game?.response?.procesador} </p>
           </div>
           <div className={styles.secondContainer}>
-            <p>Graphics: "GeForce GTS 450-class (Intel HD 4000)."</p>
-            <p>Ram: "4 GB"</p>
+            <p>Graphics: {gameStore?.game?.response?.graphics} </p>
+            <p>Ram: {gameStore?.game?.response?.ram} </p>
           </div>
         </div>
       </div>

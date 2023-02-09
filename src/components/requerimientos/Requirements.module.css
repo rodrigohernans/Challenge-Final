@@ -8,7 +8,7 @@
 }
 .h2{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     width: 90vw;
 }
 

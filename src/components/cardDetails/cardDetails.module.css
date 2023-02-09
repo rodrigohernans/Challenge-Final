@@ -58,7 +58,7 @@
 
 .button{
     cursor: pointer;
-    height: 2rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #8d86c9;
+    background-color: #725ac1;
 }
 .titulo {
     text-align: center;
@@ -77,18 +77,19 @@
 .downInfo{
     display: flex;
     justify-content: space-evenly;
-    background-color: #8d86c9;
+    background-color:  #725ac1;
 }
 .window {
-    width: 3rem;
-    padding: 0.4rem;
+    width: 2rem;
+    padding: 0.4em;
+    color: white;
 } 
-.carrito {
+.shop {
     width: 3rem;
-    padding: 0.4rem;
+    padding: 0.4em;
 } 
-.carrito:hover{
-    background-color: white;
+.shop:hover{
+    background-color: black;
     border-radius: 10%;
     cursor: pointer;
 }
@@ -151,6 +152,12 @@ button:hover{
     height: 100vh;
 }
 
+@media (min-width: 768px) {
+    .moreInfo{
+        display: none;
+    } 
+}
+
 
 @media (min-width: 1100px) {
     .containerP{
@@ -184,7 +191,7 @@ button:hover{
         transition: all 0.2s;
         flex-direction: row-reverse;
         width: 80%;
-        height: 70vh;
+        height: 75vh;
         margin-top: 3rem;
     }
 

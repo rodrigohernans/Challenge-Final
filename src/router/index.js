@@ -5,7 +5,7 @@ import {createBrowserRouter} from "react-router-dom"
 
 const indexRouter = createBrowserRouter([
     { path: "/", element : <Home /> } ,
-    { path: "/details", element : <CardDetails /> } 
+    { path: "/details/:id", element : <CardDetails /> } 
 ])
 
 export default indexRouter 
