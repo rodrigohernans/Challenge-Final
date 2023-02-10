@@ -4,7 +4,7 @@ import allGamesActions from "./actions"
 
 const { getAllGames }=  allGamesActions
 const initialState = {
-    allgames: [],
+    allgames: {},
     message: ""
 }
 
@@ -15,7 +15,7 @@ const allgamesreducers = createReducer(
             getAllGames.fulfilled,
             (state,action) =>{
                 let newState = {
-                    allgames: action.payload.response
+                    allgames: action.payload.response.allgames
                 }
                 return newState
             }

@@ -1,6 +1,22 @@
 import React from "react";
 import styles from "./AllGamesCards.module.css"
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import allGamesActions from "../../store/allGames/actions";
+
+const { getAllGames } = allGamesActions
+
 const GamesCards = () => {
+  
+  let games = useSelector((store)=>store.allgames?.allgames?.length)
+  console.log(games)
+  let dispacth = useDispatch()
+  
+  useEffect(()=>{
+    dispacth(getAllGames())
+  },[])
+  
+  
   return(
     <div className={styles.conteiner}>
       <div className={styles.carrusel}>
