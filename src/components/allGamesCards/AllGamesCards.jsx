@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Categories from "../categories/Categories";
 import styles from "./AllGamesCards.module.css"
+import { useSelector,useDispatch } from "react-redux";
+import allGamesActions from "../../store/allGames/actions";
+
+const {getAllGames} = allGamesActions
+
 const GamesCards = () => {
+const gamesStore = useSelector(store=>store.allgames.allgames)
+console.log(gamesStore)
+const dispatch = useDispatch()
+
+useEffect(()=>{
+  dispatch(getAllGames())
+  console.log(gamesStore)
+},[])
+
+const juegos = gamesStore.map(juego=>console.log(juego))
+//console.log(gamesStore.allgames)
   return(
     <div className={styles.conteiner}>
       <div className={styles.carrusel}>
@@ -8,13 +25,7 @@ const GamesCards = () => {
       </div>
       <section className={styles.sectionCategories} >
         <div className={styles.divCategories}>
-          <p>Categories</p>
-          <img src="https://media.istockphoto.com/id/1098183024/vector/marksman-sharpshooter.jpg?s=612x612&w=0&k=20&c=EmpOAVoPe5gPX3PVJ_shpACO5R5suMw3SEVqF6_XSJI=" alt="" className={styles.fotosIcono}/>
-          <img src="https://as2.ftcdn.net/v2/jpg/04/39/88/35/1000_F_439883507_ijc9r1ive2vMNBVNM8ZvWcuQscSM1gYa.jpg" alt="" className={styles.fotosIcono}/>
-          <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-logo-sports-and-gaming-logo-design-template-ed37d28efcabf0eea83a1da868b6f4bb_screen.jpg?ts=1662476515" alt="" className={styles.fotosIcono}/>
-          <img src="https://i.pinimg.com/736x/d4/a1/3a/d4a13a8cea829f4d281bf54a7a1837f2.jpg" alt="" className={styles.fotosIcono}/>
-          <img src="https://thumbs.dreamstime.com/z/icono-linear-del-juego-de-la-estrategia-estafa-moderna-logotipo-esquema-133526525.jpg" alt="" className={styles.fotosIcono}/>
-        </div>
+          </div>
         <div className={styles.divSearch}>
           <input type="text" 
           placeholder="Find your games here"

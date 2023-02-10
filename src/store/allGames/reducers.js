@@ -15,7 +15,7 @@ const allgamesreducers = createReducer(
             getAllGames.fulfilled,
             (state,action) =>{
                 let newState = {
-                    allgames: action.payload.response
+                    allgames: action.payload.response.allgames
                 }
                 return newState
             }
