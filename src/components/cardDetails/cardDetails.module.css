@@ -1,0 +1,268 @@
+.containerGeneral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    
+} 
+
+.containerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.containerImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    opacity: 0.6;
+}
+.containerImage:hover{
+    opacity: 0.8;
+}
+.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    width: 95%;
+    text-align: left;
+    height: 50vh;
+}
+
+.containerP{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+.category{
+    width: 100%;
+}
+.developer{
+    width: 100%;
+}
+
+.button{
+    cursor: pointer;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description{
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #725ac1;
+}
+.titulo {
+    text-align: center;
+}
+
+.downInfo{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:  #725ac1;
+}
+.window {
+    width: 1rem;
+    padding: 0.4em;
+    color: white;
+} 
+.shop {
+    width: 1rem;
+    padding: 0.4em;
+} 
+.shop:hover{
+    background-color: black;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.moreInfo {
+    height: 5vh;
+    margin: 1rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em;
+    text-align: center;
+    box-shadow: 0px 0px 4px white;
+}
+button:hover{
+    box-shadow: 0px 0px px white;
+}
+
+.firstContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.secondContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    margin-top: 3em;
+}
+
+.containerImage2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainImage {
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.mainImage:hover{
+    opacity: 1;
+}
+
+.containerReq{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .moreInfo{
+        display: none;
+    } 
+}
+
+
+@media (min-width: 1200px) {
+    .containerP{
+        margin-top: 3rem;
+        flex-direction: row;
+        width: 80%;
+    }
+    .containerGeneral{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .containerImage{
+        width: 100%;
+        height: 60%;
+        
+    }
+    .imagen{
+        width: 90%;
+    }
+    .mainImage{
+        margin-top: 5rem;
+    }
+    .containerCard{
+        background-color: #16202d;
+        border: solid 1px #575561;
+        border-radius: 1rem;
+        padding: 1em 2em;
+        transition: all 0.2s;
+        flex-direction: row-reverse;
+        width: 80%;
+        height: 75vh;
+        margin-top: 3rem;
+    }
+
+    .firstContainer{
+        width: 40%;
+        height: 60%;
+    }
+    .secondContainer{
+        width: 60%;
+        height: 60%;
+    } 
+        .moreInfo{
+        display: none;
+    } 
+}
+
+
+/* CARROUSEL */
+
+
+.containerCarousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 100vw;
+}
+
+
+.containerImg {
+    display: flex;
+    height: 75%;
+    margin-bottom: 0.5em;
+}
+
+.imgCarousel{
+    width: 98vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+
+@media (min-width: 768px) {
+    .containerImage{
+        margin-right: 0.5rem;
+    }
+    .containerImg{
+        height: 65%;
+    }
+
+.imgCarousel{
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+    object-fit: cover;
+    opacity: 0.6;
+}
+.imgCarousel:hover{
+    opacity: 1;
+}
+}
