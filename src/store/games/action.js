@@ -10,7 +10,10 @@ const getGame= createAsyncThunk("getGame", async (id) => {
         }
     }
     catch (error){
-        console.log(error)
+        return {
+            response: {game : error.response.data},
+            message: "error obtained game"
+        }
     }
 } )
 
