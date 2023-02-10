@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+
+import allgamesreducers from "./allGames/reducers";
 import categoryReducers from "./categories/reducers";
 
-const store = configureStore({
-    reducer:{
+export const store = configureStore({
+    reducer: {
+        allgames: allgamesreducers,
         categories: categoryReducers
     }
 })
 
-export default store
