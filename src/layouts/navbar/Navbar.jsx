@@ -31,9 +31,9 @@ const Navbar = () => {
             </div>
             {variableAcount ? (
               <div className={styles.acountMenu}>
-                <Anchor className={styles.menuOption}>ejemplo1</Anchor>
-                <Anchor className={styles.menuOption}>ejemplo2</Anchor>
-                <Anchor className={styles.menuOption}>ejemplo3</Anchor>
+                <Anchor to="./signin" className={styles.menuOption}>Sign in</Anchor>
+                <Anchor to="./signup"className={styles.menuOption}>Sign up</Anchor>
+                <Anchor to="./"className={styles.menuOption}>ejemplo3</Anchor>
               </div>
             ) : null}
           </div>
@@ -50,9 +50,9 @@ const Navbar = () => {
           </div>
           {variable ? (
             <div className={styles.explorerMenu}>
-              <Anchor className={styles.menuOption}>ejemplo1</Anchor>
-              <Anchor className={styles.menuOption}>ejemplo2</Anchor>
-              <Anchor className={styles.menuOption}>ejemplo3</Anchor>
+              <Anchor to="./details/63e2cf4dcf592bf7a781c1de" className={styles.menuOption}>ejemplo carta detail</Anchor>
+              <Anchor to="./"className={styles.menuOption}>ejemplo2</Anchor>
+              <Anchor to="./"className={styles.menuOption}>ejemplo3</Anchor>
             </div>
           ) : null}
           <div className={styles.buttonsExplore}>

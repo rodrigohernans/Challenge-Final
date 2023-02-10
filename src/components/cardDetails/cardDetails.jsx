@@ -1,7 +1,5 @@
 import "react-multi-carousel/lib/styles.css";
-
 import { useDispatch, useSelector } from "react-redux";
-
 import Carousel from "react-multi-carousel";
 import { Link } from "react-scroll";
 import React from "react";
@@ -13,6 +11,7 @@ import styles from "./cardDetails.module.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import window from "../../assets/windowsIcon.png";
+
 
 const { getGame } = gamesActions;
 

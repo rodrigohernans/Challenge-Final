@@ -24,7 +24,7 @@
     background-image: url(../../../public/assets/nebulaFondo.jpg);
     background-size: cover;
     background-position: center;
-    
+    z-index: 20;
     
     
 }
@@ -52,6 +52,7 @@
     background-size: cover;
     background-position: center;
     opacity: 0.9;
+    z-index: 20;
 
 }
 
