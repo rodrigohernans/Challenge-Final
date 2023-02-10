@@ -1,0 +1,74 @@
+.main{
+    background-color: #221F20;
+    height: 100vh;
+    margin: none;
+    display: flex;
+
+}
+.games{
+    margin-top: 15vh;
+    width: 65vw;
+    height: 70vh;
+    margin: 3vh;
+
+
+}
+.paymentcontainer{
+    margin-top: 15vh;
+    border: 1px solid rgb(71, 70, 70);
+    width: 35vw;
+    height: 70vh;
+    margin:3vh ;
+    background-color: #725AC1;
+    border-radius: 0.7vh;
+
+}
+.card{
+    background-color: #242038;
+    height: 20vh;
+    border-radius: 0.7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid rgb(71, 70, 70);
+}
+.imageContainer{
+    width: 35% ;
+    height: 100%;
+    object-fit: contain;
+
+    
+}
+.image{
+    height: 100%;
+}
+.delete{
+    display: flex;
+    justify-self: center;
+    height: 100%;
+    width: 13%;
+    align-items: center;
+}
+.btn{
+    height: 50% ;
+
+
+}
+.money{
+    margin-right:  1vw;
+}
+.method{
+    height: 70%;
+    border: 1px solid green;
+}
+
+.pay{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.btnPay{
+    width: 5vw;
+    height: 5vh;
+    margin-top:2.5vh ;
+}
