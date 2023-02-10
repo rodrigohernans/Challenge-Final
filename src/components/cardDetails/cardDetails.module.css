@@ -147,11 +147,10 @@ button:hover{
 }
 
 .containerReq{
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -161,7 +160,7 @@ button:hover{
 }
 
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .containerP{
         margin-top: 3rem;
         flex-direction: row;
@@ -205,10 +204,6 @@ button:hover{
         width: 60%;
         height: 60%;
     } 
-    .containerReq{
-        height: 40vh;
-        margin-top: 2rem;
-    }
         .moreInfo{
         display: none;
     } 
@@ -255,6 +250,9 @@ button:hover{
 @media (min-width: 768px) {
     .containerImage{
         margin-right: 0.5rem;
+    }
+    .containerImg{
+        height: 65%;
     }
 
 .imgCarousel{

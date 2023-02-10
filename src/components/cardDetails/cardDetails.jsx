@@ -86,7 +86,6 @@ function CardDetails() {
               Explore more images
             </Link>
           </div>
-
         </div>
 
         <div className={styles.secondContainer} id="carousel2">
@@ -95,10 +94,9 @@ function CardDetails() {
               src={gameStore?.game?.response?.trailer[4]}
               alt=""
               className={styles.mainImage}
-              
             />
-          </div > 
-          <div className={styles.containerP} >
+          </div>
+          <div className={styles.containerP}>
             <p className={styles.category}>
               {" "}
               Category: {gameStore?.game?.response?.category}{" "}
@@ -107,7 +105,7 @@ function CardDetails() {
               Developer: {gameStore?.game?.response?.developer}{" "}
             </p>
           </div>
-          <div className={styles.containerCarousel} >
+          <div className={styles.containerCarousel}>
             <Carousel responsive={responsive} className={styles.carousel}>
               <div className={styles.containerImg}>
                 <img
@@ -155,7 +153,6 @@ function CardDetails() {
                 />
               </div>
             </Carousel>
-            
           </div>
           <div className={styles.moreInfo}>
             <Link
@@ -166,12 +163,14 @@ function CardDetails() {
             >
               Check the requirements
             </Link>
-          </div> 
+          </div>
         </div>
+        
       </div>
-      <div className={styles.containerReq}>
-        <Requirements />
-      </div>
+
+        <div className={styles.containerReq}>
+          <Requirements />
+        </div>
     </div>
   );
 }
