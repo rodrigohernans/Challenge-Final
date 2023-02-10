@@ -1,0 +1,87 @@
+.conteiner{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: #221F20;
+}
+.carrusel{
+    width: 90%;
+    height: 20vh;
+    object-fit: fill;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2%;
+    padding-left: 50px;
+}
+.sectionCategories{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+}
+.divSearch{
+    width: 20%;
+}
+.input{
+    height: 30px;
+}
+
+.divCategories{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 41%;
+    background-color: #CAC4CE;
+}
+.fotosIcono{
+    height: 30px;
+    padding: 5px;
+}
+.divSearch{
+    display: flex;
+}
+.search{
+    height: 34px;
+    padding-top: 1px;
+}
+
+.cards{
+    display: flex;
+    background-color: red;
+    justify-content: space-between;
+    width: 75%;
+    margin-left:12%;
+    margin-top: 3%;
+    padding-right: 1rem;
+    background-color: #CAC4CE;
+}
+
+.cardsAcomodo{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.fotos{
+    width: 30%;
+}
+
+p,h2{
+    color: white;
+}
+
+.carrito{
+    height: 50px;
+}
+
+.divCarrito{
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+}
+.sectionCards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}

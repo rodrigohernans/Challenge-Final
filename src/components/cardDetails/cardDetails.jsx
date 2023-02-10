@@ -1,0 +1,178 @@
+import "react-multi-carousel/lib/styles.css";
+
+import { useDispatch, useSelector } from "react-redux";
+
+import Carousel from "react-multi-carousel";
+import { Link } from "react-scroll";
+import React from "react";
+import Requirements from "../requerimientos/Requirements";
+import apple from "../../assets/appleIcon.png";
+import gamesActions from "../../store/games/action";
+import shop from "../../assets/shopIcon.png";
+import styles from "./cardDetails.module.css";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import window from "../../assets/windowsIcon.png";
+
+const { getGame } = gamesActions;
+
+function CardDetails() {
+  const gameStore = useSelector((store) => store.games);
+  console.log(gameStore?.game?.response);
+
+  const dispatch = useDispatch();
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (gameStore) {
+      console.log("funciona");
+      dispatch(getGame(id));
+    } else {
+      console.log("no funcionaaaa");
+    }
+  }, []);
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
+  return (
+    <div className={styles.containerGeneral}>
+      <div className={styles.containerCard}>
+        <div className={styles.firstContainer}>
+          <div className={styles.containerImage}>
+            <img
+              src={gameStore?.game?.response?.image}
+              alt=""
+              className={styles.imagen}
+            />
+          </div>
+          <div className={styles.info}>
+            <p className={styles.titulo}>
+              {" "}
+              {gameStore?.game?.response?.title}{" "}
+            </p>
+            <p className={styles.description}>
+              {gameStore?.game?.response?.description}
+            </p>
+            <div className={styles.downInfo}>
+              <img src={window} alt="" className={styles.window} />
+              <img src={apple} alt="" className={styles.window} />
+              <img src={shop} alt="" className={styles.shop} />
+            </div>
+          </div>
+          <div className={styles.moreInfo}>
+            <Link
+              className={styles.button}
+              to="carousel2"
+              smooth={true}
+              duration={600}
+            >
+              Explore more images
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.secondContainer} id="carousel2">
+          <div className={styles.containerImage2}>
+            <img
+              src={gameStore?.game?.response?.trailer[4]}
+              alt=""
+              className={styles.mainImage}
+            />
+          </div>
+          <div className={styles.containerP}>
+            <p className={styles.category}>
+              {" "}
+              Category: {gameStore?.game?.response?.category}{" "}
+            </p>
+            <p className={styles.developer}>
+              Developer: {gameStore?.game?.response?.developer}{" "}
+            </p>
+          </div>
+          <div className={styles.containerCarousel}>
+            <Carousel responsive={responsive} className={styles.carousel}>
+              <div className={styles.containerImg}>
+                <img
+                  src={gameStore?.game?.response?.trailer[0]}
+                  value={gameStore?.game?.response?.title}
+                  alt=""
+                  className={styles.imgCarousel}
+                  key={gameStore?.game?.response?.title}
+                />
+              </div>
+              <div className={styles.containerImg}>
+                <img
+                  src={gameStore?.game?.response?.trailer[1]}
+                  value={gameStore?.game?.response?.title}
+                  alt=""
+                  className={styles.imgCarousel}
+                  key={gameStore?.game?.response?.title}
+                />
+              </div>
+              <div className={styles.containerImg}>
+                <img
+                  src={gameStore?.game?.response?.trailer[2]}
+                  value={gameStore?.game?.response?.title}
+                  alt=""
+                  className={styles.imgCarousel}
+                  key={gameStore?.game?.response?.title}
+                />
+              </div>
+              <div className={styles.containerImg}>
+                <img
+                  src={gameStore?.game?.response?.trailer[3]}
+                  value={gameStore?.game?.response?.title}
+                  alt=""
+                  className={styles.imgCarousel}
+                  key={gameStore?.game?.response?.title}
+                />
+              </div>
+              <div className={styles.containerImg}>
+                <img
+                  src={gameStore?.game?.response?.trailer[4]}
+                  value={gameStore?.game?.response?.title}
+                  alt=""
+                  className={styles.imgCarousel}
+                  key={gameStore?.game?.response?.title}
+                />
+              </div>
+            </Carousel>
+          </div>
+          <div className={styles.moreInfo}>
+            <Link
+              to="Requirements"
+              className={styles.button}
+              smooth={true}
+              duration={800}
+            >
+              Check the requirements
+            </Link>
+          </div>
+        </div>
+        
+      </div>
+
+        <div className={styles.containerReq}>
+          <Requirements />
+        </div>
+    </div>
+  );
+}
+
+export default CardDetails;

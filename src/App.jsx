@@ -1,5 +1,7 @@
-import { RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+import { RouterProvider } from "react-router";
 import indexRouter from "./router/index";
+import store from "./store/store";
 
 import { useEffect } from 'react'
 
@@ -18,7 +20,12 @@ function App() {
             dispatch(iniciar_sesion_con_token(token))
         }
     },[])
-    return <RouterProvider router={indexRouter} />;
-}
+    return 
+        <Provider store={store}>
+      <RouterProvider router={indexRouter} />
+    </Provider>
+    }
+
+
 
 export default App;
