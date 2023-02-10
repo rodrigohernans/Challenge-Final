@@ -1,0 +1,114 @@
+.maincontainer{
+    background-color: #221F20;
+    height: 130vh;
+    width: 100%;
+}
+.nebulacontainer{
+    height: 37vh;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    
+}
+.nebulalogo{
+    margin-top: 20vh;
+    height: 37%;
+    width: 35%;
+}
+.formcontainer{
+    height: 60vh;
+    border: none;
+    
+}
+.fieldsetcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 37vh;
+    border: none;
+    
+}
+.emailinput{
+    width: 40%;
+    height: 12%;
+    margin: 3vh;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #221F20;
+    border-radius: 5px;
+    font-size: medium;
+    color: #eee;
+}
+.passwordinput{
+    width: 40%;
+    height: 12%;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #221F20;
+    border-radius: 5px;
+    font-size: medium;
+    color: #eee;
+}
+.send{
+    width: 42%;
+    height: 20%;
+    margin: 3vh;
+    background-color:#3C29E3;
+    border-radius: 5px;
+    border:none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    
+}
+
+.send:hover{
+    background-color:#1baae3;
+    cursor:pointer
+}
+.containeranchortosignup{
+    display: flex;
+    justify-content: center;
+}
+.anchortosignup{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #3C29E3;
+    margin-top: 20px;
+}
+.anchortosignup:hover{
+    text-decoration: underline;
+    color: #1baae3;
+    cursor:pointer;
+    
+}
+.shape2{
+    background-color: #CAC4CE;
+    height: 3%;
+    width: 19%;
+    
+    border-radius: 5px;
+}
+.shape{
+    background-color:#CAC4CE;
+    height: 3%;
+    width: 19%;
+    
+    border-radius: 5px;
+}
+.containershape{
+    
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+.por{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: #CAC4CE;
+    font-weight: 600;
+}
