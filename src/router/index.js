@@ -1,4 +1,5 @@
 
+import CardDetails from '../components/cardDetails/cardDetails'
 import Home from './Home/Home'
 import Layout from '../layouts/Layout'
 import React from 'react'
@@ -14,10 +15,11 @@ const indexRouter = createBrowserRouter([{
         { path: "/", element : <Home /> } ,
         { path: "/details", element : <CardDetails /> } ,
     { path: "/shopping-cart", element: <ShoppingCart/> },
-        { path: "/store", element : <GamesCards /> } 
+        { path: "/store", element : <GamesCards /> },
+        { path: "/details/:id", element : <CardDetails /> } 
     ]
 }
-  
+
 ])
 
 export default indexRouter 
