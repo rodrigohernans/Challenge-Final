@@ -1,0 +1,260 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    background-color: #221F20;
+    box-shadow: 1px 7px 25px rgba(5,5,5,5);
+}
+
+.explorerMenu{
+    background-color: #8D86C9;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 40px;
+    width: 200px;
+    height: 300px;                   /* sacar */
+    border: 2px white solid;
+    box-shadow: 1px 7px 25px rgba(5,5,5,5);
+    background-image: url(../../../public/assets/nebulaFondo.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 20;
+    
+    
+}
+.menuOption{
+    /* anchors */
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+}
+.menuOption:hover{
+    background-color: #ffffff88;
+    border-radius: 5px;
+}
+.acountMenu{
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 60px;
+    border: 2px white solid;
+    margin-left: 130px;
+    background-image: url(../../../public/assets/nebulaFondo.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    z-index: 20;
+
+}
+
+.section1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+    
+}
+.logoImg{
+    margin: 15px;
+    width: 110px;
+    height: 20px;
+    padding: 5px;
+}
+.logoImg:hover{
+    background-color: #8d86c991;
+    border-radius: 10px;
+opacity: 1;
+}
+
+.acount{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    color: white;
+    font-size: 12px;
+    
+}
+
+.arrowAcount{
+    width: 10px;
+    margin-left: 10px;
+}
+
+.buttonAttendance{
+    display: flex;
+    height: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+.buttonAcount{
+    display: flex;
+    margin:0 5px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    
+    
+} 
+.buttonAttendance:hover{
+    background-color: #8d86c9b0;
+
+}
+.buttonAcount:hover{
+    background-color: #8d86c9b0;
+}
+.section2{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.explore{
+    background-color: #575561;
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    padding: 5px;
+   
+}
+.explore:hover{
+    background-color: #8d86c9b0;
+}
+.buttonsExplore{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.arrowExplore{
+    width: 15px;
+    height: 9px;
+    margin: 5px 0px 0px 5px;
+  
+}
+.divCarrito,.divDeseados,.divNebula {
+    background-color: #8D86C9;
+    padding: 3px;
+    border-radius: 5px;
+    margin:0 5px;
+    color: white;
+}
+.divCarrito{
+    height: 30px;
+    width: 30px;
+background-image: url(../../../public/assets/shopIcon.png);
+background-size: 25px;
+background-position-x: center;
+background-position-y: center;
+background-repeat: no-repeat;
+}
+.divCarrito:hover{
+    background-color: #8d86c9b0;
+}
+.divDeseados{
+      height: 30px;
+    width: 30px;
+    background-image: url(../../../public/assets/favoriuteIconNavBar.png);
+ background-size: 23px;
+ background-position-x: center;
+ background-position-y: center;
+ background-repeat: no-repeat;
+}
+.divDeseados:hover{
+    background-color: #8d86c9b0;
+}
+.divNebula{
+    width:90px;
+    background-image: url(../../../public/assets/nebulaIsotipe.png);
+    background-size: 85px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+.divNebula:hover{
+    background-color: #8d86c9b0;
+}
+
+@media (min-width:768px){
+    .section1{
+        padding: 40px;
+    }
+    .section2{
+        margin:0px 10px
+    }
+
+    .logoImg{
+        height: 30px;
+        width: 300px;
+    }
+    .acount{
+        font-size: 22px;
+        margin-right: 25px;
+    }
+    .arrowAcount{
+        width: 20px;
+    }
+    .explore{
+        height: 50px;
+        font-size: 22px;
+        margin-bottom: 10px;
+        padding: 20px;
+    }
+    .arrowExplore{
+        width: 20px;
+        height: 12px;
+    }
+    .divCarrito{
+        height: 50px;
+        width: 50px;
+        margin-left: 20px;
+
+    }
+    .divDeseados{
+          height: 50px;
+        width: 50px;
+        
+    }
+    .divNebula{
+        width:150px;
+        height: 50px;
+        background-size: 140px;
+    }
+    .explorerMenu{
+        margin-top: 60px;
+        width: 500px;
+    }
+    .acountMenu{
+        width: 170px;
+        
+    }
+    .menuOption{
+        /* anchors */
+        font-size: 22px;
+        padding: 10px;
+    }
+}
+
+/*
+fondo negro : #221F20
+azulviolaceo : #725AC1
+gris: #575561
+celeste claro: #8D86C9
+azul boton: #3C29E3
+CARTAS::after
+azul oscuro: #242038
+gris claro: #CAC4CE
+boton azul: #3C29E3
+*/

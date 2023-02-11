@@ -1,0 +1,59 @@
+.maincontainer{
+    background-color: #221F20;
+    height: 130vh;
+    width: 100%;
+}
+.nebulacontainer{
+    height: 37vh;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    
+}
+.nebulalogo{
+    margin-top: 20vh;
+    height: 37%;
+    width: 35%;
+}
+.formcontainer{
+    height: 60vh;
+    border: none;
+    
+}
+.fieldsetcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 37vh;
+    border: none;
+    
+}
+.emailinput{
+    width: 40%;
+    height: 12%;
+    margin: 3vh;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #221F20;
+    border-radius: 5px;
+    font-size: medium;
+    color: #eee;
+}
+.send{
+    width: 42%;
+    height: 20%;
+    margin: 3vh;
+    background-color:#3C29E3;
+    border-radius: 5px;
+    border:none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    
+}
+
+.send:hover{
+    background-color:#1baae3;
+    cursor:pointer
+}

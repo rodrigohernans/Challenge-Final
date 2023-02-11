@@ -1,0 +1,131 @@
+.buttonCategory0{
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 8px;
+    color: white;
+    background-image: url(../../../public/assets/shooterIcon.png);
+    background-size: 28px;
+    background-position-x: center;
+    background-position-y: 14px;
+    background-repeat: no-repeat;
+
+}
+.buttonCategory1{
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 8px;
+    color: white;
+    background-image: url(../../../public/assets/adventureIcon.png);
+    background-size: 30px;
+    background-position-x: center;
+    background-position-y: 15px;
+    background-repeat: no-repeat;
+}
+.buttonCategory2{
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 8px;
+    color: white;
+    background-image: url(../../../public/assets/sportsIcon.png);
+    background-size: 20px;
+    background-position-x: center;
+    background-position-y: 16px;
+    background-repeat: no-repeat;
+}
+.buttonCategory3{
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 8px;
+    color: white;
+    background-image: url(../../../public/assets/rpgIcon.png);
+    background-size: 26px;
+    background-position-x: center;
+    background-position-y: 15px;
+    background-repeat: no-repeat;
+}
+.buttonCategory4{
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 8px;
+    color: white;
+    background-image: url(../../../public/assets/estrategyIcon.png);
+    background-size: 28px;
+    background-position-x: center;
+    background-position-y: 16px;
+    background-repeat: no-repeat;
+}
+.buttonCategory0:hover,.buttonCategory1:hover,.buttonCategory2:hover,.buttonCategory3:hover,.buttonCategory4:hover{
+    border-radius: 20px;
+    padding:5px;
+    text-shadow: 2px 1px 15px rgba(1,1,1,1);
+
+
+}
+@media (min-width:768px){
+    .buttonCategory0{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        font-size: 25px;
+        margin-left: 40px;
+        height: 150px;
+        background-size: 75px;
+        background-position-y: 40px;
+    }
+    .buttonCategory1{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        font-size: 25px;
+        margin-left: 80px;
+        height: 150px;
+        background-size: 95px;
+        background-position-y: 40px;
+    }
+    .buttonCategory2{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        font-size: 25px;
+        margin-left: 80px;
+        height: 150px;
+        background-size: 55px;
+        background-position-y: 50px;
+    }
+    .buttonCategory3{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        font-size: 25px;
+        margin-left: 80px;
+        height: 150px;
+        background-size: 70px;
+        background-position-y: 48px;
+    }
+    .buttonCategory4{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        font-size: 25px;
+        margin-left: 80px;
+        height: 150px;
+        background-size: 70px;
+        background-position-y: 55px;
+    }
+
+}
