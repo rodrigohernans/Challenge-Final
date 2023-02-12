@@ -6,10 +6,12 @@
 
 .conteiner{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 25px;
+    margin-bottom: 80px;
 }
-
 .conteinerCard{
 display: flex;
 flex-direction: column;
@@ -22,7 +24,9 @@ margin-bottom: 25px;
 .gamePhoto{
     border-radius: 5px;
     margin-bottom: 2px;
-    width: 440px;
+    width: 100%;
+    height: 150px;
+    object-fit: fill;
 }
 
 .gamePhoto:hover{
@@ -34,12 +38,12 @@ margin-bottom: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 45px;
+    height: 60px;
     color: white;
     align-items: center;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 .favIcon{
     height: 30px;
@@ -75,11 +79,12 @@ margin-bottom: 25px;
 
 @media (min-width:768px){
     .conteinerCard{
-        width: 450px;
-        padding: 2px; 
+        width: 380px;
+        margin: 10px;
+        height: 400px;
         }
         .titleAndFav{  
-            height: 70px;
+            height: 90px;
             font-size: 25px;
         }
         .favIcon{
@@ -98,8 +103,24 @@ margin-bottom: 25px;
             padding: 10px;
             font-size: 20px;
         }
-        .anchorDetail{
-            
+        .gamePhoto{
+            border-radius: 5px;
+            margin-bottom: 2px;
+            width: 100%;
+            height: 230px;
+            object-fit: fill;
+        }
+}
+@media (min-width:600px) and (max-width:768px) {
+    .conteinerCard{
+        width: 280px;
+        margin: 10px; 
+        }
+}
+@media (min-width:768px) and (max-width:940px) {
+    .conteinerCard{
+        width: 350px;
+        margin: 10px; 
         }
 }
 /*
