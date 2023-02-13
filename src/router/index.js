@@ -1,16 +1,13 @@
-
-
 import CardDetails from '../components/cardDetails/cardDetails'
-
+import GamesCards from '../components/allGamesCards/AllGamesCards'
 import Home from './Home/Home'
 import Layout from '../layouts/Layout'
+import Presentacion from '../components/presentacion/Presentacion'
 import React from 'react'
+import ShoppingCart from '../components/cart/Cart'
 import SignIn from './Login/SignIn'
 import SignUp from "./Login/SignUp"
-import GamesCards from '../components/allGamesCards/AllGamesCards'
 import {createBrowserRouter} from "react-router-dom"
-import ShoppingCart from '../components/cart/Cart'
-
 
 const indexRouter = createBrowserRouter([{
     path: '/',
@@ -23,7 +20,12 @@ const indexRouter = createBrowserRouter([{
         { path: "/details/:id", element : <CardDetails /> } ,
             { path:"/signin",element:<SignIn/> },
     { path:"/signup",element:<SignUp/> } 
-    ]
+    ],
+},
+{
+    path: '/presentacion',
+    element: <Presentacion />
+
 }
 
 ])
