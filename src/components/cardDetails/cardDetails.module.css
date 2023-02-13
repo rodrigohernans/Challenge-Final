@@ -25,7 +25,7 @@
     align-items: center;
     width: 100%;
     height: 30vh;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .containerImage:hover{
     opacity: 0.8;
@@ -34,6 +34,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.8;
+}
+.imagen:hover{
+    opacity: 1;
 }
 
 .info {
@@ -48,6 +52,7 @@
     justify-content: space-evenly;
     width: 100%;
     text-align: center;
+    margin: 1em;
 }
 .category{
     width: 100%;
@@ -72,24 +77,30 @@
 }
 .titulo {
     text-align: center;
+    padding: 1em;
 }
 
 .downInfo{
     display: flex;
     justify-content: space-evenly;
-    background-color:  #725ac1;
+    background-color:  #CAC4CE;
+    padding: 0.1em;
 }
 .window {
-    width: 1rem;
+    width: 2rem;
     padding: 0.4em;
     color: white;
 } 
 .shop {
-    width: 1rem;
-    padding: 0.4em;
+    width: 2rem;
+    padding: 0.3em;
+    background-color: #8D86C9;
+    margin : 0.1em;
+    border-radius: 5px;
+    
 } 
 .shop:hover{
-    background-color: black;
+    background-color: #8d86c9b0;; 
     border-radius: 10%;
     cursor: pointer;
 }
@@ -124,16 +135,17 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 100%;
     margin-top: 3em;
 }
 
 .containerImage2{
-    width: 100%;
+    width: 95%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.5em;
 }
 
 .mainImage {
@@ -147,22 +159,15 @@ button:hover{
 }
 
 .containerReq{
-    height: 50vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media (min-width: 768px) {
-    .moreInfo{
-        display: none;
-    } 
-}
-
 
 @media (min-width: 1200px) {
     .containerP{
-        margin-top: 3rem;
         flex-direction: row;
         width: 80%;
     }
@@ -175,38 +180,55 @@ button:hover{
     }
     .containerImage{
         width: 100%;
-        height: 60%;
-        
     }
     .imagen{
-        width: 90%;
+        width: 95%;
+        height: 90%;
     }
+    .info {
+        width: 95%;
+    }
+
     .mainImage{
-        margin-top: 5rem;
+        width: 95%;
+        height: 250px;
     }
     .containerCard{
-        background-color: #16202d;
-        border: solid 1px #575561;
+        background-color: #242038;
+        border: solid 1px #725ac1;
         border-radius: 1rem;
         padding: 1em 2em;
         transition: all 0.2s;
         flex-direction: row-reverse;
         width: 80%;
-        height: 75vh;
-        margin-top: 3rem;
+
+        height: 90vh;
+
+        margin-top: 2em;
     }
 
     .firstContainer{
         width: 40%;
-        height: 60%;
+        height: 90%;
     }
     .secondContainer{
         width: 60%;
         height: 60%;
     } 
-        .moreInfo{
+    .moreInfo{
         display: none;
     } 
+    
+    .imgCarousel{
+        width: 90%;
+        height: 5em;
+    }
+    .containerImg{
+        height: 5em;
+    }
+    .containerReq{
+        height: 90vh;
+    }
 }
 
 
@@ -236,7 +258,7 @@ button:hover{
 
 .containerImg {
     display: flex;
-    height: 75%;
+    height: 80%;
     margin-bottom: 0.5em;
 }
 
@@ -250,19 +272,36 @@ button:hover{
 @media (min-width: 768px) {
     .containerImage{
         margin-right: 0.5rem;
+        height: 50%;
+        width: 100%;
     }
-    .containerImg{
-        height: 65%;
+    .containerReq{
+    height: 60vh;
     }
 
-.imgCarousel{
-    width: 90%;
-    height: 100%;
-    padding: 1rem;
+    .moreInfo{
+        display: none;
+    } 
+    .secondContainer{
+        height: 30vh;
+    }
+
+    .imgCarousel{
+    width: 95%;
+    height: 8em;
     object-fit: cover;
-    opacity: 0.6;
-}
-.imgCarousel:hover{
+    opacity: 0.8;
+    }
+    .imgCarousel:hover{
     opacity: 1;
+
 }
+.containerImage2{
+    height: 200px;
+    margin-top: 78px;
+}
+.youtube{
+    height: 300px;
+}.
+
 }
