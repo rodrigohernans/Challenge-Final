@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import styles from "../navbar/navbar.module.css";
+
 import { Link as Anchor } from "react-router-dom";
+import styles from "../navbar/navbar.module.css";
 
 const Navbar = () => {
   const [variable, setVariable] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
     <>
       <div className={styles.nav}>
         <section className={styles.section1}>
-          <Anchor to="/"><img 
+          <Anchor to="/home"><img 
             className={styles.logoImg}
             src="../../assets/nebulaIsotipe.png"
             alt="logo"

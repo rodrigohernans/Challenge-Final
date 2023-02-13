@@ -9,11 +9,17 @@ import SignIn from './Login/SignIn'
 import SignUp from "./Login/SignUp"
 import {createBrowserRouter} from "react-router-dom"
 
-const indexRouter = createBrowserRouter([{
+const indexRouter = createBrowserRouter([
+    {
+        path: '/',
+        element: <Presentacion />
+    },
+    {
+    
     path: '/',
     element:<Layout/>,
     children:[
-        { path: "/", element : <Home /> } ,
+        { path: "/home", element : <Home /> } ,
         { path: "/details", element : <CardDetails /> } ,
     { path: "/shopping-cart", element: <ShoppingCart/> },
         { path: "/store", element : <GamesCards /> },
@@ -22,11 +28,6 @@ const indexRouter = createBrowserRouter([{
     { path:"/signup",element:<SignUp/> } 
     ],
 },
-{
-    path: '/presentacion',
-    element: <Presentacion />
-
-}
 
 ])
 
