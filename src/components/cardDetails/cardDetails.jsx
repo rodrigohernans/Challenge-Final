@@ -86,16 +86,6 @@ function CardDetails() {
               <img src={shop} alt="" className={styles.shop} />
             </div>
           </div>
-          <div className={styles.moreInfo}>
-            <Link
-              className={styles.button}
-              to="carousel2"
-              smooth={true}
-              duration={600}
-            >
-              Explore more images
-            </Link>
-          </div>
         </div>
 
         <div className={styles.secondContainer} id="carousel2">
@@ -177,16 +167,6 @@ function CardDetails() {
                 />
               </div>
             </Carousel>
-          </div>
-          <div className={styles.moreInfo}>
-            <Link
-              to="Requirements"
-              className={styles.button}
-              smooth={true}
-              duration={800}
-            >
-              Check the requirements
-            </Link>
           </div>
         </div>
         
