@@ -4,7 +4,7 @@ import categoryReducers from "./categories/reducers";
 import gamesReducer from "./games/reducers";
 import authReducer from './auth/reducers';
 
-export const store = configureStore({
+ const store = configureStore({
     reducer: {
         allgames: allgamesreducers,
         categories: categoryReducers,
@@ -12,5 +12,5 @@ export const store = configureStore({
         auth: authReducer,
     }
 })
-
+export default store
 

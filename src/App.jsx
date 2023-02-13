@@ -20,10 +20,10 @@ function App() {
             dispatch(iniciar_sesion_con_token(token))
         }
     },[])
-    return 
+    return (
         <Provider store={store}>
       <RouterProvider router={indexRouter} />
-    </Provider>
+    </Provider>)
     }
 
 
