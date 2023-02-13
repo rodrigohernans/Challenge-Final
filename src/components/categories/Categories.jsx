@@ -3,6 +3,7 @@ import styles from "../categories/categories.module.css";
 import { Link as Anchor } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import categoryActions from "../../store/categories/actions";
+import CategoryButton from "./CategoryButton";
 const { getCategories } = categoryActions;
 
 function Categories() {
@@ -36,10 +37,12 @@ function Categories() {
           {categories.map((category, index) => {
             return (
              
-              <div key={index} className={"buttonCategory" + index}>
-                {category.name}
-              
-              </div>
+          <CategoryButton 
+          id={category._id}
+          key={index}
+          index={index}
+          name={category.name}
+          />
             );
           })}
           </div>

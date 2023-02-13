@@ -15,7 +15,7 @@ const dispatch = useDispatch()
 
 useEffect(()=>{
   dispatch(getAllGames())
-  console.log(gamesStore)
+  //console.log(gamesStore)
 },[])
 
 
@@ -28,7 +28,7 @@ useEffect(()=>{
     <div className={styles.conteiner}>
       {gamesStore.map((game, index) => {
         return (
-          <div className={styles.conteinerCard}>
+          <div className={styles.conteinerCard} key={index} >
             <Anchor
               className={
                 styles.anchorDetail
