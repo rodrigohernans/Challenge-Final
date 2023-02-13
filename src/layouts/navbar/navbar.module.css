@@ -80,11 +80,8 @@ opacity: 1;
 
 .acount{
     display: flex;
-    justify-content: space-between;
-    margin: 10px;
     color: white;
     font-size: 12px;
-    
 }
 
 .arrowAcount{
@@ -95,15 +92,23 @@ opacity: 1;
 .buttonAttendance{
     display: flex;
     height: 20px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     align-items: center;
 }
+.buttonStore{
+    display: flex;
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
 .buttonAcount{
     display: flex;
-    margin:0 5px;
     height: 20px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     align-items: center;
     
@@ -115,6 +120,10 @@ opacity: 1;
 }
 .buttonAcount:hover{
     background-color: #8d86c9b0;
+}
+.buttonStore:hover{
+    background-color: #8d86c9b0;
+
 }
 .section2{
     padding: 5px;
@@ -203,7 +212,7 @@ background-repeat: no-repeat;
     }
     .acount{
         font-size: 22px;
-        margin-right: 25px;
+
     }
     .arrowAcount{
         width: 20px;
@@ -247,6 +256,18 @@ background-repeat: no-repeat;
         font-size: 22px;
         padding: 10px;
     }
+    .buttonAttendance{
+        padding: 20px;
+    }
+    .buttonStore{
+        padding: 20px;
+
+    }
+    .buttonAcount{
+        padding: 20px;
+        
+        
+    } 
 }
 
 /*

@@ -19,6 +19,7 @@ const Navbar = () => {
             alt="logo"
           /></Anchor>
           <div className={styles.acount}>
+            <Anchor to="./store" className={styles.buttonStore}>Store</Anchor>
             <div className={styles.buttonAttendance}>Attendance</div>
             <div onClick={menuAcount} className={styles.buttonAcount}>
               {" "}

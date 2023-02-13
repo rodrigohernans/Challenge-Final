@@ -6,6 +6,7 @@ import React,{ useEffect } from "react";
 import Categories from '../../components/categories/Categories'
 import { useSelector,useDispatch } from "react-redux";
 import allGamesActions from "../../store/allGames/actions";
+import { Link as Anchor } from "react-router-dom";
 
 
 const {getAllGames} = allGamesActions
@@ -79,7 +80,14 @@ useEffect(()=>{
     >
       {gamesStore.map((game,index)=>{
         return(
-<div className={styles.divCarrusel}><img className={styles.carruselImg} src={game.image} alt={game.description} /></div>
+          <Anchor
+              className={
+                styles.anchorDetail
+              }   to= 
+              {`/details/${game._id}`}
+              key={index} 
+            ><div className={styles.divCarrusel}><img className={styles.carruselImg} src={game.image} alt={game.description} /></div></Anchor>
+
         )
       })}
 
@@ -93,10 +101,10 @@ useEffect(()=>{
        
     
             <Categories/>
-          {/*   <Card/> */}
+         <Card/> 
             </div>
     
     )
 }
 
-export default Home
+export default Home;

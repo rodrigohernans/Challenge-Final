@@ -2,7 +2,6 @@ import styles from "./Requirements.module.css";
 import { useSelector } from "react-redux";
 
 const Requirements = () => {
-
   const gameStore = useSelector((store) => store?.games);
 
   return (
@@ -13,12 +12,28 @@ const Requirements = () => {
       <div>
         <div className={styles.container2}>
           <div className={styles.firstContainer}>
-            <p>So: {gameStore?.game?.response?.so}</p>
-            <p>Procesador: {gameStore?.game?.response?.procesador} </p>
+            <ul>
+              <li>
+                <strong>So: </strong>
+                {gameStore?.game?.response?.so}
+              </li>
+              <li>
+                <strong>Procesador: </strong>
+                {gameStore?.game?.response?.procesador}
+              </li>
+            </ul>
           </div>
           <div className={styles.secondContainer}>
-            <p>Graphics: {gameStore?.game?.response?.graphics} </p>
-            <p>Ram: {gameStore?.game?.response?.ram} </p>
+            <ul>
+              <li>
+                <strong>Graphics: </strong>
+                {gameStore?.game?.response?.graphics}
+              </li>
+              <li>
+                <strong>Ram: </strong>
+                {gameStore?.game?.response?.ram}
+              </li>
+            </ul>
           </div>
         </div>
       </div>

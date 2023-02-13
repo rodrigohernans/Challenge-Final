@@ -7,9 +7,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 code {
   font-family: 'Coolvetica Rg'
+}
+
+#root{
+  background-color: #221F20;
 }
