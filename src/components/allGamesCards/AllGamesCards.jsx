@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect ,useRef,useState} from "react";
 import Categories from "../categories/Categories";
 import Card from "../card/Card";
 import styles from "./AllGamesCards.module.css"
@@ -8,38 +8,22 @@ import allGamesActions from "../../store/allGames/actions";
 const {getAllGames} = allGamesActions
 
 const GamesCards = () => {
+  const dispatch = useDispatch()
 const gamesStore = useSelector(store=>store.allgames.allgames)
-const page = useSelector(store=>store)
-console.log(page)
-const dispatch = useDispatch()
+//const text = useSelector((store) => store.comics.text);
+const inputCategory = useSelector((store) => store.filterCategories
+.filterGame);
+console.log(inputCategory)
+//const [load, setLoad] = useState(false);
+
 
 useEffect(()=>{
-  dispatch(getAllGames())
-},[])
-/* const next = () => {
-  const gamesLimit = gamesLimit.length
-  console.log(gamesLimit)
-  dispatch(
-    getComics({
-      page: page+1,
-    })
-  );
-} */;
-/* const boton = () => {
-    
-  const gamesLimit = gamesLimit.length
-  console.log(gamesLimit)
-  
-  if (gamesLimit<9) {
-    return <button >No more games</button>;
-  } else {
-    return (
-      <button onClick={next}>
-        More
-      </button>
-    );
-  }
-}; */
+  dispatch(getAllGames({
+    //inputText: inputText.current?.value,
+    inputCategory: inputCategory.join(","),
+  }))
+},[inputCategory])
+
 
   return(
     <div className={styles.conteiner}>
