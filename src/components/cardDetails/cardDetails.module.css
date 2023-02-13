@@ -25,7 +25,7 @@
     align-items: center;
     width: 100%;
     height: 30vh;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .containerImage:hover{
     opacity: 0.8;
@@ -34,6 +34,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.8;
+}
+.imagen:hover{
+    opacity: 1;
 }
 
 .info {
@@ -72,24 +76,30 @@
 }
 .titulo {
     text-align: center;
+    padding: 1em;
 }
 
 .downInfo{
     display: flex;
     justify-content: space-evenly;
-    background-color:  #725ac1;
+    background-color:  #CAC4CE;
+    padding: 0.1em;
 }
 .window {
-    width: 1rem;
+    width: 2rem;
     padding: 0.4em;
     color: white;
 } 
 .shop {
-    width: 1rem;
-    padding: 0.4em;
+    width: 2rem;
+    padding: 0.3em;
+    background-color: #8D86C9;
+    margin : 0.1em;
+    border-radius: 5px;
+    
 } 
 .shop:hover{
-    background-color: black;
+    background-color: #8d86c9b0;; 
     border-radius: 10%;
     cursor: pointer;
 }
@@ -129,11 +139,12 @@ button:hover{
 }
 
 .containerImage2{
-    width: 100%;
+    width: 95%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.5em;
 }
 
 .mainImage {
@@ -162,7 +173,6 @@ button:hover{
 
 @media (min-width: 1200px) {
     .containerP{
-        margin-top: 3rem;
         flex-direction: row;
         width: 80%;
     }
@@ -175,30 +185,34 @@ button:hover{
     }
     .containerImage{
         width: 100%;
-        height: 60%;
-        
     }
     .imagen{
-        width: 90%;
+        width: 95%;
+        height: 90%;
     }
+    .info {
+        width: 95%;
+    }
+
     .mainImage{
-        margin-top: 5rem;
+        width: 95%;
+        height: 300px;
     }
     .containerCard{
-        background-color: #16202d;
-        border: solid 1px #575561;
+        background-color: #242038;
+        border: solid 1px #725ac1;
         border-radius: 1rem;
         padding: 1em 2em;
         transition: all 0.2s;
         flex-direction: row-reverse;
         width: 80%;
         height: 75vh;
-        margin-top: 3rem;
+        margin-top: 2em;
     }
 
     .firstContainer{
         width: 40%;
-        height: 60%;
+        height: 90%;
     }
     .secondContainer{
         width: 60%;
@@ -236,7 +250,7 @@ button:hover{
 
 .containerImg {
     display: flex;
-    height: 75%;
+    height: 80%;
     margin-bottom: 0.5em;
 }
 
@@ -250,17 +264,16 @@ button:hover{
 @media (min-width: 768px) {
     .containerImage{
         margin-right: 0.5rem;
+        height: 100%;
     }
-    .containerImg{
-        height: 65%;
-    }
+
 
 .imgCarousel{
     width: 90%;
-    height: 100%;
+    height: 8em;
     padding: 1rem;
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .imgCarousel:hover{
     opacity: 1;

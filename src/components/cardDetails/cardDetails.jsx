@@ -1,5 +1,7 @@
 import "react-multi-carousel/lib/styles.css";
+
 import { useDispatch, useSelector } from "react-redux";
+
 import Carousel from "react-multi-carousel";
 import { Link } from "react-scroll";
 import React from "react";
@@ -12,12 +14,11 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import window from "../../assets/windowsIcon.png";
 
-
 const { getGame } = gamesActions;
 
 function CardDetails() {
   const gameStore = useSelector((store) => store.games);
-  console.log(gameStore?.game?.response);
+  console.log(gameStore);
 
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -105,7 +106,23 @@ function CardDetails() {
             </p>
           </div>
           <div className={styles.containerCarousel}>
-            <Carousel responsive={responsive} className={styles.carousel}>
+            <Carousel additionalTransfrom={0}
+      arrows
+      autoPlay
+      autoPlaySpeed={3000}
+      centerMode={false}
+      containerClass="container-with-dots"
+      dotListClass=""
+      draggable
+      focusOnSelect={false}
+      infinite={true}
+      itemClass=""
+      keyBoardControl
+      minimumTouchDrag={80}
+      pauseOnHover
+      renderArrowsWhenDisabled={false}
+      renderButtonGroupOutside={false}
+      renderDotsOutside={false} responsive={responsive} className={styles.carousel}>
               <div className={styles.containerImg}>
                 <img
                   src={gameStore?.game?.response?.trailer[0]}
