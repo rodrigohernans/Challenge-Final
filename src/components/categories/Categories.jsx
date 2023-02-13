@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
-import styles from "../categories/categories.module.css";
 import './categoryIcons.css' //hoja de estilos solo para los iconos de las categorias
+
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import { Link as Anchor } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
 import categoryActions from '../../store/categories/actions'
+import styles from "../categories/categories.module.css";
+
 const {getCategories} = categoryActions
 
 

@@ -1,5 +1,7 @@
 import "react-multi-carousel/lib/styles.css";
+
 import { useDispatch, useSelector } from "react-redux";
+
 import Carousel from "react-multi-carousel";
 import { Link } from "react-scroll";
 import React from "react";
@@ -12,12 +14,11 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import window from "../../assets/windowsIcon.png";
 
-
 const { getGame } = gamesActions;
 
 function CardDetails() {
   const gameStore = useSelector((store) => store.games);
-  console.log(gameStore?.game?.response);
+  console.log(gameStore);
 
   const dispatch = useDispatch();
   const { id } = useParams();
