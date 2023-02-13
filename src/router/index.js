@@ -2,7 +2,7 @@ import CardDetails from '../components/cardDetails/cardDetails'
 import GamesCards from '../components/allGamesCards/AllGamesCards'
 import Home from './Home/Home'
 import Layout from '../layouts/Layout'
-import Presentacion from '../components/presentacion/Presentacion'
+import Presentation from '../components/presentation/Presentation'
 import React from 'react'
 import ShoppingCart from '../components/cart/Cart'
 import SignIn from './Login/SignIn'
@@ -24,7 +24,7 @@ const indexRouter = createBrowserRouter([{
 },
 {
     path: '/presentacion',
-    element: <Presentacion />
+    element: <Presentation />
 
 }
 

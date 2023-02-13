@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './Presentacion.module.css'
+import styles from './Presentation.module.css'
 
-const Presentacion = (()=> {
+const Presentation = (()=> {
     return (
         <div className={styles.container}>
             <div className={styles.logo}>
@@ -11,4 +11,4 @@ const Presentacion = (()=> {
     )
 })
 
-export default Presentacion 
+export default Presentation
