@@ -1,41 +1,26 @@
 
  import { createAsyncThunk  } from "@reduxjs/toolkit";
 import axios from "axios";
-import urlApi from "../../url";
+import urlApi from '../../ulr.js';
 
 const  addCart = createAsyncThunk(
     "addCart",
-    async(games, token) => {
+    async(token) => {
         try{
-            let url = `http://localhost:8000/api/shopping-cart/`
+            let url = `http://localhost:8000/api/cart/`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
-            const response = await axios.post(url ,games, headers)
+            const response = await axios.get(url , headers)
             console.log(response);
             return{
-                response: response.data
+                response: response.data.response
             }
         }catch(error){
             console.log(error)
         } 
     }
 )
-const deleteCart = createAsyncThunk(
-    "deleteCart",
-    async(games, token) => {
-        try{
-            let url = `http://localhost:8000/api/shopping-cart/`
-            let headers = {headers: {'Authorization': `Bearer ${token}`}}
-            const response = await axios.delete(url ,games, headers)
-            
-        }catch(error){
-            console.log(error)
-        }
-    }
-)
 
-const cartActions = {
-    addCart, deleteCart
-}
+const cartActions = {addCart}
 export default cartActions; 
 
 
