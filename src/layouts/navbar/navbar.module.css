@@ -10,7 +10,7 @@
 }
 
 .explorerMenu{
-    background-color: #8D86C9;
+    
     padding: 10px;
     border-radius: 5px;
     display: flex;
@@ -24,7 +24,9 @@
     background-image: url(../../../public/assets/nebulaFondo.jpg);
     background-size: cover;
     background-position: center;
+    opacity: 0.9;
     z-index: 20;
+    
     
     
 }

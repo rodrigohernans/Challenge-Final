@@ -56,7 +56,7 @@ const Navbar = () => {
             </div>
           ) : null}
           <div className={styles.buttonsExplore}>
-            <div className={styles.divCarrito}></div>
+          <Anchor to="./shopping-cart"><div className={styles.divCarrito}></div></Anchor>
             <div className={styles.divDeseados}></div>
             <div className={styles.divNebula}></div>
           </div>
@@ -67,3 +67,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+///

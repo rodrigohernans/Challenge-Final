@@ -6,11 +6,13 @@ const getAllGames = createAsyncThunk(
     "getAllGames",
     async () =>{
         try{
-            let allgames = await axios.get("http://localhost:8000/api/games")
+            let allgames = await axios.get(`http://localhost:8000/api/games`)
             return {
                 success: true ,
                 response: {
-                    allgames:allgames.data.response
+                    allgames:allgames.data.response,
+                    /* category:inputCategory,
+                    text:inputText */
                 }
                 
             }

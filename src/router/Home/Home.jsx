@@ -2,11 +2,23 @@ import 'react-multi-carousel/lib/styles.css';
 import styles from './home.module.css'
 import Carousel from 'react-multi-carousel';
 import Card from '../../components/card/Card'
-import React from "react";
+import React,{ useEffect } from "react";
 import Categories from '../../components/categories/Categories'
+import { useSelector,useDispatch } from "react-redux";
+import allGamesActions from "../../store/allGames/actions";
+
+
+const {getAllGames} = allGamesActions
 
 function Home() {
+const gamesStore = useSelector(store=>store.allgames.allgames)
+console.log(gamesStore)
+const dispatch = useDispatch()
 
+useEffect(()=>{
+  dispatch(getAllGames())
+  console.log(gamesStore)
+},[])
 
      
     return(
@@ -17,12 +29,12 @@ function Home() {
       autoPlay
       autoPlaySpeed={3000}
       centerMode={false}
-      className=""
+      className={styles.carrusel}
       containerClass="container-with-dots"
       dotListClass=""
       draggable
       focusOnSelect={false}
-      infinite={false}
+      infinite={true}
       itemClass=""
       keyBoardControl
       minimumTouchDrag={80}
@@ -36,7 +48,7 @@ function Home() {
             max: 3000,
             min: 1024
           },
-          items: 1,
+          items: 3,
           partialVisibilityGutter: 40
         },
         mobile: {
@@ -65,19 +77,23 @@ function Home() {
       slidesToSlide={1}
       swipeable
     >
-      <div className={styles.divCarrusel}><img className={styles.carruselImg} src="https://images.crazygames.com/games/forge-of-empires/cover-1589012034370.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop" alt="" /></div>
-        <div className={styles.divCarrusel}><img className={styles.carruselImg} src="https://cdn.cloudflare.steamstatic.com/steam/apps/1316870/capsule_616x353.jpg?t=1615322424" alt="" /></div>
-        <div className={styles.divCarrusel}><img className={styles.carruselImg} src="https://cdn.akamai.steamstatic.com/steam/apps/567630/capsule_616x353.jpg?t=1669272638" alt="" /></div>
-        <div className={styles.divCarrusel}><img className={styles.carruselImg} src="https://www.onrpg.com/wp-content/uploads/2018/02/The_Third_Age_668x227.jpg" alt="" /></div>
-        <div className={styles.divCarrusel}><img className={styles.carruselImg} src="https://cdn.cloudflare.steamstatic.com/steam/apps/588430/capsule_616x353.jpg?t=1671140220" alt="" /></div>
-    </Carousel>
+      {gamesStore.map((game,index)=>{
+        return(
+<div className={styles.divCarrusel}><img className={styles.carruselImg} src={game.image} alt={game.description} /></div>
+        )
+      })}
+
+
+
+       
+     </Carousel>
     
 
        
        
     
             <Categories/>
-            <Card/>
+          {/*   <Card/> */}
             </div>
     
     )

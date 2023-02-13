@@ -2,10 +2,13 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
+
 
 .homeContainer{
     background-color: #221F20;
+    margin-top: 20px;
 }
 .divCarrusel{
     display: flex;
@@ -26,16 +29,24 @@
 
 @media (min-width:768px){
     .carruselImg{
-        height: 500px;
-        width: 1300px;
-        margin: 50px;
+        width: 450px;
         display: flex;
+        padding: 5px;
+        margin: 5px;
+        background-color: #221f20a9;
+        
+    
     }
-    .divCarrusel{
-      
-        height: 500px;
+    .carruselImg:hover{
+        padding: 20px;
+        opacity: 0.5;
     }
-}
+    .carrusel{
+        background-color: #221f20a9;
+        border-radius: 40px;
+    }
+    }
+
 
 /*
 fondo negro : #221F20

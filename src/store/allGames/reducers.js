@@ -15,7 +15,9 @@ const allgamesreducers = createReducer(
             getAllGames.fulfilled,
             (state,action) =>{
                 let newState = {
-                    allgames: action.payload.response.allgames
+                    allgames: action.payload.response.allgames,
+                 /*    category: action.payload.response.category,
+                    text: action.payload.response.text */
                 }
                 return newState
             }
