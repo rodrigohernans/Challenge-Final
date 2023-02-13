@@ -17,7 +17,7 @@ export default function CategoryButton(props){
     let category = useSelector((store)=> store.categories.categories)
 //console.log(category)
     useEffect(()=>{
-        if(category>0){
+        if(category.length>0){
             if(category.includes(id)){
                 setColor(!color)
             }
