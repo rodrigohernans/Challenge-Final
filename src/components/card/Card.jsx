@@ -10,19 +10,18 @@ const { getAllGames } = allGamesActions;
 
 function Card() {
 const gamesStore = useSelector(store=>store.allgames.allgames)
-/* console.log(gamesStore) */
+console.log(gamesStore)
 const dispatch = useDispatch()
 
 useEffect(()=>{
-  dispatch(getAllGames())
-  //console.log(gamesStore)
+  dispatch(getAllGames(""))
 },[])
 
 
-  useEffect(() => {
+/*   useEffect(() => {
     dispatch(getAllGames());
   }, []);
-
+ */
 
   return (
     <div className={styles.conteiner}>
