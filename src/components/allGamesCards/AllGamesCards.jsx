@@ -9,21 +9,18 @@ const {getAllGames} = allGamesActions
 
 const GamesCards = () => {
   const dispatch = useDispatch()
-const gamesStore = useSelector(store=>store?.allgames?.allgames)
+const gamesStore = useSelector(store=>store)
 const text = useSelector((store) => store.allgames.text);
 const inputCategory = useSelector((store) => store?.filterCategories
 .filterGame);
-console.log(inputCategory)
+console.log(gamesStore)
 const [load, setLoad] = useState(false);
 let inputText = useRef(text);
 
 
 useEffect(()=>{
-  dispatch(getAllGames({
-    inputText: inputText.current?.value,
-    inputCategory: inputCategory.join(","),
-  }))
-},[load,inputCategory])
+  dispatch(getAllGames())
+},[])
 
 
   return(

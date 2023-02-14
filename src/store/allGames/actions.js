@@ -5,7 +5,7 @@ const getAllGames = createAsyncThunk(
   "getAllGames", 
   async ({inputText ,inputCategory}) => {
   try {
-    let allgames = await axios.get(`http://localhost:8000/api/games?title=${inputText}&category_id=${inputCategory}`);
+    let allgames = await axios.get(`http://localhost:8000/api/games`);
     return {
       success: true,
       response: {
