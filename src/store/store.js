@@ -6,7 +6,7 @@ import authReducer from './auth/reducers';
 import cartReducer from './cart/cart.reducer'
 import filterGameReducer from './filterCategory/reducer'
 
- const store = configureStore({
+export const store = configureStore({
     reducer: {
         allgames: allgamesreducers,
         categories: categoryReducers,
@@ -16,5 +16,5 @@ import filterGameReducer from './filterCategory/reducer'
         filterCategories: filterGameReducer
     }
 })
-export default store
+
 

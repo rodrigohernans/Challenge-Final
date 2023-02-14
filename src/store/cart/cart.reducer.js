@@ -5,7 +5,7 @@ import cartActions from './cart.actions';
 
 const { addCart }=  cartActions
 const initialState = {
-    cart: [],
+    itemcart: [],
 }
 
 const cartReducer = createReducer(
@@ -20,13 +20,13 @@ const cartReducer = createReducer(
                 return newState
             }
         )
-        .addCase(addCart.fulfilled, (state ,action ) => {
+/*         .addCase(addCart.fulfilled, (state ,action ) => {
             let newState = {
                 itemCart: action.payload.response.cart,
                 message: action.payload.message,
             }
             return newState
-        })
+        }) */
         .addCase(addCart.rejected , (state, action)=>{
             let newState= {
                 message: "Error Loading cart"
