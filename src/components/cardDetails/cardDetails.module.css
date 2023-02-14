@@ -202,7 +202,7 @@ button:hover{
         flex-direction: row-reverse;
         width: 80%;
 
-        height: 90vh;
+        height: 80vh;
 
         margin-top: 2em;
     }
@@ -295,13 +295,6 @@ button:hover{
     .imgCarousel:hover{
     opacity: 1;
 
-}
-.containerImage2{
-    height: 200px;
-    margin-top: 78px;
-}
-.youtube{
-    height: 300px;
-}.
+    }
 
 }
