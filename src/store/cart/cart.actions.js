@@ -1,39 +1,98 @@
-import { createAsyncThunk  } from "@reduxjs/toolkit";
+
+ import { createAsyncThunk  } from "@reduxjs/toolkit";
 import axios from "axios";
-import urlApi from "../../url";
+import urlApi from '../../ulr.js';
 
 const  addCart = createAsyncThunk(
     "addCart",
-    async(games, token) => {
+    async(token) => {
         try{
-            let url = `http://localhost:8000/api/shopping-cart/`
+            let url = `http://localhost:8000/api/cart/`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
-            const response = await axios.post(url ,games, headers)
+            const response = await axios.get(url , headers)
             console.log(response);
             return{
-                response: response.data
+                response: response.data.response
             }
         }catch(error){
             console.log(error)
         } 
     }
 )
-const deleteCart = createAsyncThunk(
-    "deleteCart",
-    async(games, token) => {
-        try{
-            let url = `http://localhost:8000/api/shopping-cart/`
-            let headers = {headers: {'Authorization': `Bearer ${token}`}}
-            const response = await axios.delete(url ,games, headers)
-            
-        }catch(error){
-            console.log(error)
-        }
+
+const cartActions = {addCart}
+export default cartActions; 
+
+
+
+/* import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+import { urlApi } from "../../api/url";
+
+const getCart = createAsyncThunk("getCart", async data => {
+  try {
+    const res = await axios.get(`${urlApi}/api/cart`, data.headers);
+    return {
+      success: res.data.success,
+      response: res.data.response,
+      message: res.data.message,
+    };
+  } catch (error) {
+    let message = error.response ? error.response.data.message || error.response.data : error.message;
+    return { success: false, message };
+  }
+});
+
+const addToCart = createAsyncThunk("addToCart", async data => {
+  try {
+    let res = await axios.post(`${urlApi}/api/carts`, data.body, data.headers);
+    return {
+      success: res.data.success,
+      response: res.data.response,
+      message: res.data.message,
+    };
+  } catch (error) {
+    let message = error.response ? error.response.data.message || error.response.data : error.message;
+    return { success: false, message };
+  }
+});
+
+const removeFromCart = createAsyncThunk("removeFromCart", async data => {
+  try {
+    let res = await axios.delete(`${urlApi}/api/carts?concertId=${data.concertId}`, data.headers);
+    return {
+      success: res.data.success,
+      response: res.data.response,
+      message: res.data.message
     }
-)
+  }catch(error) {
+    let message = error.response ? error.response.data.message || error.response.data : error.message;
+    return { success: false, message };
+  }
+});
+
+const emptyCart = createAsyncThunk("emptyCart", async data => {
+  try {
+    const res = await axios.delete(`${urlApi}/api/carts/${data.cartId}`, data.headers);
+    return {
+      success: res.data.success,
+    };
+  } catch (error) {
+    let message = error.response ? error.response.data.message || error.response.data : error.message;
+    return { success: false, message };
+  }
+});
 
 const cartActions = {
-    addCart, deleteCart
-}
-export default cartActions; 
+  getCart,
+  addToCart,
+  removeFromCart,
+  emptyCart,
+};
+
+export default cartActions;
+*/
+
+
+
 
