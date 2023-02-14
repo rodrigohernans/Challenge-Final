@@ -9,7 +9,7 @@ import styles from "../categories/categories.module.css";
 const { getCategories } = categoryActions;
 
 function Categories() {
-  const categories = useSelector((store) => store.categories?.categories);
+  const categories = useSelector((store) => store?.categories?.categories);
 
   const dispatch = useDispatch();
 
