@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import styles from "../navbar/navbar.module.css";
+
 import { Link as Anchor } from "react-router-dom";
+
+import styles from "../navbar/navbar.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import authActions from "../../store/auth/actions"
 const { cerrar_sesion } = authActions;
+
 
 const Navbar = () => {
   const [variable, setVariable] = useState(false);
