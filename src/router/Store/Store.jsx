@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import Categories from "../categories/Categories";
-import Card from "../card/Card";
-import styles from "./AllGamesCards.module.css"
+import Categories from "../../components/categories/Categories";
+import Card from "../../components/card/Card";
 import { useSelector,useDispatch } from "react-redux";
 import allGamesActions from "../../store/allGames/actions";
+import styles from "../Store/Store.module.css"
 
 const {getAllGames} = allGamesActions
 
-const GamesCards = () => {
+const Store = () => {
 const gamesStore = useSelector(store=>store.allgames.allgames)
 const page = useSelector(store=>store)
 console.log(page)
@@ -42,10 +42,7 @@ useEffect(()=>{
 }; */
 
   return(
-    <div className={styles.conteiner}>
-      <div >
-        <img src="https://www.freetogame.com/g/157/thumbnail.jpg" alt="" />
-      </div>
+    <div className={styles.contenedor}>
       <section>
         <div>
         <Categories/>
@@ -53,9 +50,8 @@ useEffect(()=>{
       </section>
       <section >
       <Card/>
-      {/* {boton()} */}
       </section>
       </div>
   )
 }
-export default GamesCards
+export default Store
