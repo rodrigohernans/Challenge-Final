@@ -9,10 +9,14 @@ const { getAllGames } = allGamesActions;
 
 
 function Card() {
-  const gamesStore = useSelector((store) => store.allgames.allgames);
-  /* console.log(gamesStore) */
-  
-  const dispatch = useDispatch();
+const gamesStore = useSelector(store=>store.allgames.allgames)
+/* console.log(gamesStore) */
+const dispatch = useDispatch()
+
+useEffect(()=>{
+  dispatch(getAllGames())
+  //console.log(gamesStore)
+},[])
 
 
   useEffect(() => {
@@ -24,7 +28,7 @@ function Card() {
     <div className={styles.conteiner}>
       {gamesStore.map((game, index) => {
         return (
-          <div className={styles.conteinerCard}>
+          <div className={styles.conteinerCard} key={index} >
             <Anchor
               className={
                 styles.anchorDetail

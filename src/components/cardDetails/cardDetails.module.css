@@ -201,7 +201,9 @@ button:hover{
         transition: all 0.2s;
         flex-direction: row-reverse;
         width: 80%;
+
         height: 80vh;
+
         margin-top: 2em;
     }
 
@@ -292,5 +294,7 @@ button:hover{
     }
     .imgCarousel:hover{
     opacity: 1;
+
     }
+
 }

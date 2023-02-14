@@ -1,110 +1,110 @@
-import "react-multi-carousel/lib/styles.css";
+import 'react-multi-carousel/lib/styles.css';
+import styles from './home.module.css'
+import Carousel from 'react-multi-carousel';
+import Card from '../../components/card/Card'
+import React,{ useEffect } from "react";
+import Categories from '../../components/categories/Categories'
+import { useSelector,useDispatch } from "react-redux";
+import allGamesActions from "../../store/allGames/actions";
+import { Link as Anchor } from "react-router-dom";
 
-import Card from "../../components/card/Card";
-import Carousel from "react-multi-carousel";
-import Categories from "../../components/categories/Categories";
-import React from "react";
-import styles from "./home.module.css";
+
+const {getAllGames} = allGamesActions
 
 function Home() {
-  return (
-    <div className={styles.homeContainer}>
-      <Carousel
-        additionalTransfrom={0}
-        arrows
-        autoPlay
-        autoPlaySpeed={3000}
-        centerMode={false}
-        className=""
-        containerClass="container-with-dots"
-        dotListClass=""
-        draggable
-        focusOnSelect={false}
-        infinite={false}
-        itemClass=""
-        keyBoardControl
-        minimumTouchDrag={80}
-        pauseOnHover
-        renderArrowsWhenDisabled={false}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024,
-            },
-            items: 1,
-            partialVisibilityGutter: 40,
-          },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0,
-            },
-            items: 1,
-            partialVisibilityGutter: 30,
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464,
-            },
-            items: 2,
-            partialVisibilityGutter: 30,
-          },
-        }}
-        rewind
-        rewindWithAnimation={false}
-        rtl={false}
-        shouldResetAutoplay
-        showDots={false}
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
-      >
-        <div className={styles.divCarrusel}>
-          <img
-            className={styles.carruselImg}
-            src= "https://codigovalido.com.br/wp-content/uploads/2020/02/cupom-league-of-angels.jpg"
-            
-            alt=""
-            />
-        </div>
-        <div className={styles.divCarrusel}>
-          <img
-            className={styles.carruselImg}
-            src= "https://i.ytimg.com/vi/HQq-J1UxY58/maxresdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div className={styles.divCarrusel}>
-          <img
-            className={styles.carruselImg}
-            src=  "https://s1.mmommorpg.com/media/wide/maxresdefault_rGzOvJC.jpg"
-            alt=""
-          />
-        </div>
-        <div className={styles.divCarrusel}>
-          <img
-            className={styles.carruselImg}
-            src=  "https://analisadaily.com/imagesfile/202211/20221129-192005_valorant-akan-segera-hadir-di-android.jpeg"
-            alt=""
-          />
-        </div>
-        <div className={styles.divCarrusel}>
-          <img
-            className={styles.carruselImg}
-            src="https://cdn.eraspace.com/pub/media/mageplaza/blog/post/e/z/ezgif-1-769bdac2cc.jpg"
-            alt=""
-          />
-        </div>
-      </Carousel>
+const gamesStore = useSelector(store=>store.allgames.allgames)
+console.log(gamesStore)
+const dispatch = useDispatch()
 
-      <Categories />
-      <Card />
-    </div>
-  );
+useEffect(()=>{
+  dispatch(getAllGames())
+  console.log(gamesStore)
+},[])
+
+     
+    return(
+      <div className={styles.homeContainer}>
+      <Carousel
+      additionalTransfrom={0}
+      arrows
+      autoPlay
+      autoPlaySpeed={3000}
+      centerMode={false}
+      className={styles.carrusel}
+      containerClass="container-with-dots"
+      dotListClass=""
+      draggable
+      focusOnSelect={false}
+      infinite={true}
+      itemClass=""
+      keyBoardControl
+      minimumTouchDrag={80}
+      pauseOnHover
+      renderArrowsWhenDisabled={false}
+      renderButtonGroupOutside={false}
+      renderDotsOutside={false}
+      responsive={{
+        desktop: {
+          breakpoint: {
+            max: 3000,
+            min: 1024
+          },
+          items: 3,
+          partialVisibilityGutter: 40
+        },
+        mobile: {
+          breakpoint: {
+            max: 464,
+            min: 0
+          },
+          items: 1,
+          partialVisibilityGutter: 30
+        },
+        tablet: {
+          breakpoint: {
+            max: 1024,
+            min: 464
+          },
+          items: 2,
+          partialVisibilityGutter: 30
+        }
+      }}
+      rewind
+      rewindWithAnimation={false}
+      rtl={false}
+      shouldResetAutoplay
+      showDots={false}
+      sliderClass=""
+      slidesToSlide={1}
+      swipeable
+    >
+      {gamesStore.map((game,index)=>{
+        return(
+          <Anchor
+              className={
+                styles.anchorDetail
+              }   to= 
+              {`/details/${game._id}`}
+              key={index} 
+            ><div className={styles.divCarrusel}><img className={styles.carruselImg} src={game.image} alt={game.description} /></div></Anchor>
+
+        )
+      })}
+
+
+
+       
+     </Carousel>
+    
+
+       
+       
+    
+            <Categories/>
+         <Card/> 
+            </div>
+    
+    )
 }
 
 export default Home;

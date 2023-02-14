@@ -37,8 +37,8 @@ const SignUp = () => {
             <div className={styles.nebulacontainer}>
                     <img src ="/assets/nebulaIsotipeLogotipePosibleVersion.png" className={styles.nebulalogo} />
                 </div>
-                <div>
-                    <p>Create your nebula account</p>
+                <div className={styles.psignupcontainer}>
+                    <p className={styles.psignup}>Create your free nebula account here </p>
                 </div>
                 <form action="post" className={styles.formcontainer}>
                     <fieldset className={styles.fieldsetcontainer}>
@@ -47,10 +47,6 @@ const SignUp = () => {
                         <input  type="password" placeholder="Password" ref={password} className={styles.emailinput}/>
                         <input onClick={(e)=>captureData(e)} type="submit" value="SignUp" className={styles.send} />
                     </fieldset>
-                    <div>
-                        <p>Do you already have an account? then</p>
-                        <Anchor to="/signin">Login!</Anchor>
-                    </div>
                 </form>
             </div>
         </main>

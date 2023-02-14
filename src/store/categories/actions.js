@@ -23,3 +23,18 @@ const getCategories = createAsyncThunk(
 const categoryActions = {getCategories}
 
 export default categoryActions
+/* import { createAction } from "@reduxjs/toolkit"
+
+const filterCategories = createAction(
+  'filterCategories',
+  (data) => {
+    console.log(data)
+    return {
+      payload: data
+    }
+    
+  }
+) 
+
+const filterCategoriesActions = { filterCategories }
+export default filterCategoriesActions */

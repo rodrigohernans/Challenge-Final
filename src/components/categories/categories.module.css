@@ -3,30 +3,58 @@
     padding: 0;
     margin: 0;
 }
-.container{
-    background-color: #575561;
-    display: flex;
-    width: 100%;
-    height: 8vh;
-    margin-top: 2em;
-    border-radius: 1em;
-}
-
-.title{
-    color: white;
-    font-size: 15px;
-}
 
 .containerCategories{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    background-color: #575561;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 25px;
+    height: 125px;
 }
-
+.containericons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.icon{
+    width: 40px;
+ 
+}
+.icon:hover{
+    background-color: rgba(240, 248, 255, 0.411);
+    padding: 8px;
+    border-radius: 20px;
+}
+.containerTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.buttonCategory{
+    color: white;
+    font-size: 11px;
+    margin: 5px 10px;
+    
+}
 
 @media (min-width:768px){
-.container {
-    height: 14vh;
+    .icon{
+        width: 60px;
+    }
+
+    .buttonCategory{
+        font-size: 20px;
+    }
+  
 }
-} 
+/*
+fondo negro : #221F20
+azulviolaceo : #725AC1
+gris: #575561
+celeste claro: #8D86C9
+azul boton: #3C29E3
+CARTAS::after
+azul oscuro: #242038
+gris claro: #CAC4CE
+boton azul: #3C29E3
+*/
