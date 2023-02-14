@@ -29,18 +29,19 @@
 
 @media (min-width:768px){
     .carruselImg{
-        width: 450px;
+        width: 420px;
         display: flex;
         padding: 5px;
         margin: 5px;
         background-color: #221f20a9;
-        height: 280px;
-        
-    
+        height: 250px;
+        border-radius: 0.2em;
+        opacity: 0.6;
+        transition: transform .2s;
     }
     .carruselImg:hover{
-        padding: 20px;
-        opacity: 0.5;
+        opacity: 1;
+        transform: scale(1.1);
     }
     .carrusel{
         background-color: #221f20a9;

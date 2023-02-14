@@ -9,19 +9,13 @@ const { getAllGames } = allGamesActions;
 
 
 function Card() {
-const gamesStore = useSelector(store=>store.allgames.allgames)
-/* console.log(gamesStore) */
+
+const gamesStore = useSelector(store=>store?.allgames?.allgames)
 const dispatch = useDispatch()
 
 useEffect(()=>{
-  dispatch(getAllGames())
-  //console.log(gamesStore)
+  dispatch(getAllGames(""))
 },[])
-
-
-  useEffect(() => {
-    dispatch(getAllGames());
-  }, []);
 
 
   return (
