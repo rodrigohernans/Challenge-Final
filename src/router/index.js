@@ -1,7 +1,7 @@
 import CardDetails from '../components/cardDetails/cardDetails'
-import GamesCards from '../components/allGamesCards/AllGamesCards'
 import Home from './Home/Home'
 import Layout from '../layouts/Layout'
+import Store from './Store/Store'
 import Presentation from '../components/presentation/Presentation'
 import React from 'react'
 import ShoppingCart from '../components/cart/Cart'
@@ -22,7 +22,7 @@ const indexRouter = createBrowserRouter([
         { path: "/home", element : <Home /> } ,
         { path: "/details", element : <CardDetails /> } ,
     { path: "/shopping-cart", element: <ShoppingCart/> },
-        { path: "/store", element : <GamesCards /> },
+        { path: "/store", element : <Store /> },
         { path: "/details/:id", element : <CardDetails /> } ,
             { path:"/signin",element:<SignIn/> },
     { path:"/signup",element:<SignUp/> } 
@@ -32,3 +32,4 @@ const indexRouter = createBrowserRouter([
 ])
 
 export default indexRouter 
+

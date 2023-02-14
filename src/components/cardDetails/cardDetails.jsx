@@ -27,7 +27,7 @@ function CardDetails() {
     },
   };
 
-  const gameStore = useSelector((store) => store.games);
+  const gameStore = useSelector((store) => store?.games);
   console.log(gameStore);
 
   const dispatch = useDispatch();
