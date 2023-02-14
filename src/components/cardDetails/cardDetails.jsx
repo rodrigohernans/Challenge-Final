@@ -19,8 +19,8 @@ const { getGame } = gamesActions;
 function CardDetails() {
 
   const opts = {
-    height: '250',
-    width: '500',
+    height: '275',
+    width: '550',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -72,29 +72,13 @@ function CardDetails() {
               className={styles.imagen}
             />
           </div>
+          
           <div className={styles.info}>
             <p className={styles.titulo}>
               {" "}
               {gameStore?.game?.response?.title}{" "}
             </p>
-            <p className={styles.description}>
-              {gameStore?.game?.response?.description}
-            </p>
-            <div className={styles.downInfo}>
-              <img src={window} alt="" className={styles.window} />
-              <img src={apple} alt="" className={styles.window} />
-              <img src={shop} alt="" className={styles.shop} />
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.secondContainer} id="carousel2">
-          <div className={styles.containerImage2}>
-
-          <YouTube className={styles.youtube} videoId={gameStore?.game?.response?.video} opts={opts}/>
-
-          </div>
-          <div className={styles.containerP}>
+            <div className={styles.containerP}>
             <p className={styles.category}>
               {" "}
               Category: {gameStore?.game?.response?.category}{" "}
@@ -103,6 +87,26 @@ function CardDetails() {
               Developer: {gameStore?.game?.response?.developer}{" "}
             </p>
           </div>
+            <p className={styles.description}>
+              {gameStore?.game?.response?.description}
+            </p>
+            
+            <div className={styles.downInfo}>
+              <img src={window} alt="" className={styles.window} />
+              <img src={apple} alt="" className={styles.window} />
+              <img src={shop} alt="" className={styles.shop} />
+            </div>
+          </div>
+          
+        </div>
+
+        <div className={styles.secondContainer} id="carousel2">
+          <div className={styles.containerImage2}>
+
+          <YouTube className={styles.youtube} videoId={gameStore?.game?.response?.video} opts={opts}/>
+
+          </div>
+          
           <div className={styles.containerCarousel}>
             <Carousel additionalTransfrom={0}
       arrows
@@ -130,6 +134,7 @@ function CardDetails() {
                   key={gameStore?.game?.response?.title}
                 />
               </div>
+              
               <div className={styles.containerImg}>
                 <img
                   src={gameStore?.game?.response?.trailer[1]}
