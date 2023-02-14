@@ -1,14 +1,13 @@
 import React, { useEffect ,useRef,useState} from "react";
-import Categories from "../categories/Categories";
-import Card from "../card/Card";
-import styles from "./AllGamesCards.module.css"
+import Categories from "../../components/categories/Categories";
+import Card from "../../components/card/Card";
 import { useSelector,useDispatch } from "react-redux";
 import allGamesActions from "../../store/allGames/actions";
-import styles from "../Store/Store.module.css"
+import GamesCategories from "../../components/categories/GamesCategories";
 
-const {getAllGames} = allGamesActions
+const {getAllGamesByFilter} = allGamesActions
 
-const GamesCards = () => {
+const Store = () => {
   const dispatch = useDispatch()
 const gamesStore = useSelector(store=>store?.allgames?.allgames)
 const text = useSelector((store) => store.allgames.text);
@@ -20,22 +19,22 @@ let inputText = useRef(text);
 
 
 useEffect(()=>{
-  dispatch(getAllGames({
+  dispatch(getAllGamesByFilter({
     inputText: inputText.current?.value,
     inputCategory: inputCategory.join(","),
   }))
 },[load,inputCategory])
 
 
+
   return(
-    <div className={styles.contenedor}>
+    <div >
       <section>
         <div>
         <Categories/>
         <input
           ref={inputText}
           onKeyUp={() => setLoad(!load)}
-          className={styles.search}
           type="text"
           id="search"
           placeholder="Find your game here"
