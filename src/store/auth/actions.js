@@ -59,10 +59,10 @@ const iniciar_sesion_con_token = createAsyncThunk('iniciar_sesion_con_token', as
 })
 
 const cerrar_sesion = createAsyncThunk('cerrar_sesion', async (token) => {
-    let url = `${apiUrl}api/auth/token`
-    let headers = {headers: {'Authorization': `Bearer ${token}`}}
+    let url = `${apiUrl}api/auth/signout`
+    let headers = {headers: {'Authorization': `Bearer ${token}`}} 
     try {
-        await axios.post(url,null,headers)
+        await axios.post(url,null, headers )
         return { 
             success: true,
             response: null

@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import styles from "../navbar/navbar.module.css";
+
 import { Link as Anchor } from "react-router-dom";
+
+import styles from "../navbar/navbar.module.css";
+
+import { useDispatch, useSelector } from "react-redux";
+import authActions from "../../store/auth/actions"
+const { cerrar_sesion } = authActions;
+
 
 const Navbar = () => {
   const [variable, setVariable] = useState(false);
@@ -9,11 +16,19 @@ const Navbar = () => {
   const [variableAcount, setVariableAcount] = useState(false);
   const menuAcount = () => setVariableAcount(!variableAcount);
 
+  let { token, is_online } = useSelector((store) => store.auth);
+  console.log(token)
+  let dispatch = useDispatch();
+
+  async function signout(event) {
+      await dispatch(cerrar_sesion(token));
+  }
+
   return (
     <>
       <div className={styles.nav}>
         <section className={styles.section1}>
-          <Anchor to="/"><img 
+          <Anchor to="/home"><img 
             className={styles.logoImg}
             src="../../assets/nebulaIsotipe.png"
             alt="logo"
@@ -21,9 +36,12 @@ const Navbar = () => {
           <div className={styles.acount}>
             <Anchor to="./store" className={styles.buttonStore}>Store</Anchor>
             <div className={styles.buttonAttendance}>Attendance</div>
-            <div onClick={menuAcount} className={styles.buttonAcount}>
-              {" "}
-              Acount{" "}
+            {is_online ? (<>
+              <span className={styles.buttonAcount}  onClick={signout}>
+          Sign Out
+        </span> </>) : (<>
+              <div onClick={menuAcount} className={styles.buttonAcount}>
+              Acount
               <img
                 className={styles.arrowAcount}
                 src="../../assets/arrowDesplegableExplore.png"
@@ -37,9 +55,11 @@ const Navbar = () => {
                 <Anchor to="./"className={styles.menuOption}>ejemplo3</Anchor>
               </div>
             ) : null}
+            </>)}
+            
           </div>
         </section>
-
+       
         <section className={styles.section2}>
           <div onClick={menuExplorer} className={styles.explore}>
             Explore
