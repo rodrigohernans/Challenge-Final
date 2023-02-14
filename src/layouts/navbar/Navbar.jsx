@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import styles from "../navbar/navbar.module.css";
+
 import { Link as Anchor } from "react-router-dom";
+
+import styles from "../navbar/navbar.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import authActions from "../../store/auth/actions"
 const { cerrar_sesion } = authActions;
+
 
 const Navbar = () => {
   const [variable, setVariable] = useState(false);
@@ -12,7 +16,7 @@ const Navbar = () => {
   const [variableAcount, setVariableAcount] = useState(false);
   const menuAcount = () => setVariableAcount(!variableAcount);
 
-  let { token, is_online } = useSelector((store) => store.auth);
+  let { token, is_online } = useSelector((store) => store?.auth);
   console.log(token)
   let dispatch = useDispatch();
 
@@ -24,7 +28,7 @@ const Navbar = () => {
     <>
       <div className={styles.nav}>
         <section className={styles.section1}>
-          <Anchor to="/"><img 
+          <Anchor to="/home"><img 
             className={styles.logoImg}
             src="../../assets/nebulaIsotipe.png"
             alt="logo"
