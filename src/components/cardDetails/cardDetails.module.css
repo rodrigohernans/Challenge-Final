@@ -202,7 +202,7 @@ button:hover{
         flex-direction: row-reverse;
         width: 80%;
 
-        height: 80vh;
+        height: 90vh;
 
         margin-top: 2em;
     }
@@ -298,7 +298,6 @@ button:hover{
     .imgCarousel:hover{
     opacity: 1;
 
-
 }
 .containerImage2{
     height: 200px;
@@ -308,5 +307,6 @@ button:hover{
     height: 300px;
 }
 
-    }
+    
 
+}
