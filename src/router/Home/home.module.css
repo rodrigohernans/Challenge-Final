@@ -2,10 +2,13 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
+
 
 .homeContainer{
     background-color: #221F20;
+    margin-top: 20px;
 }
 .divCarrusel{
     display: flex;
@@ -26,16 +29,26 @@
 
 @media (min-width:768px){
     .carruselImg{
-        height: 500px;
-        width: 1300px;
-        margin: 50px;
+        width: 420px;
         display: flex;
+        padding: 5px;
+        margin: 5px;
+        background-color: #221f20a9;
+        height: 250px;
+        border-radius: 0.2em;
+        opacity: 0.6;
+        transition: transform .2s;
     }
-    .divCarrusel{
-      
-        height: 500px;
+    .carruselImg:hover{
+        opacity: 1;
+        transform: scale(1.1);
     }
-}
+    .carrusel{
+        background-color: #221f20a9;
+        border-radius: 40px;
+    }
+    }
+
 
 /*
 fondo negro : #221F20

@@ -8,8 +8,8 @@ const Footer = () => {
       <section  className={styles.section1}>
         <div className={styles.sectionButtons}>
           <Anchor className={styles.buttonFooter}>Contact us</Anchor>
-          <Anchor className={styles.buttonFooter}>Store</Anchor>
-          <Anchor className={styles.buttonFooter}>Shopping cart</Anchor>
+          <Anchor to='./store' className={styles.buttonFooter}>Store</Anchor>
+          <Anchor to='./shopping-cart' className={styles.buttonFooter}>Shopping cart</Anchor>
         </div>
         <div className={styles.sectionIcons}>
           <Anchor className={styles.buttonIcon}>
