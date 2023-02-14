@@ -12,7 +12,7 @@ import { Link as Anchor } from "react-router-dom";
 const {getAllGames} = allGamesActions
 
 function Home() {
-const gamesStore = useSelector(store=>store.allgames.allgames)
+const gamesStore = useSelector(store=>store?.allgames?.allgames)
 console.log(gamesStore)
 const dispatch = useDispatch()
 

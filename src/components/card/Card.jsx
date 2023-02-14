@@ -9,7 +9,7 @@ const { getAllGames } = allGamesActions;
 
 
 function Card() {
-const gamesStore = useSelector(store=>store.allgames.allgames)
+const gamesStore = useSelector(store=>store?.allgames?.allgames)
 /* console.log(gamesStore) */
 const dispatch = useDispatch()
 
