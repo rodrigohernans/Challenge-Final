@@ -1,12 +1,15 @@
-import {  createReducer } from "@reduxjs/toolkit"
 import allGamesActions from "./actions"
-
+import { createReducer } from "@reduxjs/toolkit"
 
 const { getAllGames }=  allGamesActions
 const initialState = {
     allgames: [],
+   // inputText: "",
+    category: [] ,
+
  inputText: "",
      category: [] ,
+
     //message: ""
 }
 
