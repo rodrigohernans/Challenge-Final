@@ -19,7 +19,6 @@ const dispatch = useDispatch()
 
 useEffect(()=>{
   dispatch(getAllGames(""))
-  console.log(gamesStore)
 },[])
 
 
