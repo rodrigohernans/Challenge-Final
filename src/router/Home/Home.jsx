@@ -22,7 +22,7 @@ useEffect(()=>{
   console.log(gamesStore)
 },[])
 
-     
+
     return(
       <div className={styles.homeContainer}>
       <Carousel
