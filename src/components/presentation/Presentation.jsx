@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Presentation.module.css";
 import { useState } from "react";
 
-const Presentacion = () => {
+const Presentation = () => {
   const [isShow, setIsShow] = useState(false);
   const [showInfo, setshowInfo] = useState(false);
 
@@ -40,9 +40,4 @@ const Presentacion = () => {
   );
 };
 
-export default Presentacion;
-
-/* 
-   onMouseLeave={() => setIsShow(true)}
-          onMouseEnter={() => setIsShow(false)}
-*/
+export default Presentation;
