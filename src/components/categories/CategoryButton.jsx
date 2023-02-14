@@ -14,11 +14,11 @@ export default function CategoryButton(props){
     const [color,setColor] = useState(false)
 
     const dispatch = useDispatch()
-    let category = useSelector((store)=> store.categories.categories)
+    let category = useSelector((store)=> store?.categories?.categories)
 //console.log(category)
     useEffect(()=>{
         if(category.length>0){
-            if(category.includes(id)){
+            if(category.includes(name)){
                 setColor(!color)
             }
         }
@@ -27,7 +27,7 @@ export default function CategoryButton(props){
     const getId = (e) => {
         setClick(!click)
         setColor(!color)
-        dispatch(filterCategoryGames(id))
+        dispatch(filterCategoryGames(name))
     }
 //console.log(category)
     return(

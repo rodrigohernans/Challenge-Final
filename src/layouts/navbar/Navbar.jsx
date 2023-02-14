@@ -16,7 +16,7 @@ const Navbar = () => {
   const [variableAcount, setVariableAcount] = useState(false);
   const menuAcount = () => setVariableAcount(!variableAcount);
 
-  let { token, is_online } = useSelector((store) => store.auth);
+  let { token, is_online } = useSelector((store) => store?.auth);
   console.log(token)
   let dispatch = useDispatch();
 
