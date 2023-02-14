@@ -1,27 +1,28 @@
 import 'react-multi-carousel/lib/styles.css';
-import styles from './home.module.css'
-import Carousel from 'react-multi-carousel';
-import Card from '../../components/card/Card'
-import React,{ useEffect } from "react";
-import Categories from '../../components/categories/Categories'
-import { useSelector,useDispatch } from "react-redux";
-import allGamesActions from "../../store/allGames/actions";
-import { Link as Anchor } from "react-router-dom";
 
+import React,{ useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { Link as Anchor } from "react-router-dom";
+import Card from '../../components/card/Card'
+import Carousel from 'react-multi-carousel';
+import Categories from '../../components/categories/Categories'
+import allGamesActions from "../../store/allGames/actions";
+import styles from './home.module.css'
 
 const {getAllGames} = allGamesActions
 
 function Home() {
-const gamesStore = useSelector(store=>store?.allgames?.allgames)
+const gamesStore = useSelector(store=>store.allgames.allgames)
 console.log(gamesStore)
 const dispatch = useDispatch()
 
 useEffect(()=>{
-  dispatch(getAllGames())
+  dispatch(getAllGames(""))
   console.log(gamesStore)
 },[])
 
-     
+
     return(
       <div className={styles.homeContainer}>
       <Carousel
