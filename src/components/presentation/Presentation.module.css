@@ -1,19 +1,89 @@
 
+
+
 .container {
-    background-color:#221F20; 
+    background-image: url("https://cdn.shopify.com/s/files/1/0482/6126/7617/articles/M314_1080x.jpg?v=1633105598"); 
+    background-size: cover;
+    display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: relative;
 } 
 
 .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    transition: all 1s;
+    margin: 2em;
+}
+
+p{
+    opacity: 0.6;
+}
+
+
+.button{
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    font-weight: 800;
+    padding: 2em 4em;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: white;
+    color: black;
+    opacity: 0.6;
+    transition: all 0.4s;
+}
+
+.containerButton{
+    margin: 1em;
 }
 
 .imagen{
-    width: 60%;
-    height: 5%;
+    width: 45vw;
+    height: 12vh;
 }
+
+.info {
+    background-color: black;
+    height: 30vh;
+    width: 40%;
+    position: absolute;
+    animation-name: changePosition;
+    animation-duration: 1.5s;
+    width: 100%;
+    opacity: 0.8;
+    left: 0;
+    bottom: 0;
+}
+@keyframes changePosition{
+    from{
+        height: 0%;
+    }
+    to{
+        height: 30%;
+    }
+}
+
+
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    padding: 1.5em;
+    opacity: 0.5;
+    font-size: 1.5em;
+}
+.link:hover{
+    background-color: #725AC1;
+    opacity: 1;
+}
+
