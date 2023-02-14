@@ -7,7 +7,7 @@ import CategoryButton from "./CategoryButton";
 const { getCategories } = categoryActions;
 
 function Categories() {
-  const categories = useSelector((store) => store.categories?.categories);
+  const categories = useSelector((store) => store?.categories?.categories);
 
   const dispatch = useDispatch();
 

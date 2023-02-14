@@ -5,7 +5,7 @@ import allGamesActions from "./actions"
 const { getAllGames }=  allGamesActions
 const initialState = {
     allgames: [],
-   // inputText: "",
+ inputText: "",
      category: [] ,
     //message: ""
 }
@@ -19,7 +19,7 @@ const allgamesreducers = createReducer(
                 let newState = {
                     allgames: action.payload.response.allgames,
                     category: action.payload.response.category,
-                    //text: action.payload.response.text
+                  text: action.payload.response.text
                 }
                 return newState
             }

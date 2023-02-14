@@ -295,6 +295,17 @@ button:hover{
     .imgCarousel:hover{
     opacity: 1;
 
+
+}
+.containerImage2{
+    height: 200px;
+    margin-top: 78px;
+}
+.youtube{
+    height: 300px;
+}
+
     }
+
 
 }
