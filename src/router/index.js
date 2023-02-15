@@ -22,8 +22,6 @@ const indexRouter = createBrowserRouter([
         { path: "/home", element : <Home /> } ,
         { path: "/details", element : <CardDetails /> } ,
     { path: "/cart", element: <ShoppingCart/> },
-        { path: "/store", element : <GamesCards /> },
-
         { path: "/store", element : <Store /> },
         { path: "/details/:id", element : <CardDetails /> } ,
             { path:"/signin",element:<SignIn/> },
