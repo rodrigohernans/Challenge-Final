@@ -22,8 +22,8 @@ const { getGame } = gamesActions;
 
 function CardDetails() {
   const opts = {
-    height: "300",
-    width: "660",
+    height: "280",
+    width: "580",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -90,7 +90,7 @@ function CardDetails() {
             <div className={styles.downInfo}>
               <img src={window} alt="" className={styles.window} />
               <img src={apple} alt="" className={styles.window} />
-              <button onClick={buy}> hola</button>
+              <Btn game_id={id} />
             </div>
           </div>
         </div>

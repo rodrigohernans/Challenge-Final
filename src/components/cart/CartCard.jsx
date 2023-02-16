@@ -14,11 +14,6 @@ function CartCard() {
   let { token } = useSelector((store) => store?.auth);
   let carts = useSelector((store) => store.cart);
 
-  const notbuy = () => {
-    const data = { _id: id };
-    dispatch(deleteCart(data));
-  };
-
   useEffect(() => {
     dispatch(readCart(token));
   }, []);
