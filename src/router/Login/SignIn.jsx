@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link as Anchor, useNavigate } from "react-router-dom";
 import styles from "./SignIn.module.css";
+import Swal from "sweetalert2";
 
 import authActions from "../../store/auth/actions";
 
@@ -24,7 +25,21 @@ const SignIn = () => {
     };
     let res = await dispatch(iniciar_sesion(data));
     if (res.payload.success) {
-      navigate("/home", { replace: true });
+      Swal.fire({
+        title: "Login successful",
+        text: "Â¡Welcome back!",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        navigate("/home", { replace: true });
+      });
+    } else {
+      Swal.fire({
+        title: "Login error",
+        text: "Your email or password are incorrect. Please try again.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
     }
   };
 

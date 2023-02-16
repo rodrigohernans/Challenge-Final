@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #221F20;
+    background-color: black;
     width: 100%;
     height: 100%;
     
@@ -52,7 +52,6 @@
     justify-content: space-evenly;
     width: 100%;
     text-align: center;
-    margin: 1em;
 }
 .category{
     width: 100%;
@@ -75,9 +74,9 @@
     align-items: center;
     background-color: #725ac1;
 }
-.titulo {
+.title {
     text-align: center;
-    padding: 1em;
+    margin-top: 2em;
 }
 
 .downInfo{
@@ -131,12 +130,11 @@ button:hover{
 
 .secondContainer{
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    margin-top: 3em;
 }
 
 .containerImage2{
@@ -166,114 +164,6 @@ button:hover{
 }
 
 
-@media (min-width: 1200px) {
-    .containerP{
-        flex-direction: row;
-        width: 80%;
-    }
-    .containerGeneral{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-    .containerImage{
-        width: 100%;
-    }
-    .imagen{
-        width: 95%;
-        height: 90%;
-    }
-    .info {
-        width: 95%;
-    }
-
-    .mainImage{
-        width: 95%;
-        height: 250px;
-    }
-    .containerCard{
-        background-color: #242038;
-        border: solid 1px #725ac1;
-        border-radius: 1rem;
-        padding: 1em 2em;
-        transition: all 0.2s;
-        flex-direction: row-reverse;
-        width: 80%;
-
-        height: 90vh;
-
-        margin-top: 2em;
-    }
-
-    .firstContainer{
-        width: 40%;
-        height: 90%;
-    }
-    .secondContainer{
-        width: 60%;
-        height: 60%;
-    } 
-    .moreInfo{
-        display: none;
-    } 
-    
-    .imgCarousel{
-        width: 90%;
-        height: 5em;
-    }
-    .containerImg{
-        height: 5em;
-    }
-    .containerReq{
-        height: 90vh;
-    }
-}
-
-
-/* CARROUSEL */
-
-
-.containerCarousel{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container2{
-    width: 100%;
-    height: 100%;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel {
-    width: 100%;
-    height: 100%;
-}
-
-.containerImg {
-    display: flex;
-    height: 80%;
-    margin-bottom: 0.5em;
-}
-
-.imgCarousel{
-    width: 98vw;
-    height: 30vh;
-    transition: transform .2s;
-    
-}
-.imgCarousel:hover{
-    transform: scale(1.1);
-}
-
-
 @media (min-width: 768px) {
     .containerImage{
         margin-right: 0.5rem;
@@ -289,12 +179,10 @@ button:hover{
     } 
     .secondContainer{
         height: 30vh;
-        display: flex;
-        align-content: center;
     }
 
     .imgCarousel{
-    width: 85%;
+    width: 95%;
     height: 8em;
     object-fit: cover;
     opacity: 0.7;
@@ -308,14 +196,138 @@ button:hover{
     margin-top: 78px;
 }
 .youtube{
-    display: flex;
-    align-self: center;
-    margin-bottom: 15%;
+    height: 50%;
+}
 }
 
 
+
+/* CARROUSEL */
+
+
+.containerCarousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 100vw;
+}
+
+.containerImg {
+    display: flex;
+    height: 100%;
+    margin-bottom: 0.5em;
+}
+
+.imgCarousel{
+    width: 98vw;
+    height: 30vh;
+    transition: transform .2s;
+    
+}
+.imgCarousel:hover{
+    transform: scale(1.1);
+}
+
+
+@media (min-width: 1200px) {
+    .containerP{
+        flex-direction: row;
+        width: 80%;
+    }
+    .containerGeneral{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .containerImage{
+        width: 100%;
+        height: 40%;
+    }
+    .imagen{
+        width: 95%;
+        height: 90%;
+    }
+    .info {
+        width: 95%;
+        height: 60%;
+        background-color: #242038;
+        
     }
 
+    .mainImage{
+        width: 95%;
+        height: 250px;
+    }
+    .containerCard{
+        background-color: #242038;
+        border: solid 1px #725ac1;
+        border-radius: 1rem;
+        padding: 1em 2em;
+        transition: all 0.2s;
+        flex-direction: row-reverse;
+        width: 80%;
+        height: 80vh;
+        margin-top: 2em;
+    }
+
+    .firstContainer{
+        width: 40%;
+        height: 100%;
+    }
+    .secondContainer{
+        width: 60%;
+        height: 100%;
+    } 
+    .moreInfo{
+        display: none;
+    } 
+    
+    .imgCarousel{
+        width: 90%;
+        height: 5em;
+    }
+    .containerReq{
+        height: 90vh;
+    }
+    .containerImage2{
+        height: 40vh;
+        margin-top: 0.6em;
+        width: 100%;
+    }
+    .youtube{
+        height: 100%;
+    }
+    .containerCarousel{
+        height: 40%;
+    }
+    .description{
+        height: 50%;
+        margin-top: 1.5em;
+    }
+    .containerImg{
+        height: 15vh;
+        width: 100%;
+    }
+    .imgCarousel{
+        height: 100%;
+        width: 95%;
+    }
+
+}
 
 
 
