@@ -8,12 +8,16 @@ import ShoppingCart from '../components/cart/Cart'
 import SignIn from './Login/SignIn'
 import SignUp from "./Login/SignUp"
 import {createBrowserRouter} from "react-router-dom"
+import Welcome from "../components/welcome/Welcome"
+import AccountVerify from '../components/accountVerify/AccountVerify'
 
 const indexRouter = createBrowserRouter([
     {
         path: '/',
         element: <Presentation />
     },
+    {  path:"/verify/:verify_Code", element: <Welcome/> },
+    {  path:"/verify", element: <AccountVerify/> },
     {
     
     path: '/',
