@@ -13,7 +13,7 @@ const cartReducer = createReducer(
     (builder) => { builder
         .addCase(addCart.fulfilled, (state,action) =>{
                 let newState = {
-                    cart: action.payload.response.cart
+                    cart: action.payload
                 }
                 return newState
             }
