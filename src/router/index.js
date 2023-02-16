@@ -7,6 +7,7 @@ import React from 'react'
 import ShoppingCart from '../components/cart/Cart'
 import SignIn from './Login/SignIn'
 import SignUp from "./Login/SignUp"
+import GamesCards from './'
 import {createBrowserRouter} from "react-router-dom"
 
 const indexRouter = createBrowserRouter([
@@ -22,7 +23,7 @@ const indexRouter = createBrowserRouter([
         { path: "/home", element : <Home /> } ,
         { path: "/details", element : <CardDetails /> } ,
     { path: "/cart", element: <ShoppingCart/> },
-        { path: "/store", element : <GamesCards /> },
+        { path: "/store", element : <Store /> },
         { path: "/details/:id", element : <CardDetails /> } ,
             { path:"/signin",element:<SignIn/> },
     { path:"/signup",element:<SignUp/> } 

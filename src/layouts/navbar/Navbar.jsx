@@ -91,7 +91,7 @@ const Navbar = () => {
             </div>
           ) : null}
           <div className={styles.buttonsExplore}>
-          <Anchor to="./shopping-cart"><div className={styles.divCarrito}></div></Anchor>
+          <Anchor to="./cart"><div className={styles.divCarrito}></div></Anchor>
             <div onClick={Myfavorites} className={styles.divDeseados}></div>
             
             <div className={styles.divNebula}></div>
