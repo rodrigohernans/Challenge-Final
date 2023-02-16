@@ -93,8 +93,9 @@ useEffect(()=>{
 
        
      </Carousel>
-            <Categories/>
-         <Card/> 
+     <div className={styles.divGames}>
+      <p className={styles.titleGames}>Games</p> </div>
+     {/*     <Card/>  */}
             </div>
     
     )

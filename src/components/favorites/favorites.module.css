@@ -20,6 +20,7 @@
     flex-direction: row;
     padding: 5px;
     border-radius: 3px;
+    margin-bottom: 5px;
 }
 .img{
     width: 60%;
@@ -93,9 +94,9 @@
         justify-content: space-around;
     }
     .title{
-        font-size: 22px;
-       
-       /*  width: 100%; */
+        font-size: 20px;
+        display: flex;
+         width: 100%; 
     }
     .allButtons{
         display: flex;
