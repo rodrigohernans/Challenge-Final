@@ -90,7 +90,7 @@ function CardDetails() {
             <div className={styles.downInfo}>
               <img src={window} alt="" className={styles.window} />
               <img src={apple} alt="" className={styles.window} />
-              <button onClick={buy}> hola</button>
+              <Btn game_id={id} />
             </div>
           </div>
         </div>

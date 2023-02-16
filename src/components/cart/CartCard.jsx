@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./cartCard.module.css";
 import axios, { all } from "axios";
-import cartActions from "../../store/cart/cart.actions";
 import { useSelector, useDispatch } from "react-redux";
 import { useRef, useEffect } from "react";
+import Btn from "../cart/Btn";
+import cartActions from "../../store/cart/cart.actions";
+import BtnDelete from "../cart/BtnDelete";
 
-const { addCart, readCart } = cartActions;
+const { addCart, readCart, deleteCart } = cartActions;
 
 function CartCard() {
   const dispatch = useDispatch();
@@ -32,13 +34,7 @@ function CartCard() {
               <p className={styles.cash}>$ {game.game_id.price}</p>
             </div>
             <div>
-              <button className={styles.btn}>
-                <img
-                  className={styles.btn}
-                  src="/assets/trash-can.png"
-                  alt="trash"
-                />
-              </button>
+              <BtnDelete /* game_id={id} */ />
             </div>
           </div>
         </div>
