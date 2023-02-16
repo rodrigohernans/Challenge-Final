@@ -24,7 +24,7 @@ const SignIn = () => {
     };
     let res = await dispatch(iniciar_sesion(data));
     if (res.payload.success) {
-      navigate("/", { replace: true });
+      navigate("/home", { replace: true });
     }
   };
 
