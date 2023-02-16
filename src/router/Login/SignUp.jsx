@@ -27,7 +27,7 @@ const SignUp = () => {
         console.log(data)
 		let res = await dispatch(registrar_usuario(data))
         if (res.payload.success) {
-            navigate("/",{ replace:true })
+            navigate("/verify",{ replace:true })
         } /* configurar alerta */       
 	}
 

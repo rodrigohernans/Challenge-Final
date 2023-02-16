@@ -4,6 +4,7 @@ import categoryReducers from "./categories/reducers";
 import gamesReducer from "./games/reducers";
 import authReducer from './auth/reducers';
 import filterGameReducer from './filterCategory/reducer'
+import userReducer from './user/reducer'
 
 export const store = configureStore({
     reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
         categories: categoryReducers,
         games: gamesReducer,
         auth: authReducer,
-        filterCategories: filterGameReducer
+        filterCategories: filterGameReducer,
+        user: userReducer
     }
 })
 
