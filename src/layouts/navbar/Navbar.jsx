@@ -6,10 +6,14 @@ import styles from "../navbar/navbar.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import authActions from "../../store/auth/actions"
+import CardFavorites from "../../components/favorites/CardFavorites";
 const { cerrar_sesion } = authActions;
 
 
 const Navbar = () => {
+  const [favorites, setFavorites] = useState(false);
+  const Myfavorites = () => setFavorites(!favorites);
+
   const [variable, setVariable] = useState(false);
   const menuExplorer = () => setVariable(!variable);
 
@@ -26,13 +30,21 @@ const Navbar = () => {
 
   return (
     <>
+    
       <div className={styles.nav}>
+      
         <section className={styles.section1}>
+          
           <Anchor to="/home"><img 
             className={styles.logoImg}
             src="../../assets/nebulaIsotipe.png"
             alt="logo"
           /></Anchor>
+          {favorites ? (
+              <div className={styles.myFavorites}>
+                <CardFavorites/>
+              </div>
+            ) : null}
           <div className={styles.acount}>
             <Anchor to="./store" className={styles.buttonStore}>Store</Anchor>
             <div className={styles.buttonAttendance}>Attendance</div>
@@ -59,6 +71,7 @@ const Navbar = () => {
             
           </div>
         </section>
+        
        
         <section className={styles.section2}>
           <div onClick={menuExplorer} className={styles.explore}>
@@ -69,6 +82,7 @@ const Navbar = () => {
               alt=""
             />
           </div>
+          
           {variable ? (
             <div className={styles.explorerMenu}>
               <Anchor to="./details/63e2cf4dcf592bf7a781c1de" className={styles.menuOption}>ejemplo carta detail</Anchor>
@@ -78,9 +92,11 @@ const Navbar = () => {
           ) : null}
           <div className={styles.buttonsExplore}>
           <Anchor to="./cart"><div className={styles.divCarrito}></div></Anchor>
-            <div className={styles.divDeseados}></div>
+            <div onClick={Myfavorites} className={styles.divDeseados}></div>
+            
             <div className={styles.divNebula}></div>
           </div>
+          
         </section>
       </div>
     </>

@@ -21,8 +21,10 @@ const { getGame } = gamesActions;
 
 function CardDetails() {
   const opts = {
-    height: "250",
-    width: "500",
+
+    height: '275',
+    width: '550',
+
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -81,20 +83,32 @@ function CardDetails() {
               className={styles.imagen}
             />
           </div>
+          
           <div className={styles.info}>
             <p className={styles.titulo}>
               {" "}
               {gameStore?.game?.response?.title}{" "}
             </p>
+            <div className={styles.containerP}>
+            <p className={styles.category}>
+              {" "}
+              Category: {gameStore?.game?.response?.category}{" "}
+            </p>
+            <p className={styles.developer}>
+              Developer: {gameStore?.game?.response?.developer}{" "}
+            </p>
+          </div>
             <p className={styles.description}>
               {gameStore?.game?.response?.description}
             </p>
+            
             <div className={styles.downInfo}>
               <img src={window} alt="" className={styles.window} />
               <img src={apple} alt="" className={styles.window} />
               <Btn game_id={id} />
             </div>
           </div>
+          
         </div>
 
         <div className={styles.secondContainer} id="carousel2">
@@ -105,15 +119,7 @@ function CardDetails() {
               opts={opts}
             />
           </div>
-          <div className={styles.containerP}>
-            <p className={styles.category}>
-              {" "}
-              Category: {gameStore?.game?.response?.category}{" "}
-            </p>
-            <p className={styles.developer}>
-              Developer: {gameStore?.game?.response?.developer}{" "}
-            </p>
-          </div>
+          
           <div className={styles.containerCarousel}>
             <Carousel
               additionalTransfrom={0}
@@ -145,6 +151,7 @@ function CardDetails() {
                   key={gameStore?.game?.response?.title}
                 />
               </div>
+              
               <div className={styles.containerImg}>
                 <img
                   src={gameStore?.game?.response?.trailer[1]}
