@@ -1,3 +1,36 @@
 .contenedor{
     background-color: #221F20;
 }
+
+
+.filterContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: baseline;
+}
+.divSearch{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 85%;
+    
+}
+.search{
+    border: none;
+    width: 100%;
+    margin-left: 20px;
+    
+}
+.lupa{
+    width: 30px;
+}
+
+
+@media (min-width:768px){
+    .divSearch{
+        width: 95%;
+    }
+}

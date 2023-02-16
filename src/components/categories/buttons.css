@@ -1,0 +1,99 @@
+.active1,.active2,.active3,.active4,.active5{
+    background-color:#8d86c95e;
+}
+
+
+
+.buttonCategory1{
+    color: white;
+    font-size: 11px;
+    margin: 5px 10px;
+    padding: 5px;
+    border-radius: 14px;
+    display: flex;
+    
+    
+}
+.buttonCategory1:hover{
+    background-color: rgba(255, 255, 255, 0.267);
+    
+}
+
+.buttonCategory2{
+    color: white;
+    font-size: 11px;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 14px;
+    display: flex;
+   justify-content: center;
+    
+}
+.buttonCategory2:hover{
+    background-color: rgba(255, 255, 255, 0.267);
+    
+    
+}
+
+.buttonCategory3{
+    color: white;
+    font-size: 11px;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 14px;
+    display: flex;
+   justify-content: center;
+    
+}
+.buttonCategory3:hover{
+    background-color: rgba(255, 255, 255, 0.267);
+    
+}
+.buttonCategory4{
+    color: white;
+    font-size: 11px;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 14px;
+    display: flex;
+   justify-content: center;
+    
+}
+.buttonCategory4:hover{
+    background-color: rgba(255, 255, 255, 0.267);
+    
+}
+.buttonCategory5{
+    color: white;
+    font-size: 11px;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 14px;
+    display: flex;
+   justify-content: center;
+    
+}
+.buttonCategory5:hover{
+    background-color: rgba(255, 255, 255, 0.267);
+    
+}
+
+@media (min-width:768px){
+
+    .buttonCategory1{
+        font-size: 20px;
+    }
+    .buttonCategory2{
+        font-size: 20px;
+    }
+    .buttonCategory3{
+        font-size: 20px;
+    }
+    .buttonCategory4{
+        font-size: 20px;
+    }
+    .buttonCategory5{
+        font-size: 20px;
+    }
+  
+}

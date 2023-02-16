@@ -7,6 +7,7 @@ import React from 'react'
 import ShoppingCart from '../components/cart/Cart'
 import SignIn from './Login/SignIn'
 import SignUp from "./Login/SignUp"
+import GamesCards from './'
 import {createBrowserRouter} from "react-router-dom"
 import Welcome from "../components/welcome/Welcome"
 import AccountVerify from '../components/accountVerify/AccountVerify'
@@ -25,7 +26,7 @@ const indexRouter = createBrowserRouter([
     children:[
         { path: "/home", element : <Home /> } ,
         { path: "/details", element : <CardDetails /> } ,
-    { path: "/shopping-cart", element: <ShoppingCart/> },
+    { path: "/cart", element: <ShoppingCart/> },
         { path: "/store", element : <Store /> },
         { path: "/details/:id", element : <CardDetails /> } ,
             { path:"/signin",element:<SignIn/> },

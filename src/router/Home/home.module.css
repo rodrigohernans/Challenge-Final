@@ -4,6 +4,20 @@
     margin: 0;
     
 }
+.divGames{
+    display: flex;
+    background-color:#725AC1 ;
+    margin:5px 1%;
+    height: 50px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 5px;
+}
+.titleGames{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-left: 5px;
+}
 
 
 .homeContainer{
