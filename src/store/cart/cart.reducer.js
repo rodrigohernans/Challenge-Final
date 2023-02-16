@@ -1,22 +1,41 @@
-import { createReducer } from '@reduxjs/toolkit';
-import { ADD_ITEM_TO_CART, REMOVE_ITEM_FROM_CART } from '../actions/cart';
+import {  createReducer } from "@reduxjs/toolkit"
+import cartActions from './cart.actions';
 
+
+
+const { addCart, readCart }=  cartActions
 const initialState = {
-  items: [],
-  error: null,
-};
+    cart: [],
+}
 
-export default createReducer(initialState, {
-  [ADD_ITEM_TO_CART.fulfilled]: (state, action) => {
-    state.items.push(action.payload);
-},
-[ADD_ITEM_TO_CART.rejected]: (state, action) => {
-  state.error = action.error;
-},
-  [REMOVE_ITEM_FROM_CART.fulfilled]: (state, action) => {
-    state.items = state.items.filter(item => item.id !== action.payload);
-  },
-  [REMOVE_ITEM_FROM_CART.rejected]: (state, action) => {
-    state.error = action.error;
-  },
-});
+const cartReducer = createReducer(
+    initialState,
+    (builder) => { builder
+        .addCase(addCart.fulfilled, (state,action) =>{
+                let newState = {
+                    cart: action.payload.response.cart
+                }
+                return newState
+            }
+        )
+        .addCase(addCart.rejected , (state, action)=>{
+            let newState= {
+                message: "Error Loading cart"
+            }
+            return newState
+        })
+        .addCase (readCart.fulfilled, (state, action) =>{
+            console.log(action)
+            let newState = {
+                cart: action.payload
+            }
+            return newState
+        })
+
+
+    }
+)
+
+export default cartReducer
+
+

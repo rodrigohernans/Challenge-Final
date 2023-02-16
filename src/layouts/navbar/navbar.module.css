@@ -27,6 +27,7 @@
     opacity: 0.9;
     z-index: 20;
     
+    z-index: 20;
     
     
 }
@@ -174,7 +175,11 @@ background-repeat: no-repeat;
 .divCarrito:hover{
     background-color: #8d86c9b0;
 }
+
+
 .divDeseados{
+    display: flex;
+    flex-direction: column;
       height: 30px;
     width: 30px;
     background-image: url(../../../public/assets/favoriuteIconNavBar.png);

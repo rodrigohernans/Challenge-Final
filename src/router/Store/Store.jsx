@@ -4,8 +4,9 @@ import Card from "../../components/card/Card";
 import { useSelector,useDispatch } from "react-redux";
 import allGamesActions from "../../store/allGames/actions";
 import GamesCategories from "../../components/categories/GamesCategories";
-
+import styles from '../Store/Store.module.css'
 const {getAllGamesByFilter} = allGamesActions
+
 
 const Store = () => {
   const dispatch = useDispatch()
@@ -29,10 +30,13 @@ useEffect(()=>{
 
   return(
     <div >
-      <section>
-        <div>
+      <section className={styles.storeContainer}>
+        <div className={styles.filterContainer}>
         <Categories/>
+        <div className={styles.divSearch}>
+          <img className={styles.lupa}src="../../../assets/lupa.png" alt="" />
         <input
+         className={styles.search}
           ref={inputText}
           onKeyUp={() => setLoad(!load)}
           type="text"
@@ -41,6 +45,8 @@ useEffect(()=>{
           defaultValue={text}
         />
         </div>
+        </div>
+       
       </section>
       <section >
       <Card/>

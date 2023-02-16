@@ -60,15 +60,46 @@
 .method{
     height: 70%;
     border: 1px solid green;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 3vh;
 }
 
 .pay{
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    background-color: #CAC4CE;
+    height: 15vh;
+    border-radius: 0.7vh;
+
 }
 .btnPay{
-    width: 5vw;
+    width: 9vw;
     height: 5vh;
-    margin-top:2.5vh ;
+    
+    border: 1px solid grey;
+    border-radius: 5px;
 }
+.mp{
+    width: 9vw;
+    height: 30px;
+    object-fit: contain;
+    
+  }
+  .mP{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+  }
+  .methodPosition{
+    margin: 3vh;
+  }
+  .elementPay{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between ;
+  }
