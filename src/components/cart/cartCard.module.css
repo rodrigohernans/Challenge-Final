@@ -18,6 +18,7 @@
     flex-direction: row;
     justify-content: space-between;
     border: 1px solid rgb(71, 70, 70);
+    margin-bottom: 2vh;
 }
 .imageContainer{
     width: 35% ;
@@ -25,7 +26,8 @@
     object-fit: contain;
 }
 .image{
-    height: 100%;
+    height: 20vh;
+    width: 21.5vw;
 }
 .delete{
     display: flex;
@@ -43,6 +45,7 @@
     align-items: center;
     justify-content: space-around;
     margin: 3vh;
+    color: white
 }
 .price{
     justify-content: space-around;
@@ -56,4 +59,7 @@
     height: 30px;
     object-fit: contain;
     
+  }
+  .cash{
+    color: white
   }
