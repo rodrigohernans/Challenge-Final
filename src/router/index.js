@@ -21,8 +21,8 @@ const indexRouter = createBrowserRouter([
     children:[
         { path: "/home", element : <Home /> } ,
         { path: "/details", element : <CardDetails /> } ,
-    { path: "/shopping-cart", element: <ShoppingCart/> },
-        { path: "/store", element : <Store /> },
+    { path: "/cart", element: <ShoppingCart/> },
+        { path: "/store", element : <GamesCards /> },
         { path: "/details/:id", element : <CardDetails /> } ,
             { path:"/signin",element:<SignIn/> },
     { path:"/signup",element:<SignUp/> } 

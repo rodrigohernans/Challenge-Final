@@ -6,13 +6,14 @@ import Carousel from "react-multi-carousel";
 import { Link } from "react-scroll";
 import React from "react";
 import Requirements from "../requerimientos/Requirements";
-import apple from "../../assets/appleIcon.png";
+import apple from "./appleIcon.png";
 import gamesActions from "../../store/games/action";
-import shop from "../../assets/shopIcon.png";
+import shop from "./shopIcon.png";
 import styles from "./cardDetails.module.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import window from "../../assets/windowsIcon.png";
+import window from "./windowsIcon.png";
+
 
 const { getGame } = gamesActions;
 

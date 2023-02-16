@@ -86,8 +86,8 @@ const Navbar = () => {
           {variable ? (
             <div className={styles.explorerMenu}>
               <Anchor to="./details/63e2cf4dcf592bf7a781c1de" className={styles.menuOption}>ejemplo carta detail</Anchor>
-              <Anchor to="./"className={styles.menuOption}>ejemplo2</Anchor>
-              <Anchor to="./"className={styles.menuOption}>ejemplo3</Anchor>
+              <Anchor className={styles.menuOption} to="./store">Store</Anchor>
+              <Anchor className={styles.menuOption}>ejemplo3</Anchor>
             </div>
           ) : null}
           <div className={styles.buttonsExplore}>

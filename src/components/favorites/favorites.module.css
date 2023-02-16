@@ -90,7 +90,6 @@
     }
 
     .data{
-        
         justify-content: space-around;
     }
     .title{
@@ -100,7 +99,6 @@
     }
     .allButtons{
         display: flex;
-        
         justify-content: space-around;
         width: 100%;
         align-items: center;
