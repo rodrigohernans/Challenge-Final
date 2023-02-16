@@ -1,62 +1,56 @@
 import "react-multi-carousel/lib/styles.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import YouTube from "react-youtube";
+
+import Btn from "../cart/Btn";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-scroll";
 import React from "react";
 import Requirements from "../requerimientos/Requirements";
+import YouTube from "react-youtube";
 import apple from "./appleIcon.png";
+import cartActions from "../../store/cart/cart.actions";
 import gamesActions from "../../store/games/action";
 import shop from "./shopIcon.png";
 import styles from "./cardDetails.module.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import window from "./windowsIcon.png";
-import Btn from "../cart/Btn";
-import cartActions from "../../store/cart/cart.actions";
 
 const { addCart } = cartActions;
 const { getGame } = gamesActions;
 
 function CardDetails() {
-
   const opts = {
-    height: '250',
-    width: '500',
+    height: "300",
+    width: "560",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
     },
   };
 
-  
   const gameStore = useSelector((store) => store?.games);
-/*   console.log(gameStore); */
-  let cartStore = useSelector(store => store)
-  console.log(cartStore)
+  /*   console.log(gameStore); */
+  let cartStore = useSelector((store) => store);
+  console.log(cartStore);
 
   const dispatch = useDispatch();
   const { id } = useParams();
 
-
- const buy =()=> {
-  const data = {_id: id }
-    dispatch(addCart(data))
+  const buy = () => {
+    const data = { _id: id };
+    dispatch(addCart(data));
   };
-  
-
 
   useEffect(() => {
     if (gameStore) {
       console.log("funciona");
       dispatch(getGame(id));
     } else {
-      console.log("no funcionaaaa");
+      console.log("no funciona");
     }
   }, []);
-
-
 
   const responsive = {
     superLargeDesktop: {
@@ -89,10 +83,7 @@ function CardDetails() {
             />
           </div>
           <div className={styles.info}>
-            <p className={styles.titulo}>
-              {" "}
-              {gameStore?.game?.response?.title}{" "}
-            </p>
+            <p className={styles.title}> {gameStore?.game?.response?.title} </p>
             <p className={styles.description}>
               {gameStore?.game?.response?.description}
             </p>
@@ -106,9 +97,11 @@ function CardDetails() {
 
         <div className={styles.secondContainer} id="carousel2">
           <div className={styles.containerImage2}>
-
-          <YouTube className={styles.youtube} videoId={gameStore?.game?.response?.video} opts={opts}/>
-
+            <YouTube
+              className={styles.youtube}
+              videoId={gameStore?.game?.response?.video}
+              opts={opts}
+            />
           </div>
           <div className={styles.containerP}>
             <p className={styles.category}>
@@ -120,23 +113,27 @@ function CardDetails() {
             </p>
           </div>
           <div className={styles.containerCarousel}>
-            <Carousel additionalTransfrom={0}
-      arrows
-      autoPlay
-      autoPlaySpeed={3000}
-      centerMode={false}
-      containerClass="container-with-dots"
-      dotListClass=""
-      draggable
-      focusOnSelect={false}
-      infinite={true}
-      itemClass=""
-      keyBoardControl
-      minimumTouchDrag={80}
-      pauseOnHover
-      renderArrowsWhenDisabled={false}
-      renderButtonGroupOutside={false}
-      renderDotsOutside={false} responsive={responsive} className={styles.carousel}>
+            <Carousel
+              additionalTransfrom={0}
+              arrows
+              autoPlay
+              autoPlaySpeed={3000}
+              centerMode={false}
+              containerClass="container-with-dots"
+              dotListClass=""
+              draggable
+              focusOnSelect={false}
+              infinite={true}
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={responsive}
+              className={styles.carousel}
+            >
               <div className={styles.containerImg}>
                 <img
                   src={gameStore?.game?.response?.trailer[0]}
@@ -185,12 +182,11 @@ function CardDetails() {
             </Carousel>
           </div>
         </div>
-        
       </div>
 
-        <div className={styles.containerReq}>
-          <Requirements />
-        </div>
+      <div className={styles.containerReq}>
+        <Requirements />
+      </div>
     </div>
   );
 }
