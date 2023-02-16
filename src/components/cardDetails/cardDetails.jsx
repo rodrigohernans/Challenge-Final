@@ -22,8 +22,8 @@ const { getGame } = gamesActions;
 
 function CardDetails() {
   const opts = {
-    height: "280",
-    width: "580",
+    height: "300",
+    width: "660",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,

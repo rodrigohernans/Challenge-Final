@@ -5,12 +5,11 @@ import urlApi from '../../ulr.js';
 
 const  addCart = createAsyncThunk(
     "addCart",
-    async( token) => {
-
+    async( {game_id, token}) => {
         try{
-            let url = `http://localhost:8000/api/cart`
+            let url = `http://localhost:8000/api/carts`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
-            const response = await axios.post(url, headers)
+            const response = await axios.post(url, game_id,  headers)
             console.log(response);
             return{
                 success: true,
@@ -20,6 +19,23 @@ const  addCart = createAsyncThunk(
             console.log(error)
         } 
     }
+)
+const  deleteCart = createAsyncThunk(
+  "addCart",
+  async( {game_id, token}) => {
+      try{
+          let url = `http://localhost:8000/api/carts`
+          let headers = {headers: {'Authorization': `Bearer ${token}`}}
+          const response = await axios.delete(url, game_id,  headers)
+          console.log(response);
+          return{
+              success: true,
+              response: response.data.response
+          }
+      }catch(error){
+          console.log(error)
+      } 
+  }
 )
 const readCart = createAsyncThunk(
   "readCart",
@@ -39,7 +55,7 @@ const readCart = createAsyncThunk(
   }
 )
 
-const cartActions = {addCart, readCart}
+const cartActions = {addCart, readCart, deleteCart}
 export default cartActions; 
 
 
