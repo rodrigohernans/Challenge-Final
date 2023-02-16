@@ -23,7 +23,7 @@ const AccountVerify = () => {
       </div>
       <div className={styles.containerButton}>
           <div className={styles.info}>
-            <Link to={"/"} className={styles.link}>
+            <Link to={""} className={styles.link}>
             Please check your email to verify your account
 
 
