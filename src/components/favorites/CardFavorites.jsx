@@ -10,29 +10,26 @@ const { addFav,readFav} = favoritesActions;
 function CardFavorites() {
   const dispatch = useDispatch();
   let { token } = useSelector((store) => store?.auth);
- let favs = useSelector((store)=>store?.favoritesReactions?.fav?.response)
+ let favs = useSelector((store)=>store?.favoritesReactions?.fav)
 console.log(favs)
 
 useEffect(()=>{
   dispatch(readFav(token))
 },[])
 
-const algo = favs.map((fav)=> fav)
-console.log(algo) 
-
   return (
     <div className={styles.container}>
- {favs.map((fav)=> (
+ {favs.response?.map((fav)=> (
  <section className={styles.card}>
         <img
           className={styles.img}
-          src={fav.game_id.image}
+          src={fav?.game_id?.image}
           alt=""
         />
 
         <div className={styles.data}>
           {" "}
-          <p className={styles.title}>{fav.game_id.title}</p>
+          <p className={styles.title}>{fav?.game_id?.title}</p>
           <div className={styles.allButtons}>
             <div className={styles.buttons}>
               <img
@@ -46,7 +43,7 @@ console.log(algo)
                 alt=""
               />
             </div>
-            <button className={styles.price}>${fav.game_id.price}</button>
+            <button className={styles.price}>${fav?.game_id?.price}</button>
           </div>
         </div>
       </section>))}
