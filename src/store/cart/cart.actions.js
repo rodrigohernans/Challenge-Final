@@ -21,7 +21,7 @@ const  addCart = createAsyncThunk(
     }
 )
 const  deleteCart = createAsyncThunk(
-  "addCart",
+  "deleteCart",
   async( {game_id, token}) => {
       try{
           let url = `http://localhost:8000/api/carts`
