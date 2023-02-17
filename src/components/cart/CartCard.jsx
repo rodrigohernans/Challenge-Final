@@ -14,15 +14,9 @@ function CartCard() {
   let { token } = useSelector((store) => store?.auth);
   let carts = useSelector((store) => store.cart);
 
-  const notbuy = () => {
-    const data = { _id: id };
-    dispatch(deleteCart(data));
-  };
-
   useEffect(() => {
     dispatch(readCart(token));
   }, []);
-  carts.cart?.response?.map((game) => console.log(game.game_id));
 
   return (
     <div className={styles.games}>

@@ -13,9 +13,7 @@ const BtnDelete = (props) => {
   let cart = useSelector((store) => store.cart);
   const dispatch = useDispatch();
   const deletedCart = () => {
-    dispatch(
-      deleteCart({ game_id: game_id.game_id, token }, console.log("anda joia"))
-    );
+    dispatch(deleteCart({ game_id: game_id.game_id, token }));
   };
 
   return (
