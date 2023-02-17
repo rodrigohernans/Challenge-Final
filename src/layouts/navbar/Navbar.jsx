@@ -1,12 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Link as Anchor } from "react-router-dom";
-
+import CardFavorites from "../../components/favorites/CardFavorites";
+import authActions from "../../store/auth/actions";
 import styles from "../navbar/navbar.module.css";
 
-import { useDispatch, useSelector } from "react-redux";
-import authActions from "../../store/auth/actions";
-import CardFavorites from "../../components/favorites/CardFavorites";
 const { cerrar_sesion } = authActions;
 
 const Navbar = () => {
@@ -47,7 +46,9 @@ const Navbar = () => {
             <Anchor to="./store" className={styles.buttonStore}>
               Store
             </Anchor>
-            <div className={styles.buttonAttendance}>Attendance</div>
+            <Anchor to="./attendance" className={styles.buttonAttendance}>
+              Attendance
+            </Anchor>
             {is_online ? (
               <>
                 <span className={styles.buttonAcount} onClick={signout}>
