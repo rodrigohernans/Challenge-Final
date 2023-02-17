@@ -96,35 +96,43 @@ opacity: 1;
     padding: 10px;
     align-items: center;
     text-decoration: none;
-    margin-right: 1em;
+    color: white;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
 }
 .buttonStore{
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
     display: flex;
     height: 20px;
     padding: 10px;
     align-items: center;
     text-decoration: none;
     color: white;
-    margin-right: 1em;
 }
 .buttonAcount{
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    color: white;
     display: flex;
     height: 20px;
     padding: 10px;
     align-items: center;
-    margin-right: 1em;
 } 
 .buttonAttendance:hover{
     background-color: #8d86c9b0;
     border-radius: 0.4em;
+    color: white;
 }
 .buttonAcount:hover{
     background-color: #8d86c9b0;
     border-radius: 0.4em;
+    color: white;
 }
 .buttonStore:hover{
     background-color: #8d86c9b0;
     border-radius: 0.4em;
+    color: white;
 }
 
 .section2{
@@ -213,8 +221,8 @@ background-repeat: no-repeat;
     }
 
     .logoImg{
-        height: 30px;
-        width: 300px;
+        height: 38px;
+        width: 350px;
     }
     .acount{
         font-size: 22px;
