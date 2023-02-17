@@ -24,8 +24,8 @@ function Categories() {
   }, []);
 
   return (
-    <div>
-      <section className={styles.container}>
+    <div className={styles.container}>
+      <section>
         <div className={styles.containerCategories}>
           <div className={styles.containericons}>
             <img

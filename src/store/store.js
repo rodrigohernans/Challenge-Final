@@ -7,6 +7,10 @@ import cartReducers from './cart/cart.reducer'
 import filterGameReducer from './filterCategory/reducer'
 const { cartReducer, deleteReducer} = cartReducers
 
+import favoritesReducer from './favorites/reducers'
+
+import userReducer from './user/reducer'
+
 export const store = configureStore({
     reducer: {
         allgames: allgamesreducers,
@@ -15,7 +19,9 @@ export const store = configureStore({
         auth: authReducer,
         cart: cartReducer, 
         filterCategories: filterGameReducer,
-        deteleCart: deleteReducer
+        deteleCart: deleteReducer,
+        favoritesReactions: favoritesReducer,
+        user: userReducer
     }
 })
 

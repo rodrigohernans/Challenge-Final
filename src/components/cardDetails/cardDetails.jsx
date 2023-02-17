@@ -1,28 +1,29 @@
 import "react-multi-carousel/lib/styles.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import YouTube from "react-youtube";
+
+import Btn from "../cart/Btn";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-scroll";
 import React from "react";
 import Requirements from "../requerimientos/Requirements";
+import YouTube from "react-youtube";
 import apple from "./appleIcon.png";
+import cartActions from "../../store/cart/cart.actions";
 import gamesActions from "../../store/games/action";
 import shop from "./shopIcon.png";
 import styles from "./cardDetails.module.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import window from "./windowsIcon.png";
-import Btn from "../cart/Btn";
-import cartActions from "../../store/cart/cart.actions";
 
 const { addCart } = cartActions;
 const { getGame } = gamesActions;
 
 function CardDetails() {
   const opts = {
-    height: "250",
-    width: "500",
+    height: "280",
+    width: "580",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -32,7 +33,7 @@ function CardDetails() {
   const gameStore = useSelector((store) => store?.games);
   /*   console.log(gameStore); */
   let cartStore = useSelector((store) => store);
-  /*   console.log(cartStore); */
+  console.log(cartStore);
 
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -82,10 +83,7 @@ function CardDetails() {
             />
           </div>
           <div className={styles.info}>
-            <p className={styles.titulo}>
-              {" "}
-              {gameStore?.game?.response?.title}{" "}
-            </p>
+            <p className={styles.title}> {gameStore?.game?.response?.title} </p>
             <p className={styles.description}>
               {gameStore?.game?.response?.description}
             </p>
