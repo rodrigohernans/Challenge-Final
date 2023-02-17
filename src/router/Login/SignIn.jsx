@@ -9,7 +9,7 @@ import authActions from "../../store/auth/actions"
 const { iniciar_sesion } = authActions
 
 const SignIn = () => {
-    console.log(hola)  
+     
     const { messages } = useSelector(store => store.auth)
     console.log(messages)
 	const dispatch = useDispatch()
