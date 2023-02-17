@@ -111,8 +111,9 @@ const Navbar = () => {
               <div className={styles.divCarrito}></div>
             </Anchor>
             <div onClick={Myfavorites} className={styles.divDeseados}></div>
-
+            <Anchor to="./home">
             <div className={styles.divNebula}></div>
+            </Anchor>
           </div>
         </section>
       </div>
