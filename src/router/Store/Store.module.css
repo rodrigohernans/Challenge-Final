@@ -22,8 +22,6 @@
     border: none;
     width: 100%;
     margin-left: 20px;
-    font-size: 20px;
-    
     
 }
 .lupa{
@@ -33,7 +31,6 @@
 
 @media (min-width:768px){
     .divSearch{
-        width: 97.5%;
-        margin-left: 15px;
+        width: 95%;
     }
 }

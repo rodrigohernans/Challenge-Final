@@ -19,10 +19,9 @@
     width: 35vw;
     height: 70vh;
     margin:3vh ;
-    background-color: #242424;
-    border: solid 1.5px #725ac1;
+    background-color: #725AC1;
     border-radius: 0.7vh;
-    
+
 }
 .card{
     background-color: #242038;
@@ -37,7 +36,7 @@
     width: 35% ;
     height: 100%;
     object-fit: contain;
-    
+
     
 }
 .image{
@@ -52,15 +51,15 @@
 }
 .btn{
     height: 50% ;
-    
-    
+
+
 }
 .money{
     margin-right:  1vw;
 }
 .method{
     height: 70%;
-    border: solid 1.5px #725ac1;
+    border: 1px solid green;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -75,7 +74,7 @@
     background-color: #CAC4CE;
     height: 15vh;
     border-radius: 0.7vh;
-    
+
 }
 .btnPay{
     width: 9vw;
@@ -98,7 +97,6 @@
   }
   .methodPosition{
     margin: 3vh;
-    color: white;
   }
   .elementPay{
     display: flex;
