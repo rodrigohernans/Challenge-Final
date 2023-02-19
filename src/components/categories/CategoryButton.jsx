@@ -3,7 +3,9 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import filterCategoryGamesActions from "../../store/filterCategory/action";
 import styles from "../categories/categories.module.css";
+import '../categories/buttons.css'
 const {filterCategoryGames}= filterCategoryGamesActions
+
 
 export default function CategoryButton(props){
     const {id,index,name} = props;
@@ -29,7 +31,7 @@ export default function CategoryButton(props){
         <div
         onClick={getName}
         id={id}
-        className={styles.buttonCategory}
+        className={"buttonCategory" + (index + 1) + (color ? ` active${index + 1}` : "")}
         key={index} >
             {name}
         </div>

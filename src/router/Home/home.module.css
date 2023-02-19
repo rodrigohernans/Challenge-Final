@@ -4,6 +4,21 @@
     margin: 0;
     
 }
+.divGames{
+    display: flex;
+    background-color:#725AC1 ;
+    margin:5px 1%;
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 5px;
+}
+.titleGames{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-left: 5px;
+}
 
 
 .homeContainer{
@@ -25,6 +40,9 @@
 }
 .carruselImg:hover{
     opacity: 0.8;
+}
+.CardMoreExpensibeContainer{
+    width: 100%;
 }
 
 @media (min-width:768px){
