@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={styles.footer}>
       <section  className={styles.section1}>
         <div className={styles.sectionButtons}>
-          <Anchor className={styles.buttonFooter} to="/attendance" >Contact us</Anchor>
+          <Anchor className={styles.buttonFooter}>Contact us</Anchor>
           <Anchor to='./store' className={styles.buttonFooter}>Store</Anchor>
           <Anchor to='./shopping-cart' className={styles.buttonFooter}>Shopping cart</Anchor>
         </div>
