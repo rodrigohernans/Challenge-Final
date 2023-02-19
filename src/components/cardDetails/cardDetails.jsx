@@ -22,8 +22,8 @@ const { getGame } = gamesActions;
 
 function CardDetails() {
   const opts = {
-    height: "300",
-    width: "560",
+    height: '300',
+    width: '660',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -83,7 +83,10 @@ function CardDetails() {
             />
           </div>
           <div className={styles.info}>
-            <p className={styles.title}> {gameStore?.game?.response?.title} </p>
+            <p className={styles.title}>
+              {" "}
+              {gameStore?.game?.response?.title}{" "}
+            </p>
             <p className={styles.description}>
               {gameStore?.game?.response?.description}
             </p>

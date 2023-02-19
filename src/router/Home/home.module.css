@@ -6,17 +6,24 @@
 }
 .divGames{
     display: flex;
-    background-color:#725AC1 ;
+    background-color: #242038 ;
     margin:5px 1%;
+    margin-top: 30px;
     height: 50px;
     border-radius: 5px;
     align-items: center;
     padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
 .titleGames{
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 25px;
     margin-left: 5px;
+    font-family: monospace;
+    text-align: center;
+    letter-spacing: 1px;
+    z-index: 1;
 }
 
 
@@ -39,6 +46,9 @@
 }
 .carruselImg:hover{
     opacity: 0.8;
+}
+.CardMoreExpensibeContainer{
+    width: 100%;
 }
 
 @media (min-width:768px){
