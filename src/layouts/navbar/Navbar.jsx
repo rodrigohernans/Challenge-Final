@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Link as Anchor } from "react-router-dom";
 import CardFavorites from "../../components/favorites/CardFavorites";
+import { Link } from "react-scroll";
 import authActions from "../../store/auth/actions";
+import { animateScroll as scroll } from "react-scroll";
+import { scroller } from "react-scroll";
 import styles from "../navbar/navbar.module.css";
 
 const { cerrar_sesion } = authActions;
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [favorites, setFavorites] = useState(false);
   const Myfavorites = () => setFavorites(!favorites);
 
   const [variable, setVariable] = useState(false);
-  const menuExplorer = () => setVariable(!variable);
+  const menuExplorer = () => {
+    setVariable(!variable);
+  };
 
   const [variableAcount, setVariableAcount] = useState(false);
   const menuAcount = () => setVariableAcount(!variableAcount);
@@ -25,6 +30,7 @@ const Navbar = () => {
   async function signout(event) {
     await dispatch(cerrar_sesion(token));
   }
+
 
   return (
     <>
@@ -58,23 +64,29 @@ const Navbar = () => {
             ) : (
               <>
                 <div onClick={menuAcount} className={styles.buttonAcount}>
-                  Acount
-                  <img
-                    className={styles.arrowAcount}
-                    src="../../assets/arrowDesplegableExplore.png"
-                    alt=""
-                  />
+                  <div
+                    className={styles.explorerAccount}
+                    onMouseEnter={() => setVariableAcount(true)}
+                  >
+                    Acount
+                    <img
+                      className={styles.arrowAcount}
+                      src="../../assets/arrowDesplegableExplore.png"
+                      alt="icons"
+                      onMouseEnter={() => setVariableAcount(true)}
+                    />
+                  </div>
                 </div>
                 {variableAcount ? (
-                  <div className={styles.acountMenu}>
+                  <div
+                    className={styles.acountMenu}
+                    onMouseLeave={() => setVariableAcount(false)}
+                  >
                     <Anchor to="./signin" className={styles.menuOption}>
                       Sign in
                     </Anchor>
                     <Anchor to="./signup" className={styles.menuOption}>
                       Sign up
-                    </Anchor>
-                    <Anchor to="./" className={styles.menuOption}>
-                      ejemplo3
                     </Anchor>
                   </div>
                 ) : null}
@@ -82,29 +94,46 @@ const Navbar = () => {
             )}
           </div>
         </section>
-
         <section className={styles.section2}>
-          <div onClick={menuExplorer} className={styles.explore}>
-            Explore
+          <div className={styles.explore} onClick={menuExplorer}>
+            <div onMouseEnter={() => setVariable(true)}
+            >Explorer</div>
             <img
               className={styles.arrowExplore}
               src="../../assets/arrowDesplegableExplore.png"
               alt=""
+              onMouseEnter={() => setVariable(true)}
             />
           </div>
-
           {variable ? (
-            <div className={styles.explorerMenu}>
-              <Anchor
-                to="./details/63e2cf4dcf592bf7a781c1de"
+            <div
+              className={styles.explorerMenu}
+              onMouseLeave={() => setVariable(false)}
+            >
+              <Link
                 className={styles.menuOption}
+                to="cheap"
+                smooth={true}
+                duration={600}
               >
-                ejemplo carta detail
-              </Anchor>
-              <Anchor className={styles.menuOption} to="./store">
-                Store
-              </Anchor>
-              <Anchor className={styles.menuOption}>ejemplo3</Anchor>
+                Cheaper games
+              </Link>
+              <Link
+                className={styles.menuOption}
+                to="quality"
+                smooth={true}
+                duration={600}
+              >
+                Highest quality games
+              </Link>
+              <Link
+                className={styles.menuOption}
+                to="free"
+                smooth={true}
+                duration="800"
+              >
+                Free games
+              </Link>
             </div>
           ) : null}
           <div className={styles.buttonsExplore}>
@@ -113,7 +142,7 @@ const Navbar = () => {
             </Anchor>
             <div onClick={Myfavorites} className={styles.divDeseados}></div>
             <Anchor to="./home">
-            <div className={styles.divNebula}></div>
+              <div className={styles.divNebula}></div>
             </Anchor>
           </div>
         </section>
