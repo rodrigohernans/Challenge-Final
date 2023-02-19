@@ -9,7 +9,6 @@ import CardCheap from "../../components/card/CardCheap";
 import CardFree from "../../components/card/CardFree";
 import CardMoreExpensibe from "../../components/card/CardMostExpensibe";
 import Carousel from "react-multi-carousel";
-import Categories from "../../components/categories/Categories";
 import { Element } from "react-scroll";
 import allGamesActions from "../../store/allGames/actions";
 import styles from "./home.module.css";
