@@ -31,7 +31,6 @@ const Navbar = (props) => {
     await dispatch(cerrar_sesion(token));
   }
 
-
   return (
     <>
       <div className={styles.nav}>
@@ -43,6 +42,7 @@ const Navbar = (props) => {
               alt="logo"
             />
           </Anchor>
+
           {favorites ? (
             <div className={styles.myFavorites}>
               <CardFavorites />
@@ -96,8 +96,7 @@ const Navbar = (props) => {
         </section>
         <section className={styles.section2}>
           <div className={styles.explore} onClick={menuExplorer}>
-            <div onMouseEnter={() => setVariable(true)}
-            >Explorer</div>
+            <div onMouseEnter={() => setVariable(true)}>Explorer</div>
             <img
               className={styles.arrowExplore}
               src="../../assets/arrowDesplegableExplore.png"

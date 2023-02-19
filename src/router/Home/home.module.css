@@ -26,7 +26,6 @@
     z-index: 1;
 }
 
-
 .homeContainer{
     background-color: #221F20;
     margin-top: 20px;
@@ -35,8 +34,11 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 200px;
+    height: 310px; 
+    box-shadow: 1px 7px 25px rgba(8,8,8,8);
 }
+
+
 .carruselImg{
     width: 300px;
     display: flex;
