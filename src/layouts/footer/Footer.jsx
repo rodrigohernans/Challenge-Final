@@ -1,6 +1,6 @@
+import { Link as Anchor } from "react-router-dom";
 import React from "react";
 import styles from "../footer/footer.module.css";
-import { Link as Anchor } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -40,7 +40,9 @@ const Footer = () => {
       </section>
       <section className={styles.section3}>
       <div className={styles.textFooter}>© 2023 Nebula. All Rights Reserved</div>
-      <div className={styles.textFooter}>Terms and Conditions</div>
+      <div className={styles.textFooter}>
+      <Anchor to='./termsandconditions' className={styles.textFooterTerms}>Terms and Conditions</Anchor>
+        </div>
       <div className={styles.textFooter}>Privacy policy</div>
 
       </section>

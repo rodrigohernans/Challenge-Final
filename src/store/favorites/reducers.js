@@ -13,7 +13,7 @@ const favoritesReducer = createReducer(
     (builder) => { builder
         .addCase(addFav.fulfilled, (state,action) =>{
                 let newState = {
-                    fav: action.payload.response.fav
+                    fav: action.payload
                 }
                 return newState
             }

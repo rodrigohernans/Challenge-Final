@@ -1,41 +1,38 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import gamesActions from "../../store/games/action"
+
 import { Link as Anchor } from "react-router-dom";
 import allGamesActions from "../../store/allGames/actions";
-import styles from "../card/card.module.css";
-import BtnFav from '../favorites/BtnFav'
+import styles from "../card/cardHome.module.css";
 
 const { getAllGames } = allGamesActions;
-const { getGame } = gamesActions;
 
-function Card() {
-  const { id } = useParams();
+
+function CardCheap() {
+
 const gamesStore = useSelector(store=>store?.allgames?.allgames)
+
+const gamesCopy = [...gamesStore]
+gamesCopy.sort(function compare(a, b) {
+  let priceA = new Number(a.price);
+  let priceB = new Number(b.price);
+  return priceA - priceB;
+})
+console.log(gamesCopy)
+
+let gamesMoreExpensibeOnly5 = gamesCopy.slice(4,8)
+  console.log(gamesMoreExpensibeOnly5)
+
 const dispatch = useDispatch()
-let { token } = useSelector((store) => store?.auth);
 
 useEffect(()=>{
   dispatch(getAllGames(""))
-},[token])
+},[])
 
-const gameStore = useSelector((store) => store?.games);
-
-
-
-useEffect(() => {
-  if (gameStore) {
-    console.log("funciona");
-    dispatch(getGame(id,token));
-  } else {
-    console.log("no funciona");
-  }
-}, [token,id]);
 
   return (
     <div className={styles.conteiner}>
-      {gamesStore.map((game, index) => {
+      { gamesMoreExpensibeOnly5.map((game, index) => {
         return (
           <div className={styles.conteinerCard} key={index} >
             <Anchor
@@ -53,7 +50,15 @@ useEffect(() => {
             </Anchor>
             <div className={styles.titleAndFav}>
               {game.title}
-              <BtnFav game_id={game._id} />
+              <img
+                className={styles.favIcon}
+                src="../../assets/favoriteIcon.png"
+                alt=""
+                />
+            </div>
+            <div className={styles.extra}>
+                {game.developer}
+                
             </div>
             <div className={styles.footerCard}>
               <div className={styles.footerIcons}>
@@ -76,4 +81,4 @@ useEffect(() => {
     </div>
   );
 }
-export default Card;
+export default CardCheap;

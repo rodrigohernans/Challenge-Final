@@ -89,7 +89,7 @@
     .container{
         width: 30%;
         margin-top: 115px;
-        margin-left: 280px;
+        margin-left: 250px;
     }
     .card{
         height: 120px;
@@ -107,6 +107,7 @@
     .allButtons{
         display: flex;
         width: 100%;
+        margin-left: 35px;
         align-items: center;
         flex-direction: row;
     }
@@ -119,10 +120,8 @@
         
         
     }
-    .fav,.cart{
+  .cart{
         width: 30px;
-        margin-left: 3px;
-        margin-right: 3px;
         padding: 7px;
     }
 }
