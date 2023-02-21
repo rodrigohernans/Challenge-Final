@@ -5,15 +5,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRef, useEffect } from "react";
 import cartActions from "../../store/cart/cart.actions";
 
-const { deleteCart } = cartActions;
+const { deleteCart, readCart } = cartActions;
 
 const BtnDelete = (props) => {
-  const game_id = { game_id: props };
+  let { id } = props;
   let { token } = useSelector((store) => store?.auth);
   let cart = useSelector((store) => store.cart);
   const dispatch = useDispatch();
   const deletedCart = () => {
-    dispatch(deleteCart({ game_id: game_id.game_id, token }));
+    console.log(token);
+    dispatch(deleteCart({ _id: id, token }));
+    dispatch(readCart(token));
   };
 
   return (

@@ -25,7 +25,6 @@ const cartReducer = createReducer(
             return newState
         })
         .addCase (readCart.fulfilled, (state, action) =>{
-            console.log(action)
             let newState = {
                 cart: action.payload
             }

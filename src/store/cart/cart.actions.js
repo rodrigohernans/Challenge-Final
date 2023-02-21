@@ -10,7 +10,7 @@ const  addCart = createAsyncThunk(
             let url = `http://localhost:8000/api/carts`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
             const response = await axios.post(url, game_id,  headers)
-            console.log(response);
+
             return{
                 success: true,
                 response: response.data.response
@@ -22,12 +22,12 @@ const  addCart = createAsyncThunk(
 )
 const  deleteCart = createAsyncThunk(
   "deleteCart",
-  async( {game_id, token}) => {
+  async( {_id, token}) => {
       try{
-          let url = `http://localhost:8000/api/carts`
+          let url = `http://localhost:8000/api/carts/${_id}`
           let headers = {headers: {'Authorization': `Bearer ${token}`}}
-          const response = await axios.delete(url, game_id,  headers)
-          console.log(response);
+          const response = await axios.delete(url,  headers)
+
           return{
               success: true,
               response: response.data.response
@@ -44,7 +44,7 @@ const readCart = createAsyncThunk(
       let url = `http://localhost:8000/api/carts`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
             const response = await axios.get(url, headers)
-            console.log(response)
+
             return{
               success:true,
               response: response.data.response
