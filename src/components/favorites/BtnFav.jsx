@@ -13,7 +13,7 @@ const Btn = (props) => {
   const game_id = { game_id: props };
   let { token } = useSelector((store) => store?.auth);
   let favs = useSelector((store) => store?.favoritesReactions?.fav);
-  console.log(game_id.game_id);
+  //console.log(game_id.game_id);
   const dispatch = useDispatch();
  const [color,setColor] = useState(false) 
 

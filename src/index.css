@@ -2,7 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: monospace; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,3 +14,10 @@ code {
 #root{
   background-color: #221F20;
 }
+
+
+/* 
+fuente de antes = 
+'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+*/

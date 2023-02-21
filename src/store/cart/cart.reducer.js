@@ -3,7 +3,7 @@ import cartActions from './cart.actions';
 
 
 
-const { addCart, readCart }=  cartActions
+const { addCart, readCart, deleteCart }=  cartActions
 const initialState = {
     cart: [],
 }
@@ -25,17 +25,27 @@ const cartReducer = createReducer(
             return newState
         })
         .addCase (readCart.fulfilled, (state, action) =>{
-            console.log(action)
             let newState = {
                 cart: action.payload
             }
             return newState
         })
-
-
+        
+    }
+)
+const deleteReducer = createReducer(
+    initialState,
+    (builder) => { builder
+        .addCase (deleteCart.fulfilled, (state, action) =>{
+            let newState = {
+                cart: action.payload
+            }
+            return newState
+        })
     }
 )
 
-export default cartReducer
+const cartReducers = { cartReducer, deleteReducer}
+export default cartReducers
 
 

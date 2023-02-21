@@ -1,49 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import gamesActions from "../../store/games/action"
+
 import { Link as Anchor } from "react-router-dom";
 import allGamesActions from "../../store/allGames/actions";
 import styles from "../card/card.module.css";
-import BtnFav from '../favorites/BtnFav'
 
 const { getAllGames } = allGamesActions;
-const { getGame } = gamesActions;
 
 function Card() {
-  const { id } = useParams();
-const gamesStore = useSelector(store=>store?.allgames?.allgames)
-const dispatch = useDispatch()
-let { token } = useSelector((store) => store?.auth);
+  const gamesStore = useSelector((store) => store?.allgames?.allgames);
+  const dispatch = useDispatch();
 
-useEffect(()=>{
-  dispatch(getAllGames(""))
-},[token])
-
-const gameStore = useSelector((store) => store?.games);
-
-
-
-useEffect(() => {
-  if (gameStore) {
-    console.log("funciona");
-    dispatch(getGame(id,token));
-  } else {
-    console.log("no funciona");
-  }
-}, [token,id]);
+  useEffect(() => {
+    dispatch(getAllGames(""));
+  }, []);
 
   return (
     <div className={styles.conteiner}>
       {gamesStore.map((game, index) => {
         return (
-          <div className={styles.conteinerCard} key={index} >
+          <div className={styles.conteinerCard} key={index}>
             <Anchor
-              className={
-                styles.anchorDetail
-              }   to= 
-              {`/details/${game._id}`}
-              key={index} 
+              className={styles.anchorDetail}
+              to={`/details/${game._id}`}
+              key={index}
             >
               <img
                 className={styles.gamePhoto}
@@ -53,7 +33,11 @@ useEffect(() => {
             </Anchor>
             <div className={styles.titleAndFav}>
               {game.title}
-              <BtnFav game_id={game._id} />
+             {/*  <img
+                className={styles.favIcon}
+                src="../../assets/favoriteIcon.png"
+                alt=""
+              /> */}
             </div>
             <div className={styles.footerCard}>
               <div className={styles.footerIcons}>
@@ -68,7 +52,7 @@ useEffect(() => {
                   alt=""
                 />{" "}
               </div>
-              <button className={styles.buttonPrice}>${game.price}</button>
+              <p className={styles.buttonPrice}>${game.price}</p>
             </div>
           </div>
         );

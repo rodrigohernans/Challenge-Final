@@ -3,12 +3,14 @@ import allgamesreducers from "./allGames/reducers";
 import categoryReducers from "./categories/reducers";
 import gamesReducer from "./games/reducers";
 import authReducer from './auth/reducers';
-import cartReducer from './cart/cart.reducer'
+import cartReducers from './cart/cart.reducer'
 import filterGameReducer from './filterCategory/reducer'
-
-import favoritesReducer from './favorites/reducers'
-
+import favoritesReducers from './favorites/reducers'
+import donationReducer from './cart/mercadoPago.reducers'
 import userReducer from './user/reducer'
+const { cartReducer, deleteReducer} = cartReducers
+const { favoritesReducer,deleteFavReducer} = favoritesReducers
+
 
 export const store = configureStore({
     reducer: {
@@ -18,8 +20,11 @@ export const store = configureStore({
         auth: authReducer,
         cart: cartReducer, 
         filterCategories: filterGameReducer,
+        deteleCart: deleteReducer,
         favoritesReactions: favoritesReducer,
-        user: userReducer
+        deleteFav: deleteFavReducer,
+        user: userReducer,
+        mercadoPago: donationReducer
     }
 })
 

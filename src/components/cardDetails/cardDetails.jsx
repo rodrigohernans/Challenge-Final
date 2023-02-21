@@ -25,7 +25,7 @@ const { addFav} = favoritesActions;
 function CardDetails() {
   const opts = {
     height: "300",
-    width: "560",
+    width: "500",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -36,12 +36,12 @@ function CardDetails() {
   /*   console.log(gameStore); */
   let cartStore = useSelector((store) => store);
   let { token } = useSelector((store) => store?.auth)
-  console.log(cartStore);
+  //console.log(cartStore);
 
   const dispatch = useDispatch();
   const { id } = useParams();
 
- /*  const buy = () => {
+  const buy = () => {
     const data = { _id: id };
     dispatch(addCart(data));
   };
@@ -49,7 +49,7 @@ function CardDetails() {
     const data = { _id: id };
     dispatch(addFav(data));
   };
- */
+ 
   useEffect(() => {
     if (gameStore) {
       console.log("funciona");

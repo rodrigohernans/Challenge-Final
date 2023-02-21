@@ -16,25 +16,25 @@ function CartCard() {
 
   useEffect(() => {
     dispatch(readCart(token));
-  }, []);
-  carts.cart?.response?.map((game) => console.log(game.game_id));
-
+  }, [token]);
+  console.log(carts);
   return (
     <div className={styles.games}>
       {carts.cart?.response?.map((game) => (
         <div className={styles.card}>
           <div className={styles.imageContainer}>
-            <img className={styles.image} src={game.game_id.image} alt="" />
+            <img className={styles.image} src={game?.game_id?.image} alt="" />
           </div>
           <div className={styles.description}>
-            <p>{game.game_id.title}</p>
+            <p>{game?.game_id?.title}</p>
           </div>
           <div className={styles.price}>
             <div className={styles.money}>
-              <p className={styles.cash}>$ {game.game_id.price}</p>
+              <p className={styles.cash}>$ {game?.game_id?.price}</p>
             </div>
             <div>
-              <BtnDelete /* game_id={id} */ />
+              {console.log(game._id)}
+              <BtnDelete id={game?._id} />
             </div>
           </div>
         </div>

@@ -23,12 +23,12 @@ const  addFav = createAsyncThunk(
 )
 const  deleteFav = createAsyncThunk(
   "addFav",
-  async( {game_id, token}) => {
+  async( {_id, token}) => {
       try{
-          let url = `http://localhost:8000/api/favorites`
+          let url = `http://localhost:8000/api/favorites/${_id}`
           let headers = {headers: {'Authorization': `Bearer ${token}`}}
-          const response = await axios.delete(url, game_id,  headers)
-          console.log(response);
+          const response = await axios.delete(url, headers)
+          //console.log(response);
           return{
               success: true,
               response: response.data.response
@@ -56,6 +56,6 @@ const readFav = createAsyncThunk(
   }
 )
 
-const favoritesActions = {addFav, readFav}
+const favoritesActions = {addFav, readFav,deleteFav}
 export default favoritesActions; 
 
