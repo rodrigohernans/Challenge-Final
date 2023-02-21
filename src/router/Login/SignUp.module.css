@@ -23,6 +23,7 @@
 }
 .psignup{
     font-size: 1.5rem;
+    color: white;
 }
 .formcontainer{
     height: 60vh;
@@ -42,7 +43,7 @@
     height: 20%;
     margin: 2vh;
     padding: 10px;
-    border: 1px solid #eee;
+    border: 2px solid #725AC1;
     background-color: #221F20;
     border-radius: 5px;
     font-size: medium;
@@ -59,7 +60,8 @@
     display: flex;
     align-items: center;
     color: aliceblue;
-    
+    justify-content: center;
+    font-family: monospace;
 }
 
 .send:hover{

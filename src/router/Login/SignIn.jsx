@@ -1,10 +1,10 @@
+import { Link as Anchor, useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link as Anchor, useNavigate } from "react-router-dom";
-import styles from "./SignIn.module.css";
-import Swal from "sweetalert2";
 
+import Swal from "sweetalert2";
 import authActions from "../../store/auth/actions";
+import styles from "./SignIn.module.css";
 
 const { iniciar_sesion } = authActions;
 
@@ -27,7 +27,7 @@ const SignIn = () => {
     if (res.payload.success) {
       Swal.fire({
         title: "Login successful",
-        text: "Â¡Welcome back!",
+        text: "¡Welcome back!",
         icon: "success",
         confirmButtonText: "OK",
       }).then(() => {
@@ -58,7 +58,7 @@ const SignIn = () => {
             <input
               className={styles.emailinput}
               type="text"
-              placeholder="Put your e mail here"
+              placeholder="Put your e-mail here"
               id="mail"
               ref={mail}
             />
