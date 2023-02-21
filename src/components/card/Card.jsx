@@ -7,28 +7,23 @@ import styles from "../card/card.module.css";
 
 const { getAllGames } = allGamesActions;
 
-
 function Card() {
+  const gamesStore = useSelector((store) => store?.allgames?.allgames);
+  const dispatch = useDispatch();
 
-const gamesStore = useSelector(store=>store?.allgames?.allgames)
-const dispatch = useDispatch()
-
-useEffect(()=>{
-  dispatch(getAllGames(""))
-},[])
-
+  useEffect(() => {
+    dispatch(getAllGames(""));
+  }, []);
 
   return (
     <div className={styles.conteiner}>
       {gamesStore.map((game, index) => {
         return (
-          <div className={styles.conteinerCard} key={index} >
+          <div className={styles.conteinerCard} key={index}>
             <Anchor
-              className={
-                styles.anchorDetail
-              }   to= 
-              {`/details/${game._id}`}
-              key={index} 
+              className={styles.anchorDetail}
+              to={`/details/${game._id}`}
+              key={index}
             >
               <img
                 className={styles.gamePhoto}
@@ -57,7 +52,7 @@ useEffect(()=>{
                   alt=""
                 />{" "}
               </div>
-              <button className={styles.buttonPrice}>${game.price}</button>
+              <p className={styles.buttonPrice}>${game.price}</p>
             </div>
           </div>
         );

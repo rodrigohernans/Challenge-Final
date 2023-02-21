@@ -23,7 +23,7 @@ const { getGame } = gamesActions;
 function CardDetails() {
   const opts = {
     height: "300",
-    width: "560",
+    width: "500",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -33,7 +33,6 @@ function CardDetails() {
   const gameStore = useSelector((store) => store?.games);
   /*   console.log(gameStore); */
   let cartStore = useSelector((store) => store);
-  console.log(cartStore);
 
   const dispatch = useDispatch();
   const { id } = useParams();
