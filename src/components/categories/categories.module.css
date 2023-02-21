@@ -4,7 +4,8 @@
     margin: 0;
 }
 .container{
-    width: 96%;
+    width: 99%;
+    margin-left: 5px;
 
 }
 .containerCategories{
