@@ -18,8 +18,8 @@
     width: 35vw;
     height: 70vh;
     margin:3vh ;
-    background-color: #242424;
-    border: solid 1.5px #725ac1;
+    background-color: #CAC4CE;
+    border: solid 1.5px #242038;
     border-radius: 0.7vh;
     
 }
@@ -59,11 +59,11 @@
 }
 .method{
     height: 70%;
-    border: solid 1.5px #725ac1;
+/*     border: solid 1.5px #725ac1; */
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin: 3vh;
+    margin: 2vh;
 }
 
 .pay{
@@ -74,14 +74,15 @@
     background-color: #CAC4CE;
     height: 15vh;
     border-radius: 0.7vh;
-    
+    font-size: 15px;
+
 }
 .btnPay{
     width: 9vw;
     height: 5vh;
-    
     border: 1px solid grey;
     border-radius: 5px;
+
 }
 .mp{
     width: 9vw;
@@ -102,5 +103,16 @@
   .elementPay{
     display: flex;
     flex-direction:row ;
-    justify-content: space-between ;
+    justify-content: space-around ;
+    align-items: center;
+    padding: 3vh;
+    border-radius: 5px;
+    background-color: #242038;
+    height: 25%;
+    width: 100%;
+    font-size: 15px;
   }
+  .text{
+    color: white
+  }
+  
