@@ -38,7 +38,7 @@ const Navbar = (props) => {
           <Anchor to="/home">
             <img
               className={styles.logoImg}
-              src="../../assets/nebulaIsotipe.png"
+              src="../../assets/nebula letras.png"
               alt="logo"
             />
           </Anchor>

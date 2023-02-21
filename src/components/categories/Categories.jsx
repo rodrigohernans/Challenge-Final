@@ -10,9 +10,11 @@ const { getCategories } = categoryActions;
 
 function Categories() {
   const categories = useSelector((store) => store?.categories?.categories);
-
+  
   const dispatch = useDispatch();
   let token = localStorage.getItem("token");
+
+  
 
   useEffect(() => {
     dispatch(

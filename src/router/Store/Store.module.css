@@ -35,7 +35,12 @@
     justify-content: center;
 }
 
-
+.containerh21{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+}
 @media (min-width:768px){
     .divSearch{
 
@@ -60,5 +65,17 @@
         justify-content: center;
         color: aliceblue;
         padding-top: 2rem;
+        
+    }
+    .containerh21{
+        display: flex;
+        width: 100%;
+        /* justify-content: center; */
+        justify-content: space-around;
+        color: aliceblue;
+        padding-top: 2rem;
+        width: 100%;
+        
+        
     }
 }

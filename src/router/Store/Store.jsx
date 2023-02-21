@@ -11,11 +11,21 @@ const { getAllGamesByFilter } = allGamesActions;
 const Store = () => {
   const dispatch = useDispatch();
   const gamesStore = useSelector((store) => store?.allgames?.allgames);
+  const [category, setCategory] = useState(true)
   /* const text = useSelector((store) => store.allgames.text); */
+
+ 
   const inputCategory = useSelector(
     (store) => store?.filterCategories.filterGame
   );
-  console.log(inputCategory);
+   console.log(inputCategory); 
+
+   useEffect(() => {
+    setCategory(inputCategory.length > 0);
+  }, [inputCategory]);
+console.log(category)
+  /* let category = useSelector((store)=> store?.categories?.categories)
+    console.log(category) */
   /* const [load, setLoad] = useState(false);
   let inputText = useRef(text); */
 
@@ -31,9 +41,13 @@ const Store = () => {
   return (
     <div>
       <section>
-        <div className={styles.containerh2}>
-        <h2>Find all the games here</h2>
-        </div>
+        
+          {!category ? (<div className={styles.containerh2}>
+
+            <h2>  Find your games here </h2>
+          </div>
+          ) : (<div className={styles.containerh21}><h2>Category: {`${inputCategory}`} </h2></div>)}
+        
       </section>
       <section>
         <Card />
