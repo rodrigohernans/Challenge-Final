@@ -25,7 +25,7 @@ const boton =()=>{
   const limit = favs.response.length
   console.log(limit)
   if(limit<1){
-    return <div className={styles.noFavorites}>No favorites</div>
+    return <div className={styles.noFavorites}>Add yours favorites here</div>
   } else{
     return(
 favs.response?.map((fav)=> (
