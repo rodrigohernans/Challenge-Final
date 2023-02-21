@@ -32,8 +32,8 @@ const ShoppingCart = () => {
         <div className={styles.paymentcontainer}>
           <div className={styles.method}>
             <div className={styles.elementPay}>
-              <p>{game.game_id.title}</p>
-              <p>{"b"}</p>
+              {/*               <p>{game.game_id.title}</p>
+              <p>{"b"}</p> */}
             </div>
           </div>
           <div className={styles.pay}>
