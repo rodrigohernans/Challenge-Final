@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import filterCategoryGamesActions from "../../store/filterCategory/action";
 import styles from "../categories/categories.module.css";
-import './buttons.css'
+import '../categories/buttons.css'
 const {filterCategoryGames}= filterCategoryGamesActions
 
 

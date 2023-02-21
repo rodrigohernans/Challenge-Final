@@ -4,7 +4,8 @@
     margin: 0;
 }
 .container{
-    width: 96%;
+    width: 99%;
+    margin-left: 5px;
 
 }
 .containerCategories{
@@ -49,7 +50,10 @@
     .buttonCategory{
         font-size: 20px;
     }
-  
+    .containerCategories{
+
+        margin-left: 7vh;
+    }
 }
 /*
 fondo negro : #221F20

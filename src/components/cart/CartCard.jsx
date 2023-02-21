@@ -16,9 +16,8 @@ function CartCard() {
 
   useEffect(() => {
     dispatch(readCart(token));
-  }, []);
-  carts.cart?.response?.map((game) => console.log(game.game_id));
-
+  }, [token]);
+  console.log(carts);
   return (
     <div className={styles.games}>
       {carts.cart?.response?.map((game) => (
@@ -34,7 +33,7 @@ function CartCard() {
               <p className={styles.cash}>$ {game.game_id.price}</p>
             </div>
             <div>
-              <BtnDelete /* game_id={id} */ />
+              <BtnDelete game_id={game._id} />
             </div>
           </div>
         </div>
