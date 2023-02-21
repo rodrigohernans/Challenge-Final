@@ -11,15 +11,15 @@ const { getAllGamesByFilter } = allGamesActions;
 const Store = () => {
   const dispatch = useDispatch();
   const gamesStore = useSelector((store) => store?.allgames?.allgames);
-  const text = useSelector((store) => store.allgames.text);
+  /* const text = useSelector((store) => store.allgames.text); */
   const inputCategory = useSelector(
     (store) => store?.filterCategories.filterGame
   );
   console.log(inputCategory);
-  const [load, setLoad] = useState(false);
-  let inputText = useRef(text);
+  /* const [load, setLoad] = useState(false);
+  let inputText = useRef(text); */
 
-  useEffect(() => {
+  /* useEffect(() => {
     dispatch(
       getAllGamesByFilter({
         inputText: inputText.current?.value,
@@ -27,28 +27,12 @@ const Store = () => {
       })
     );
   }, [load, inputCategory]);
-
+ */
   return (
     <div>
       <section>
-        <div>
-          <Categories />
-          <div className={styles.divSearch}>
-            <img
-              className={styles.lupa}
-              src="../../../assets/lupa.png"
-              alt=""
-            />
-            <input
-              className={styles.search}
-              ref={inputText}
-              onKeyUp={() => setLoad(!load)}
-              type="text"
-              id="search"
-              placeholder="Find your game here"
-              defaultValue={text}
-            />
-          </div>
+        <div className={styles.containerh2}>
+        <h2>Find all the games here</h2>
         </div>
       </section>
       <section>

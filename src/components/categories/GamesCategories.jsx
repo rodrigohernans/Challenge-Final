@@ -27,6 +27,7 @@ const GamesCategories = () => {
             index={index}
             key={index}
             categoryIcon={category.categoryIcon}
+            
           />
         );
       })}

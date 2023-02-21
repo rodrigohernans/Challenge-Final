@@ -23,52 +23,29 @@ function Categories() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <section>
-        <div className={styles.containerCategories}>
-          <div className={styles.containericons}>
-            <img
-              className={styles.icon}
-              src="../../assets/shooterIcon.png"
-              alt=""
-            />
-            <img
-              className={styles.icon}
-              src="../../assets/adventureIcon.png"
-              alt=""
-            />
-            <img
-              className={styles.icon}
-              src="../../assets/sportsIcon.png"
-              alt=""
-            />
-            <img
-              className={styles.icon}
-              src="../../assets/rpgIcon.png"
-              alt=""
-            />
-            <img
-              className={styles.icon}
-              src="../../assets/estrategyIcon.png"
-              alt=""
-            />
-          </div>
-          <div className={styles.containerTitle}>
+    <div  /* className={styles.explorerMenu} */ >
+      <section >
+           <div /* className={styles.menuOption} */> 
             {categories.map((category, index) => {
               return (
-                <CategoryButton
+                <CategoryButton 
                   id={category._id}
                   key={index}
                   index={index}
-                  categoryIcon={ <img
-                    /* className={styles.gamePhoto} */
-                    src={category}
+                  name={category.name}
+                  /* categoryIcon={ <img
+                    className={styles.gameIcon} 
+                    src={category.categoryIcon
+                    }
+                    
                     alt="PhotoGame"
-                  />}
+                    
+                  />} */
+                
                 />
               );
             })}
-          </div>
+          {/* </div> */}
         </div>
       </section>
     </div>

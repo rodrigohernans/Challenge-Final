@@ -29,6 +29,11 @@
 .lupa{
     width: 30px;
 }
+.containerh2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 
 
 @media (min-width:768px){
@@ -48,5 +53,12 @@
 
         width: 97.5%;
         margin-left: 15px
+    }
+    .containerh2{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        color: aliceblue;
+        padding-top: 2rem;
     }
 }
