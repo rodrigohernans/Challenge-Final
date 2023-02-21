@@ -8,9 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRef, useEffect } from "react";
 import { useParams } from "react-router";
 import gamesActions from "../../store/games/action";
-import donationActions from "../../store/cart/mercadoPago.actions";
 
-const { donation } = donationActions;
 const { addCart, readCart } = cartActions;
 const { getGame } = gamesActions;
 
@@ -32,8 +30,8 @@ const ShoppingCart = () => {
         <div className={styles.paymentcontainer}>
           <div className={styles.method}>
             <div className={styles.elementPay}>
-              <p>{game.game_id.title}</p>
-              <p>{"b"}</p>
+              {/*               <p>{game.game_id.title}</p>
+              <p>{"b"}</p> */}
             </div>
           </div>
           <div className={styles.pay}>

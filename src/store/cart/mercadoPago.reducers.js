@@ -1,6 +1,4 @@
-
-
-
+/* 
 import { createReducer } from "@reduxjs/toolkit";
 import mercadoPagoActions from "./mercadoPago.actions";
 
@@ -26,4 +24,4 @@ const mercadoPagoReducer = createReducer(
     }
 )
 
-export default mercadoPagoReducer
+export default mercadoPagoReducer */
