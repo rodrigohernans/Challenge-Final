@@ -50,7 +50,10 @@
     .buttonCategory{
         font-size: 20px;
     }
-  
+    .containerCategories{
+
+        margin-left: 7vh;
+    }
 }
 /*
 fondo negro : #221F20

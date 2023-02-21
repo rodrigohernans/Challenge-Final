@@ -8,38 +8,50 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRef, useEffect } from "react";
 import { useParams } from "react-router";
 import gamesActions from "../../store/games/action";
+import donationActions from "../../store/cart/mercadoPago.actions";
 
+const { donation } = donationActions;
 const { addCart, readCart } = cartActions;
 const { getGame } = gamesActions;
 
 const ShoppingCart = () => {
   let carts = useSelector((store) => store.cart);
+  let { token } = useSelector((store) => store?.auth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(readCart(token));
+  }, [token]);
 
   return (
-    <div className={styles.main}>
-      <>
+    <div>
+      <div className={styles.main}>
         <div className={styles.games}>
           <CartCard />
         </div>
         <div className={styles.paymentcontainer}>
           <div className={styles.method}>
             <div className={styles.elementPay}>
-              <p>{/* {game.title} */}</p>
-              <p>{/* {game.price} */}</p>
+              <p>{game.game_id.title}</p>
+              <p>{"b"}</p>
             </div>
-            <p className={styles.methodPosition}>aca van los juegos</p>
           </div>
           <div className={styles.pay}>
-            <p>Total: $1269</p>
-            <Btn />
-            <button className={styles.btnPay}>
-              <img className={styles.mp} src="/assets/mp.png" alt="" />
-            </button>
+            <p>Total: $2850</p>
           </div>
         </div>
-      </>
+      </div>
     </div>
   );
 };
 
 export default ShoppingCart;
+{
+  /*             <p className={styles.methodPosition}>{game.game_id.title}</p> */
+}
+
+{
+  /*             <button className={styles.btnPay} onClick={dispatch1}>
+        <img className={styles.mp} src="/assets/mp.png" alt="" />
+      </button> */
+}

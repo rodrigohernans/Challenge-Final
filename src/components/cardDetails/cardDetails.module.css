@@ -76,10 +76,11 @@
 }
 .title {
     text-align: center;
-    padding: 1em;
+    padding: 1vh;
+    
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 0.5vh;
 }
 
 .downInfo{
@@ -313,6 +314,7 @@ button:hover{
     }
     .youtube{
         height: 100%;
+        margin-bottom: -1.6vh;
     }
     .containerCarousel{
         height: 40%;
