@@ -61,7 +61,11 @@ function Categories() {
                   id={category._id}
                   key={index}
                   index={index}
-                  name={category.name}
+                  categoryIcon={ <img
+                    /* className={styles.gamePhoto} */
+                    src={category}
+                    alt="PhotoGame"
+                  />}
                 />
               );
             })}

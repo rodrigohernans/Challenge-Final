@@ -26,7 +26,7 @@ const GamesCategories = () => {
           className={styles.buttonCategory}
             index={index}
             key={index}
-            name={category.name}
+            categoryIcon={category.categoryIcon}
           />
         );
       })}

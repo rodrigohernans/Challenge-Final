@@ -8,14 +8,16 @@ const {filterCategoryGames}= filterCategoryGamesActions
 
 
 export default function CategoryButton(props){
-    const {id,index,name} = props;
+    const {id,index,categoryIcon} = props;
     const [click, setClick] = useState(true);
     const [color,setColor] = useState(false)
     const dispatch = useDispatch()
     let category = useSelector((store)=> store?.categories?.categories)
+    console.log(category)
+
     useEffect(()=>{
         if(category.length>0){
-            if(category.includes(name)){
+            if(category.includes(categoryIcon)){
                 setColor(!color)
             }
         }
@@ -24,16 +26,16 @@ export default function CategoryButton(props){
     const getName = (e) => {
         setClick(!click)
         setColor(!color)
-        dispatch(filterCategoryGames(name))
+        dispatch(filterCategoryGames(categoryIcon))
     }
 //console.log(category)
     return(
         <div
         onClick={getName}
+        className={"buttonCategory"}
         id={id}
-        className={"buttonCategory" + (index + 1) + (color ? ` active${index + 1}` : "")}
         key={index} >
-            {name}
+        { categoryIcon }
         </div>
     )
 }
