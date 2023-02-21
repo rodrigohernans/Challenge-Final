@@ -36,7 +36,7 @@ function CardDetails() {
 
   const dispatch = useDispatch();
   const { id } = useParams();
-
+  console.log("hola");
   const buy = () => {
     const data = { _id: id };
     dispatch(addCart(data));
