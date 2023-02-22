@@ -1,8 +1,7 @@
 import "react-multi-carousel/lib/styles.css";
-
 import { useDispatch, useSelector } from "react-redux";
-
 import Btn from "../cart/Btn";
+import BtnFav from '../favorites/BtnFav'
 import Carousel from "react-multi-carousel";
 import { Link } from "react-scroll";
 import React from "react";
@@ -16,9 +15,12 @@ import styles from "./cardDetails.module.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import window from "./windowsIcon.png";
+import favoritesActions from '../../store/favorites/actions'
 
 const { addCart } = cartActions;
 const { getGame } = gamesActions;
+const { addFav} = favoritesActions;
+
 
 function CardDetails() {
   const opts = {
@@ -33,23 +35,29 @@ function CardDetails() {
   const gameStore = useSelector((store) => store?.games);
   /*   console.log(gameStore); */
   let cartStore = useSelector((store) => store);
+  let { token } = useSelector((store) => store?.auth)
+  //console.log(cartStore);
 
   const dispatch = useDispatch();
   const { id } = useParams();
-  console.log("hola");
+
   const buy = () => {
     const data = { _id: id };
     dispatch(addCart(data));
   };
-
+  const reactionFav = () => {
+    const data = { _id: id };
+    dispatch(addFav(data));
+  };
+ 
   useEffect(() => {
     if (gameStore) {
       console.log("funciona");
-      dispatch(getGame(id));
+      dispatch(getGame(id,token));
     } else {
       console.log("no funciona");
     }
-  }, []);
+  }, [id,token]);
 
   const responsive = {
     superLargeDesktop: {
@@ -90,6 +98,7 @@ function CardDetails() {
               <img src={window} alt="" className={styles.window} />
               <img src={apple} alt="" className={styles.window} />
               <Btn game_id={id} />
+              <BtnFav game_id={gameStore?.game?.response?._id} />
             </div>
           </div>
         </div>

@@ -1,0 +1,51 @@
+.fav{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+   background-image: url(../../../public/assets/favoriteIcon.png);
+   background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    background-color: #725AC1;
+    padding: 3px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.FavActive{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    background-image: url(../../../public/assets/pink.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #725ac160;
+    padding: 3px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.trash{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    background-image: url(../../../public/assets/trash-can.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #725ac160;
+    padding: 3px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.trash:hover{
+    background-color: #b4030360;
+}
+/*
+fondo negro : #221F20
+azulviolaceo : #725AC1
+gris: #575561
+celeste claro: #8D86C9
+azul boton: #3C29E3
+CARTAS::after
+azul oscuro: #242038
+gris claro: #CAC4CE
+boton azul: #3C29E3
+*/

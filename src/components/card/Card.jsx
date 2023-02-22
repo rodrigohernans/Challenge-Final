@@ -34,11 +34,11 @@ function Card() {
             </Anchor>
             <div className={styles.titleAndFav}>
               {game.title}
-              <img
+             {/*  <img
                 className={styles.favIcon}
                 src="../../assets/favoriteIcon.png"
                 alt=""
-              />
+              /> */}
             </div>
             <div className={styles.footerCard}>
               <div className={styles.footerIcons}>

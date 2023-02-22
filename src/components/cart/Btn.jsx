@@ -12,7 +12,7 @@ const Btn = (props) => {
   const game_id = { game_id: props };
   let { token } = useSelector((store) => store?.auth);
   let cart = useSelector((store) => store.cart);
-  console.log(game_id.game_id);
+  //console.log(game_id.game_id);
   const dispatch = useDispatch();
 
   const createCart = () => {
