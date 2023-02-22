@@ -35,7 +35,7 @@ const SignUp = () => {
         <main className={styles.maincontainer} >
             <div>
             <div className={styles.nebulacontainer}>
-                    <img src ="/assets/nebulaIsotipeLogotipePosibleVersion.png" className={styles.nebulalogo} />
+                    <img src ="/assets/nebula logo e isotipo.png" className={styles.nebulalogo} />
                 </div>
                 <div className={styles.psignupcontainer}>
                     <p className={styles.psignup}>Create your free nebula account here </p>

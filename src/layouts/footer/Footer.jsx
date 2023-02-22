@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
       </section>
       <section className={styles.section2}>
-        <img  className={styles.footerLogo} src="../../assets/nebulaIsotipe.png" alt="" />
+        <img  className={styles.footerLogo} src="../../assets/nebula letras.png" alt="" />
       </section>
       <section className={styles.section3}>
       <div className={styles.textFooter}>© 2023 Nebula. All Rights Reserved</div>

@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    background-color: #221F20;
+    box-shadow: 1px 7px 25px rgba(5,5,5,5);
+}
+
+.explorerMenu{
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px white solid;
+    z-index: 20;
+    left: 5px;
+    top: 0;
+    background: rgb(141,134,201);
+    background: radial-gradient(circle, rgba(83, 78, 132, 0.934) 59%, rgba(0,0,0,1) 100%);
+    cursor: pointer;
+}
+
+.menuOption{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+}
+.menuOption:hover{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+.acountMenu{
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px white solid;
+    right: 3.2em;
+    top: 3em;
+    background: rgb(141,134,201);
+    background: radial-gradient(circle, rgba(83, 78, 132, 0.934) 59%, rgba(0,0,0,1) 100%);
+    z-index: 20;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+    
+}
+
+
+.logoImg{
+    width: 80px;
+    height: 15px;
+}
+.logoImg:hover{
+    background-color: #8D86C9;
+    transition: 0.5;
+}
+
+.acount{
+    display: flex;
+    color: white;
+    font-size: 12px;
+}
+
+.arrowAcount{
+    width: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.buttonAttendance{
+    display: flex;
+    height: 20px;
+    padding: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+.buttonStore{
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    display: flex;
+    height: 20px;
+    padding: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.buttonAcount{
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    color: white;
+    display: flex;
+    height: 20px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+} 
+.buttonAttendance:hover{
+    background-color: #8d86c9b0;
+    border-radius: 0.4em;
+    color: white;
+    transition: 0.2s;
+}
+.buttonAcount:hover{
+    background-color: #8d86c9b0;
+    border-radius: 0.4em;
+    color: white;
+    transition: 0.2s;
+}
+.buttonStore:hover{
+    background-color: #8d86c9b0;
+    border-radius: 0.4em;
+    color: white;
+    transition: 0.2s;
+}
+
+.section2{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: all ease 500ms;
+    position: relative;
+}
+.explore{ 
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 0.5px #8D86C9;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    color: white;
+    margin: 0;
+}
+
+.explorerAccount{
+position: relative;
+}
+
+.buttonsExplore{
+    display: flex;
+    justify-content: space-around;
+}
+.arrowExplore{
+    width: 15px;
+    height: 9px;
+    margin: 5px 0px 0px 5px;
+}
+.divCarrito,.divDeseados,.divNebula {
+    background-color: #8D86C9;
+    padding: 3px;
+    border-radius: 5px;
+    margin:0 5px;
+    color: white;
+}
+.divCarrito{
+    height: 30px;
+    width: 30px;
+background-image: url(../../../public/assets/shopIcon.png);
+background-size: 25px;
+background-position-x: center;
+background-position-y: center;
+background-repeat: no-repeat;
+}
+.divCarrito:hover{
+    background-color: #8d86c9b0;
+}
+
+
+
+.divDeseados{
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    width: 30px;
+    background-image: url(../../../public/assets/favoriuteIconNavBar.png);
+    background-size: 23px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+.divDeseados:hover{
+    background-color: #8d86c9b0;
+}
+.divNebula{
+    width:90px;
+    background-image: url(../../../public/assets/nebulaIsotipe.png);
+    background-size: 85px;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+.divNebula:hover{
+    background-color: #8d86c9b0;
+}
+
+@media (min-width:768px){
+    .section1{
+        padding: 40px;
+    }
+    .section2{
+        margin:0px 10px
+    }
+
+    .logoImg{
+        height: 38px;
+        width: 350px;
+    }
+    .acount{
+        font-size: 22px;
+
+    }
+    .arrowAcount{
+        width: 20px;
+    }
+    .explore{
+        height: 50px;
+        font-size: 22px;
+        padding: 20px;
+    }
+    .arrowExplore{
+        width: 20px;
+        height: 12px;
+    }
+    .divCarrito{
+        height: 50px;
+        width: 50px;
+        margin-left: 20px;
+
+    }
+    .divDeseados{
+          height: 50px;
+        width: 50px;
+        
+    }
+    .divNebula{
+        width:150px;
+        height: 50px;
+        background-size: 140px;
+    }
+    .explorerMenu{
+        margin-top: 60px;
+        width: 500px;
+    }
+    .acountMenu{
+        width: 170px;
+        
+    }
+    .menuOption{
+        font-size: 22px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .buttonAttendance{
+        padding: 20px;
+    }
+    .buttonStore{
+        padding: 20px;
+
+    }
+    .buttonAcount{
+        padding: 20px;
+        
+        
+    } 
+}
+
+/*
+fondo negro : #221F20
+azulviolaceo : #725AC1
+gris: #575561
+celeste claro: #8D86C9
+azul boton: #3C29E3
+CARTAS::after
+azul oscuro: #242038
+gris claro: #CAC4CE
+boton azul: #3C29E3
+*/
