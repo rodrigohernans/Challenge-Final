@@ -1,6 +1,3 @@
-
-
-
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -9,13 +6,13 @@ const payment = createAsyncThunk(
     "payment",
     async ({data, token}) => {
         try{
-            const url = `http://localhost:8000/api/carts/:user_id`
+            const url = `http://localhost:8000/api/payment`
             let headers = {headers: {'Authorization':`Bearer ${token}`}}
             const response = await axios.post(url, data, headers)
             console.log(response);
             return {
                 success: true,
-                response: window.location.href = response.data.response.body.init_point
+                response: window.location.href = response.data.url
             }
         }
         catch(error){
@@ -27,6 +24,6 @@ const payment = createAsyncThunk(
     }
 )
 
-const mercadoPagoActions = {payment}
+const paymentActions = {payment}
 
-export default mercadoPagoActions
+export default paymentActions
