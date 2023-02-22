@@ -58,8 +58,7 @@ const ShoppingCart = () => {
           <div className={styles.pay}>
             <p>Total: ${totalPrice.toFixed(2)}</p>
             <button className={styles.btnPay} onClick={paybtn}>
-              caca
-              {/*               <img className={styles.mp} src="/assets/mp.png" alt="" /> */}
+              <img className={styles.mp} src="/assets/mp.png" alt="" />
             </button>
           </div>
         </div>

@@ -107,7 +107,8 @@
     align-items: center;
     padding: 3vh;
     border-radius: 5px;
-    background-color: #242038;
+    background-color: #725AC1;
+    border: 1px solid #242038;
     height: 25%;
     width: 100%;
     font-size: 15px;
@@ -115,4 +116,6 @@
   .text{
     color: white
   }
-  
+  .paymentDetail{
+    color: black
+  }
