@@ -35,7 +35,14 @@ const SignUp = () => {
         <main className={styles.maincontainer} >
             <div>
             <div className={styles.nebulacontainer}>
-                    <img src ="/assets/nebula logo e isotipo.png" className={styles.nebulalogo} />
+            <Anchor to="/home" className={styles.anchorlogo} >
+          <img
+            src="/assets/nebula logo e isotipo.png"
+            className={styles.nebulalogo}
+          />
+            
+            </Anchor>
+                    {/* <img src ="/assets/nebula logo e isotipo.png" className={styles.nebulalogo} /> */}
                 </div>
                 <div className={styles.psignupcontainer}>
                     <p className={styles.psignup}>Create your free nebula account here </p>

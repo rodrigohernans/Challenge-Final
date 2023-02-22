@@ -4,6 +4,7 @@ import axios, { all } from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { useRef, useEffect } from "react";
 import cartActions from "../../store/cart/cart.actions";
+import Swal from "sweetalert2";
 
 const { deleteCart, readCart } = cartActions;
 
@@ -16,6 +17,12 @@ const BtnDelete = (props) => {
     console.log(token);
     dispatch(deleteCart({ _id: id, token }));
     dispatch(readCart(token));
+    Swal.fire({
+      title: 'Success!',
+      text: 'item deleted from cart',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
   };
 
   return (

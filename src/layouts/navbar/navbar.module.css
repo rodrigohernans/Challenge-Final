@@ -201,12 +201,13 @@ background-repeat: no-repeat;
     background-color: #8d86c9b0;
 }
 .divNebula{
-    width:90px;
-    background-image: url(../../../public/assets/nebulaIsotipe.png);
-    background-size: 85px;
+    /* width:90px; */
+    background-image: url(../../../public/assets/nebulaletras.png);
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: center; 
     background-repeat: no-repeat;
+    background-size: contain;
+    
 }
 .divNebula:hover{
     background-color: #8d86c9b0;
@@ -254,7 +255,7 @@ background-repeat: no-repeat;
     .divNebula{
         width:150px;
         height: 50px;
-        background-size: 140px;
+        background-size: 120px;
     }
     .explorerMenu{
         margin-top: 60px;

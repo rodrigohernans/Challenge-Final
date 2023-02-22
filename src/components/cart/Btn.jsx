@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRef, useEffect } from "react";
 import gamesActions from "../../store/games/action";
 import styles from "./btn.module.css";
+import Swal from "sweetalert2";
 
 const { addCart } = cartActions;
 
@@ -15,15 +16,30 @@ const Btn = (props) => {
   console.log(game_id.game_id);
   const dispatch = useDispatch();
 
+  /* const handleAddToCart = () => {
+    dispatch(addCart(id));
+    Swal.fire({
+      title: 'Success!',
+      text: 'Item added to cart',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+  }; */
   const createCart = () => {
     dispatch(addCart({ game_id: game_id.game_id, token }));
+    Swal.fire({
+      title: 'Success!',
+      text: 'Item added to cart',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
   };
 
   //---------------------------------------------------
 
   return (
     <div className={styles.chopCard1}>
-      <a className={styles.chopCard} onClick={createCart}>
+      <a className={styles.chopCard} onClick={createCart} >
         <img className={styles.shop} src="/assets/shopIcon.png" alt="shop" />
       </a>
     </div>
