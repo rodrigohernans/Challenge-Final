@@ -38,6 +38,34 @@
    
     
 }
+.gameIcon{
+    height: 20px;
+}
+.explorerMenu{
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px white solid;
+    z-index: 20;
+    left: 5px;
+    top: 0;
+    background: rgb(141,134,201);
+    background: radial-gradient(circle, rgba(83, 78, 132, 0.934) 59%, rgba(0,0,0,1) 100%);
+    cursor: pointer;
+}
+.menuOption{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+}
+.menuOption:hover{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
 
 
 
@@ -49,10 +77,21 @@
     }
     .buttonCategory{
         font-size: 20px;
+        flex-direction: column;
+        padding: 10px;
     }
     .containerCategories{
 
         margin-left: 7vh;
+    }
+    .menuOption{
+        font-size: 22px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .explorerMenu{
+        margin-top: 60px;
+        width: 500px;
     }
 }
 /*

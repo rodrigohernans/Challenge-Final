@@ -1,14 +1,13 @@
-/* 
 import { createReducer } from "@reduxjs/toolkit";
-import mercadoPagoActions from "./mercadoPago.actions";
+import paymentActions from "./mercadoPago.actions";
 
-const {payment} = mercadoPagoActions
+const {payment} = paymentActions
 
 const initialState = {
     order: []
 }
 
-const mercadoPagoReducer = createReducer(
+const paymentReducers = createReducer(
     initialState,
     (builder) => {
         builder
@@ -24,4 +23,4 @@ const mercadoPagoReducer = createReducer(
     }
 )
 
-export default mercadoPagoReducer */
+export default paymentReducers

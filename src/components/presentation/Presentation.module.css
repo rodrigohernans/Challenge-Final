@@ -15,6 +15,7 @@
 .logo{
     transition: all 1s;
     margin: 2em;
+    height: 150px;
 }
 
 p{
@@ -44,8 +45,8 @@ p{
 }
 
 .imagen{
-    width: 45vw;
-    height: 12vh;
+    width: 50vw;
+    height: 25vh;
 }
 
 .info {

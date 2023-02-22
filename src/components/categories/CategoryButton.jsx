@@ -8,11 +8,13 @@ const {filterCategoryGames}= filterCategoryGamesActions
 
 
 export default function CategoryButton(props){
-    const {id,index,name} = props;
+    const {id,index,categoryIcon,name} = props;
     const [click, setClick] = useState(true);
     const [color,setColor] = useState(false)
     const dispatch = useDispatch()
     let category = useSelector((store)=> store?.categories?.categories)
+    console.log(category)
+
     useEffect(()=>{
         if(category.length>0){
             if(category.includes(name)){
@@ -30,10 +32,10 @@ export default function CategoryButton(props){
     return(
         <div
         onClick={getName}
+        className={styles.menuOption}
         id={id}
-        className={"buttonCategory" + (index + 1) + (color ? ` active${index + 1}` : "")}
         key={index} >
-            {name}
+        {name}
         </div>
     )
 }

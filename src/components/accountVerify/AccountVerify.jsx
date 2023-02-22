@@ -16,7 +16,7 @@ const AccountVerify = () => {
     <div className={styles.container}>
       <div className={styles.logo}>
         <img
-          src="../../assets/nebulaIsotipe.png"
+          src="../../assets/nebula logo e isotipo.png"
           className={styles.imagen}
           alt=""
         />

@@ -30,7 +30,7 @@ const SignIn = () => {
     if (res.payload.success) {
       Swal.fire({
         title: "Login successful",
-        text: "¡Welcome back!",
+        text: "Welcome back",
         icon: "success",
         confirmButtonText: "OK",
       }).then(() => {
@@ -51,7 +51,7 @@ const SignIn = () => {
       <div>
         <div className={styles.nebulacontainer}>
           <img
-            src="/assets/nebulaIsotipeLogotipePosibleVersion.png"
+            src="/assets/nebula logo e isotipo.png"
             className={styles.nebulalogo}
           />
         </div>

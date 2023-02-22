@@ -17,7 +17,6 @@ function CartCard() {
   useEffect(() => {
     dispatch(readCart(token));
   }, [token]);
-  console.log(carts);
   return (
     <div className={styles.games}>
       {carts.cart?.response?.map((game) => (
