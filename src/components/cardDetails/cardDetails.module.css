@@ -43,7 +43,7 @@
 .info {
     width: 95%;
     text-align: left;
-    height: 50vh;
+    height: 55vh;
 }
 
 .containerP{
@@ -52,6 +52,7 @@
     justify-content: space-evenly;
     width: 100%;
     text-align: center;
+    margin-top:7vh ;
 }
 .category{
     width: 100%;
@@ -68,13 +69,15 @@
     justify-content: center;
 }
 .description{
+
     padding: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #725ac1;
-    font-size: 1.2em;
+    font-size: 2.5vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2vh;
 }
 .title {
     text-align: center;
@@ -218,6 +221,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .container2{
@@ -249,6 +253,7 @@ button:hover{
 }
 
 
+
 @media (min-width: 1200px) {
     .containerP{
         flex-direction: row;
@@ -265,6 +270,7 @@ button:hover{
         width: 100%;
         height: 40%;
     }
+
     .imagen{
         width: 95%;
         height: 90%;
@@ -324,7 +330,7 @@ button:hover{
         height: 40%;
     }
     .description{
-        height: 50%;
+        height: 27vh;
         margin-top: 1.5em;
     }
     .containerImg{
