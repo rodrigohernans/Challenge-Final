@@ -36,7 +36,7 @@ const NavbarSignIn = (props) => {
       <div className={styles.nav}>
         <section className={styles.section1}>
           <Anchor to="/home">
-            Home
+            
           </Anchor>
 
           {favorites ? (
@@ -65,6 +65,7 @@ const NavbarSignIn = (props) => {
                     onMouseEnter={() => setVariableAcount(true)}
                   >
                     Acount
+                    
                     <img
                       className={styles.arrowAcount}
                       src="../../assets/arrowDesplegableExplore.png"

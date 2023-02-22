@@ -68,3 +68,7 @@
     background-color:#8778b6;
     cursor:pointer
 }
+.anchorlogo{
+    display: flex;
+    justify-content: center;
+}

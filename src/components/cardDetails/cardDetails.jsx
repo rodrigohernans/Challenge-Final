@@ -16,6 +16,7 @@ import styles from "./cardDetails.module.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import window from "./windowsIcon.png";
+import Swal from 'sweetalert2'
 
 const { addCart } = cartActions;
 const { getGame } = gamesActions;
@@ -30,6 +31,17 @@ function CardDetails() {
     },
   };
 
+  /* const handleAddToCart = () => {
+    dispatch(addCart(id));
+    Swal.fire({
+      title: 'Success!',
+      text: 'Item added to cart',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+  }; */
+
+ 
   const gameStore = useSelector((store) => store?.games);
   /*   console.log(gameStore); */
   let cartStore = useSelector((store) => store);
@@ -37,10 +49,8 @@ function CardDetails() {
   const dispatch = useDispatch();
   const { id } = useParams();
   console.log("hola");
-  const buy = () => {
-    const data = { _id: id };
-    dispatch(addCart(data));
-  };
+  
+  
 
   useEffect(() => {
     if (gameStore) {
@@ -72,6 +82,11 @@ function CardDetails() {
 
   return (
     <div className={styles.containerGeneral}>
+   {/*  <div className={styles.downInfo}>
+      <img src={window} alt="" className={styles.window} />
+      <img src={apple} alt="" className={styles.window} />
+      <button onClick={handleAddToCart}>Add to cart</button>
+    </div> */}
       <div className={styles.containerCard}>
         <div className={styles.firstContainer}>
           <div className={styles.containerImage}>
@@ -89,7 +104,7 @@ function CardDetails() {
             <div className={styles.downInfo}>
               <img src={window} alt="" className={styles.window} />
               <img src={apple} alt="" className={styles.window} />
-              <Btn game_id={id} />
+              <Btn game_id={id}  />
             </div>
           </div>
         </div>

@@ -127,3 +127,7 @@ input:hover{
     color: #CAC4CE;
     font-weight: 600;
 }
+.anchorlogo{
+    display: flex;
+    justify-content: center;
+}

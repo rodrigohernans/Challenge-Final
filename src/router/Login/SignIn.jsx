@@ -47,10 +47,13 @@ const SignIn = () => {
     <main className={styles.maincontainer}>
       <div>
         <div className={styles.nebulacontainer}>
+        <Anchor to="/home" className={styles.anchorlogo} >
           <img
             src="/assets/nebula logo e isotipo.png"
             className={styles.nebulalogo}
           />
+            
+            </Anchor>
         </div>
         <form action="post" className={styles.formcontainer}>
           <fieldset className={styles.fieldsetcontainer}>
