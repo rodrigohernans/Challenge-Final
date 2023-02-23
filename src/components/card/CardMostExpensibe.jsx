@@ -7,40 +7,35 @@ import styles from "../card/cardHome.module.css";
 
 const { getAllGames } = allGamesActions;
 
-
 function CardMoreExpensibe() {
+  const gamesStore = useSelector((store) => store?.allgames?.allgames);
 
-const gamesStore = useSelector(store=>store?.allgames?.allgames)
+  const gamesCopy = [...gamesStore];
+  gamesCopy.sort(function compare(a, b) {
+    let priceA = new Number(a.price);
+    let priceB = new Number(b.price);
+    return priceB - priceA;
+  });
+  console.log(gamesCopy);
 
-const gamesCopy = [...gamesStore]
-gamesCopy.sort(function compare(a, b) {
-  let priceA = new Number(a.price);
-  let priceB = new Number(b.price);
-  return priceB - priceA;
-})
-console.log(gamesCopy)
+  let gamesMoreExpensibeOnly5 = gamesCopy.slice(0, 3);
+  console.log(gamesMoreExpensibeOnly5);
 
-let gamesMoreExpensibeOnly5 = gamesCopy.slice(0,4)
-  console.log(gamesMoreExpensibeOnly5)
+  const dispatch = useDispatch();
 
-const dispatch = useDispatch()
-
-useEffect(()=>{
-  dispatch(getAllGames(""))
-},[])
-
+  useEffect(() => {
+    dispatch(getAllGames(""));
+  }, []);
 
   return (
     <div className={styles.conteiner}>
-      { gamesMoreExpensibeOnly5.map((game, index) => {
+      {gamesMoreExpensibeOnly5.map((game, index) => {
         return (
-          <div className={styles.conteinerCard} key={index} >
+          <div className={styles.conteinerCard} key={index}>
             <Anchor
-              className={
-                styles.anchorDetail
-              }   to= 
-              {`/details/${game._id}`}
-              key={index} 
+              className={styles.anchorDetail}
+              to={`/details/${game._id}`}
+              key={index}
             >
               <img
                 className={styles.gamePhoto}
@@ -54,12 +49,9 @@ useEffect(()=>{
                 className={styles.favIcon}
                 src="../../assets/favoriteIcon.png"
                 alt=""
-                />
+              />
             </div>
-            <div className={styles.extra}>
-                {game.developer}
-                
-            </div>
+            <div className={styles.extra}>{game.developer}</div>
             <div className={styles.footerCard}>
               <div className={styles.footerIcons}>
                 <img

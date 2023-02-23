@@ -9,12 +9,15 @@ import styles from "./SignIn.module.css";
 const { iniciar_sesion } = authActions;
 
 const SignIn = () => {
+
+
   const { messages } = useSelector((store) => store.auth);
   console.log(messages);
   const dispatch = useDispatch();
   const mail = useRef("");
   const password = useRef("");
   const navigate = useNavigate();
+
 
   const captureData = async (e) => {
     e.preventDefault();

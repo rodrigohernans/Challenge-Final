@@ -9,7 +9,7 @@ const { getAllGames } = allGamesActions;
 
 function Card() {
   const gamesStore = useSelector((store) => store?.allgames?.allgames);
-  console.log(gamesStore)
+  console.log(gamesStore);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,22 +34,22 @@ function Card() {
             </Anchor>
             <div className={styles.titleAndFav}>
               {game.title}
-              <img
+              {/*  <img
                 className={styles.favIcon}
                 src="../../assets/favoriteIcon.png"
                 alt=""
-              />
+              /> */}
             </div>
             <div className={styles.footerCard}>
               <div className={styles.footerIcons}>
                 <img
                   className={styles.icon}
-                  src="../../assets/windowsIcon.png"
+                  src="/assets/windows-logo-24.png"
                   alt=""
                 />
                 <img
                   className={styles.icon}
-                  src="../../assets/appleIcon.png"
+                  src="/assets/apple-logo-24.png"
                   alt=""
                 />{" "}
               </div>
