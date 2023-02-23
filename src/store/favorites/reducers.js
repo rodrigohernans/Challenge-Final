@@ -3,7 +3,7 @@ import favoritesActions from './actions';
 
 
 
-const { addFav, readFav }=  favoritesActions
+const { addFav, readFav ,deleteFav}=  favoritesActions
 const initialState = {
     fav: [],
 }
@@ -13,7 +13,7 @@ const favoritesReducer = createReducer(
     (builder) => { builder
         .addCase(addFav.fulfilled, (state,action) =>{
                 let newState = {
-                    fav: action.payload.response.fav
+                    fav: action.payload
                 }
                 return newState
             }
@@ -35,6 +35,17 @@ const favoritesReducer = createReducer(
 
     }
 )
+const deleteFavReducer = createReducer(
+    initialState,
+    (builder)=>{ builder
+        .addCase (deleteFav.fulfilled, (state,action)=>{
+            let newState = {
+                fav:action.payload
+            }
+            return newState
+        })
+    }
+)
 
-export default favoritesReducer
-
+const favoritesReducers = {favoritesReducer,deleteFavReducer}
+export default favoritesReducers
